@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import About from "./About"
 import Skill from "./Skill";
+import Project from "./Project";
 
 const Home = () => {
     const [count, setCount] = useState(0);
@@ -35,6 +36,7 @@ const Home = () => {
             </div>
             <h2>Projects</h2>
             <div className="projects-section">
+                <Project title="Project 1 - Image Translation for Medical Students" />
                 <h4>Project 1 - Image Translation for Medical Students</h4>
                 <div>features</div>
                 <div>image</div>

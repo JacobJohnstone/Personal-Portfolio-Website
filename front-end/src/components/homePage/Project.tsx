@@ -1,11 +1,18 @@
 import ProjectFeature from "./ProjectFeature";
 
-const Project = () => {
+type ProjectProps = {
+    title : string;
+    //featureName : string;
+    //featureImage : React.reactComponent?
+}
+
+const Project = ( { title } : ProjectProps ) => {
     return (
 
         <div>
+            <h4>{title}</h4>
             <div>
-                <ProjectFeature />
+                
             </div>
             <div>
                 {//<ProjectImage />
