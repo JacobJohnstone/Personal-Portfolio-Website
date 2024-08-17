@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import About from "./About"
+import Skill from "./Skill";
 
 const Home = () => {
     const [count, setCount] = useState(0);
@@ -21,24 +22,19 @@ const Home = () => {
                 <img className="some-cool-hobby-collection"></img>
             </div>
             <h2>Skills</h2>
-            <div>
+            <div className="skills-section">
                 <div>
-                    <h4>Software Development</h4>
-                    <div>Best practices, OOP, Version Control</div>
-                    <div>Java, JavaScript, TypeScript, Python</div>
+                    <Skill title="Software Development" description="Best practices, OOP, Version control:Java, JavaScript, Typescript, Python"/>
                 </div>
                 <div>
-                    <h4>Fullstack Development</h4>
-                    <div>Web applications built with HTML, CSS, JS, and React</div>
-                    <div>Supported by RESTful APIs, Express backends, and both relational and NoSQL databases</div>
+                    <Skill title="Fullstack Development" description="Web applications built with HTML, CSS, JS, and React : Supported by RESTful APIs, Express backends, and both relational and NoSQL databases"/>
                 </div>
                 <div>
-                    <h4>AI Driven Solutions</h4>
-                    <div>Taking advantage of PyTorch, advancing steps within the field of healthcare</div>
+                    <Skill title="AI Driven Solutions" description="Taking advantage of PyTorch, advancing steps within the field of healthcare"/>
                 </div>
             </div>
             <h2>Projects</h2>
-            <div>
+            <div className="projects-section">
                 <h4>Project 1 - Image Translation for Medical Students</h4>
                 <div>features</div>
                 <div>image</div>
@@ -46,8 +42,8 @@ const Home = () => {
                 <div>features</div>
                 <div>image</div>
             </div>
-            <div>
-                <h2>Education</h2>
+            <h2>Education</h2>
+            <div className="education-section">
                 <h4>The University of Western Ontario</h4>
                 <div>September 2020 - April 2024</div>
                 <h5>Relevant Coursework</h5>
