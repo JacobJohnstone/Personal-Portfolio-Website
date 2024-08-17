@@ -1,14 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
-import PowerBtn from './components/powerBtn';
+import LandingPage from './components/landingPage/landingPage';
+import Home from './components/homePage/Home';
 
 function App() {
-  return (
-    <div className="App">
-      <PowerBtn />
-    </div>
-  );
+
+	const [display, setDisplay] = useState(false);
+	
+	function handleClick () {
+		setDisplay(true);
+	}
+
+	return (
+		<div className="App">
+			{display ? (
+				<Home />
+			) : (
+				<LandingPage clickFunc={handleClick}/>
+			)}
+		</div>
+	);
 }
 
 export default App;
