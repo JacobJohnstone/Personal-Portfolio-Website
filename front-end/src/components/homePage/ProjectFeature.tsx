@@ -7,8 +7,7 @@ const ProjectFeature = ( { name } : ProjectFeatureProps ) => {
     return(
 
         <div>
-            <h4>{name}</h4>
-            <button>+</button>
+            <button>{name}</button>
         </div>
 
     );
