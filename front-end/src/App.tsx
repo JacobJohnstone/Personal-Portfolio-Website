@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './App.css';
+import { useState } from 'react';
+//import './App.css';
 import LandingPage from './components/landingPage/landingPage';
 import Home from './components/homePage/Home';
 
@@ -12,11 +12,15 @@ function App() {
 	}
 
 	return (
-		<div className="App">
+		<div>
 			{display ? (
-				<Home />
+				<div>
+					<Home />
+				</div>
 			) : (
-				<LandingPage clickFunc={handleClick}/>
+				<div className='h-screen flex items-center justify-center text-white bg-gray-800'>
+					<LandingPage clickFunc={handleClick}/>
+				</div>
 			)}
 		</div>
 	);

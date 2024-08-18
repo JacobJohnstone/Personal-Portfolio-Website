@@ -1,3 +1,5 @@
+import power from "../../images/Power-Btn.png";
+
 type ButtonProps = {
     clickFunc : () => void;
 }
@@ -5,7 +7,7 @@ type ButtonProps = {
 const PowerBtn = ({ clickFunc } : ButtonProps) => {
     return (
         <>
-            <button className="m-4 text-center p-3 font-bold px-2" onClick={clickFunc}>Power</button>
+            <img src={power} alt="Click-Here" width="50" height="50" onClick={clickFunc} className="flex items-center justify-center cursor-pointer bg-white p-2 rounded-full"/>
         </>
     );
 }

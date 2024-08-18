@@ -9,10 +9,14 @@ const LandingPage = ({clickFunc} : LandingProps) => {
 
     return (
 
-        <>
-            <Name />
-            <PowerBtn clickFunc={clickFunc} />
-        </>
+        <div>
+            <div className='flex items-baseline justify-center text-white w-screen'>
+                <Name />
+            </div>
+            <div className='flex items-start justify-center text-white w-screen'>
+                <PowerBtn clickFunc={clickFunc}/>
+            </div>
+        </div>
 
     )
 

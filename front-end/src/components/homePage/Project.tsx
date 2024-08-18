@@ -1,7 +1,4 @@
 import ProjectFeature from "./ProjectFeature";
-import pointers from '../../images/PointerPictures.jpg';
-import ER from "../../images/ER-Design.png"
-import backend from "../../images/PreviousSessionsBackendCode.png"
 import loading from "../../images/loading.gif";
 import defaultDatabase from "../../images/DatabaseIcon.png"
 import { useEffect, useState } from "react";
@@ -34,7 +31,7 @@ const Project = ( { title, features, description, featureImages } : ProjectProps
             <p>{ description }</p>
             <div>
                 <ul>
-                    { features.map((feature, i) => <li key={i} onClick={(e) => handleFeatureClick(i)}><ProjectFeature name={features[i]}/></li>)}
+                    { features.map((feature, i) => <li key={i} onClick={(e) => handleFeatureClick(i)} className="cursor-pointer"><ProjectFeature name={features[i]}/></li>)}
                 </ul>
             </div>
             <div>
