@@ -38,7 +38,7 @@ const Project = ( { title, features, description, featureImages } : ProjectProps
                 </ul>
             </div>
             <div>
-                <img src={image} alt={alt} width="800" height="500"/>
+                <img src={image} alt={alt}/>
             </div>
         </div>
 

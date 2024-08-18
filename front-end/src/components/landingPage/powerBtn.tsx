@@ -5,7 +5,7 @@ type ButtonProps = {
 const PowerBtn = ({ clickFunc } : ButtonProps) => {
     return (
         <>
-            <button onClick={clickFunc}>Power</button>
+            <button className="m-4 text-center p-3 font-bold px-2" onClick={clickFunc}>Power</button>
         </>
     );
 }
