@@ -7,7 +7,7 @@ type ButtonProps = {
 const PowerBtn = ({ clickFunc } : ButtonProps) => {
     return (
         <div className="">
-            <img src={power} alt="Click-Here" width="50" height="50" onClick={clickFunc} className="flex items-center justify-center cursor-pointer bg-white p-2 rounded-full"/>
+            <img src={power} alt="Click-Here" onClick={clickFunc} className="flex items-center justify-center cursor-pointer bg-btn-colour p-2 rounded-full h-9 w-9 sm:h-12 sm:w-12"/>
         </div>
     );
 }
