@@ -6,9 +6,9 @@ type ButtonProps = {
 
 const PowerBtn = ({ clickFunc } : ButtonProps) => {
     return (
-        <>
+        <div className="">
             <img src={power} alt="Click-Here" width="50" height="50" onClick={clickFunc} className="flex items-center justify-center cursor-pointer bg-white p-2 rounded-full"/>
-        </>
+        </div>
     );
 }
 
