@@ -17,9 +17,13 @@ const Home = () => {
 
     return (
 
-        <>
-            <h1>JACOB JOHNSTONE</h1>
-            <h3>B.E.Sc</h3>
+        <div className='h-screen text-white bg-gray-800'>
+            <h1 className='flex flex-row justify-center items-center text-transparent relative
+                text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-light font-mono z-30
+                bg-gradient-to-b from-red-300 to-bottom-gradient bg-clip-text'>JACOB JOHNSTONE</h1>
+            <h3 className='flex flex-row justify-center items-center text-transparent relative
+                text-3xl sm:text-4xl md:text-5xl font-light font-mono z-30
+                bg-gradient-to-b from-red-300 to-bottom-gradient bg-clip-text'>B.E.Sc</h3>
             <div className="about-section">
                 <About />
                 <img className="some-cool-hobby-collection" alt="coolhobby"></img>
@@ -63,7 +67,7 @@ const Home = () => {
                 <h5>Relevant Coursework</h5>
                 <div>Web Technologies, Database Management Systems, Data Structures and Algorithms, Operating Systems, Artificial Intelligence, Software Engineering Design, Information Secuirty, Software Testing</div>
             </div>
-        </>
+        </div>
 
     )
 }
