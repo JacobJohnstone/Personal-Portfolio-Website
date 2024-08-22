@@ -14,7 +14,7 @@ function App() {
 	return (
 		<div>
 			{display ? (
-				<div>
+				<div className='h-fit text-gray-500 bg-gray-800'>
 					<Home />
 				</div>
 			) : (

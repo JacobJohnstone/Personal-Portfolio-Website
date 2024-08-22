@@ -17,18 +17,18 @@ const Home = () => {
 
     return (
 
-        <div className='h-screen text-white bg-gray-800'>
+        <div>
             <h1 className='flex flex-row justify-center items-center text-transparent relative
                 text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-light font-mono z-30
                 bg-gradient-to-b from-red-300 to-bottom-gradient bg-clip-text'>JACOB JOHNSTONE</h1>
             <h3 className='flex flex-row justify-center items-center text-transparent relative
                 text-3xl sm:text-4xl md:text-5xl font-light font-mono z-30
                 bg-gradient-to-b from-red-300 to-bottom-gradient bg-clip-text'>B.E.Sc</h3>
-            <div className="about-section">
+            <div>
                 <About />
-                <img className="some-cool-hobby-collection" alt="coolhobby"></img>
             </div>
-            <h2>SKILLS</h2>
+            <h2 className="flex justify-center items-center text-gray-100 text-bold text-3xl relative top-10 w-fit
+                left-1/2 -translate-x-1/2">SKILLS</h2>
             <div className="skills-section">
                 <div>
                     <Skill title="Software Development" description="Best practices, OOP, Version control:Java, JavaScript, Typescript, Python"/>
