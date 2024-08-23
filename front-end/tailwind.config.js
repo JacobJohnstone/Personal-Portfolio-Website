@@ -12,15 +12,15 @@ module.exports = {
             colors: {
                 smallEclipse: "#554301",
                 largeEclipse: "#4F2202",
-                "bottom-gradient": "#696969",
-                "btn-colour": "#C5C5C5",
+                bottomGradient: "#696969",
+                btnColour: "#C5C5C5",
             },
             blur: {
                 smallBlur: "234px",
                 largeBlur: "176px",
             },
             animation: {
-                "spin-slow": "spin 60s linear infinite",
+                spinSlow: "spin 60s linear infinite",
                 wiggle: "wiggle 1s linear infinite",
             },
         },

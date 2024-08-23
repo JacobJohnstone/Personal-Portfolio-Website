@@ -3,17 +3,17 @@
 //Skill 3: title=AI driven solutions description: Taking advantage of PyTorch, advancing steps within the field of healthcare
 
 type SkillProps = {
-    title: string,
-    description: string
-}
+    title: string;
+    description: string;
+};
 
-const Skill = ( { title, description } : SkillProps ) => {
-    return(
+const Skill = ({ title, description }: SkillProps) => {
+    return (
         <div>
             <h4>{title}</h4>
             <div>{description}</div>
         </div>
     );
-}
+};
 
 export default Skill;
