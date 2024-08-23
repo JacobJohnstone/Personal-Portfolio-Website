@@ -27,9 +27,11 @@ const Home = () => {
             <div>
                 <About />
             </div>
-            <h2 className="flex justify-center items-center text-gray-100 text-bold text-3xl relative top-10 w-fit
-                left-1/2 -translate-x-1/2">SKILLS</h2>
-            <div className="skills-section">
+            
+            <div className="bg-black flex justify-center items-center w-screen">
+                <h2 className="text-gray-100 text-bold text-3xl w-fit">
+                        SKILLS
+                </h2>
                 <div>
                     <Skill title="Software Development" description="Best practices, OOP, Version control:Java, JavaScript, Typescript, Python"/>
                 </div>
@@ -40,8 +42,8 @@ const Home = () => {
                     <Skill title="AI Driven Solutions" description="Taking advantage of PyTorch, advancing steps within the field of healthcare"/>
                 </div>
             </div>
-            <h2>PROJECTS</h2>
-            <div className="projects-section">
+            <div className="bg-yellow-500">
+                <h2>PROJECTS</h2>
                 <Project title="PROJECT 1 - Image Translation for Medical Students" 
                     description="Created an image translation program to be used for medical students in training, enhancing their training by allowing them to view a more realistic version when practicing mitral valve surgery procedures" 
                     features={["Translated plastic, model heart images into realistic looking heart images", "Implemented rapid image translation allowing rapid streaming from a camera"]} 
@@ -51,8 +53,8 @@ const Home = () => {
                     features={["Relational database designed and implemented to be normalized (ER Picture)", "Member Info provides all the information connected to the member requestsed, such as the class sessions they will be attending and what classes (offerings) they are a part of", "Able to track member statistics such as workout frequencies and class registrations enabling more business decision to be made more effectively", "Made use of an Express backend used to manage queries and responses to and from the databse"]} 
                     featureImages={[ER, pointers, backend]}/>
             </div>
-            <h4>TECHNOLOGIES USED IN THIS PORTFOLIO</h4>
-            <div>
+            <div className="bg-green-500">
+                <h4>TECHNOLOGIES USED IN THIS PORTFOLIO</h4>
                 <ul>
                     <li>HTML</li>
                     <li>CSS</li>
@@ -60,8 +62,8 @@ const Home = () => {
                     <li>React</li>
                 </ul>
             </div>
-            <h2>Education</h2>
-            <div className="education-section">
+            <div className="bg-purple-500">
+                <h2>Education</h2>
                 <h4>The University of Western Ontario</h4>
                 <div>September 2020 - April 2024</div>
                 <h5>Relevant Coursework</h5>
