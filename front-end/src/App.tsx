@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Home from "./components/homePage/Home";
 import power from "./images/Power-Btn.png";
 
@@ -7,6 +7,8 @@ import power from "./images/Power-Btn.png";
 function App() {
     const [displayHome, setDisplayHome] = useState<boolean>(false); // For switching to the home page
     const [showPowerBtn, setShowPowerBtn] = useState<boolean>(true); // For initiating powerBtn fade
+    const [disableBtn, setDisableBtn] = useState<boolean>(false);
+    const powerButtonRef = useRef<HTMLButtonElement | null>(null);
 
     // tailwind static to animation changes
     const powerBtnClasses = `${
@@ -18,6 +20,7 @@ function App() {
     // Called on PowerBtn Click
     function handleClick() {
         setShowPowerBtn(false);
+        setDisableBtn(true);
         setTimeout(pageTranistion, 5000); // Delay until all animations are complete
     }
 
@@ -46,14 +49,18 @@ function App() {
                             </div>
                             <div className="flex m-auto text-white w-fit top-24 sm:top-1 relative z-30">
                                 <div>
-                                    <img
-                                        src={power}
-                                        alt="Click-Here"
+                                    <button
                                         onClick={(e) => {
                                             handleClick();
                                         }}
-                                        className={powerBtnClasses}
-                                    />
+                                        ref={powerButtonRef}
+                                        disabled={disableBtn}>
+                                        <img
+                                            src={power}
+                                            alt="Click-Here"
+                                            className={powerBtnClasses}
+                                        />
+                                    </button>
                                 </div>
                             </div>
                         </div>
