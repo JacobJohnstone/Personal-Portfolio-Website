@@ -8,6 +8,10 @@ module.exports = {
                     "0%, 100%": { transform: "(-9deg)" },
                     "50%": { transform: "9deg" },
                 },
+                disappear: {
+                    from: { opacity: 1 },
+                    to: { opacity: 0 },
+                },
             },
             colors: {
                 smallEclipse: "#554301",
@@ -22,6 +26,7 @@ module.exports = {
             animation: {
                 spinSlow: "spin 60s linear infinite",
                 wiggle: "wiggle 1s linear infinite",
+                powerDisable: "disappear 1s linear forwards",
             },
         },
     },
