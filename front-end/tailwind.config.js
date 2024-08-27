@@ -2,10 +2,21 @@
 module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
+        screens: {
+            sm: "640px",
+
+            md: "768px",
+
+            lg: "1024px",
+
+            xl: "1280px",
+
+            "2xl": "1536px",
+        },
         extend: {
             keyframes: {
                 titleComplete: {
-                    "0%": { opacity: 1, bottom: "5rem", color: "#777777" },
+                    "0%": { opacity: 1, top: "15rem", color: "#777777" },
                     "1%": { opacity: 1 }, //0
                     "2%": { opacity: 1, color: "#CCCCCC" }, //white , color: "white"
                     "3%": { opacity: 1 }, //0
@@ -17,16 +28,16 @@ module.exports = {
                     "21%": { opacity: 1 }, //0
                     "22%": { opacity: 1 }, //0
                     "23%": { opacity: 1 }, //0 //white
-                    "50%": { opacity: 1, bottom: "5rem", color: "#777777" }, //0 white
+                    "50%": { opacity: 1, top: "15rem", color: "#777777" }, //0 white
                     "51%": { color: "#CCCCCC" },
                     "100%": {
                         opacity: 1,
-                        bottom: "24.5rem",
+                        top: "5rem",
                         color: "#EBEBEB",
                     }, //28 on desktop
                 },
                 titleBackground: {
-                    "0%": { opacity: 0, bottom: "5rem" },
+                    "0%": { opacity: 0, top: "15rem" },
                     "1%": { opacity: 0 },
                     "2%": { opacity: 1 },
                     "3%": { opacity: 0 },
@@ -41,34 +52,16 @@ module.exports = {
                     "23%": { opacity: 0 },
                     "50%": {
                         opacity: 0,
-                        bottom: "5rem",
+                        top: "15rem",
                     },
                     "100%": {
                         opacity: 80,
-                        bottom: "24rem",
+                        top: "5rem", // 17 on laptop, 24 on desktop
                     },
                 },
                 disappear: {
                     from: { opacity: 80 },
                     to: { opacity: 0 },
-                },
-                titleToTop: {
-                    from: {
-                        bottom: "6rem",
-                        color: "white",
-                    },
-                    to: {
-                        bottom: "28rem",
-                        color: "black",
-                    },
-                },
-                phoneTitleToTop: {
-                    from: {
-                        bottom: "0rem",
-                    },
-                    to: {
-                        bottom: "16rem",
-                    },
                 },
             },
             colors: {
@@ -76,12 +69,11 @@ module.exports = {
                 largeEclipse: "#4F2202",
                 bottomGradient: "#696969",
                 btnColour: "#F0EFF0",
+                titleFinal: "#EBEBEB",
             },
             animation: {
                 spinSlow: "spin 60s linear infinite",
                 powerDisable: "disappear 0.5s linear forwards",
-                toTop: "titleToTop 2s ease-in-out 1s both",
-                phoneTop: "phoneTitleToTop 2s ease-in-out 1s both",
                 title: "titleComplete 4s linear 1s both",
                 titleBackground: "titleBackground 4s linear 1s both",
             },
