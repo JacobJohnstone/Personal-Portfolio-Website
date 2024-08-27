@@ -9,14 +9,16 @@ import SkillCollection from "./SkillCollection";
 
 const Home = () => {
     return (
-        <div className="h-fit bg-gray-900 overflow-x-hidden">
+        <div className="bg-gray-900 overflow-x-hidden z-50">
             <div className="h-screen w-screen">
                 <Title />
-                <div className="flex justify-center">
+                <div className="relative flex justify-center top-1/3">
                     <About />
                 </div>
             </div>
-            <SkillCollection />
+            <div className="flex justify-center">
+                <SkillCollection />
+            </div>
         </div>
     );
 };

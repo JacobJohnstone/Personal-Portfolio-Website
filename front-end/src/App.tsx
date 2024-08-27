@@ -57,7 +57,9 @@ function App() {
     return (
         <div>
             {displayHome ? (
-                <Home />
+                <div className="no-scrollbar">
+                    <Home />
+                </div>
             ) : (
                 <div className="h-screen flex bg-gray-900">
                     <div className="flex justify-center items-center h-screen w-screen">
