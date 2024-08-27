@@ -6,7 +6,7 @@ const SkillCollection = () => {
             <div>Skills</div>
             <Skill
                 title="Software Development"
-                description="Best practices, OOP, Version control:Java, JavaScript, Typescript, Python"
+                description="Best practices, OOP, Version control:Java, JavaScript, TypeScript, Python"
             />
             <Skill
                 title="Fullstack Development"

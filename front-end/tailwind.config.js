@@ -59,9 +59,22 @@ module.exports = {
                         top: "5rem", // 17 on laptop, 24 on desktop
                     },
                 },
+                bachelor: {
+                    "0%": { opacity: 0 },
+                    "45%": { opacity: 0 },
+                    "50%": { opacity: 1 },
+                    "55%": { opacity: 0 },
+                    "99%": { opacity: 0 },
+                    "100%": { opacity: 1 },
+                },
                 disappear: {
                     from: { opacity: 80 },
                     to: { opacity: 0 },
+                },
+                glow: {
+                    from: { opacity: 1 },
+                    "50%": { opacity: 0.5 },
+                    to: { opacity: 1 },
                 },
             },
             colors: {
@@ -72,10 +85,11 @@ module.exports = {
                 titleFinal: "#EBEBEB",
             },
             animation: {
-                spinSlow: "spin 60s linear infinite",
                 powerDisable: "disappear 0.5s linear forwards",
                 title: "titleComplete 4s linear 1s both",
                 titleBackground: "titleBackground 4s linear 1s both",
+                schoolTitle: "bachelor 1s linear 0.5s both",
+                signGlow: "glow 5s linear infinite",
             },
         },
     },

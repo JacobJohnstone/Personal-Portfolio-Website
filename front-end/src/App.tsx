@@ -24,7 +24,7 @@ function App() {
     const titleClasses = `${
         titleMiddle
             ? "absolute top-60 w-fit text-[#777777] text-4xl sm:text-5xl md:text-7xl lg:text-9xl lg:tracking-wider font-thin font-mono z-40"
-            : "absolute w-fit text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider font-light font-mono z-40 animate-title"
+            : "absolute w-fit text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-light font-mono z-40 animate-title"
     }`;
 
     const titleBackgroundClasses = `${
@@ -46,7 +46,7 @@ function App() {
         setTitleMiddle(false);
         setTitleBackground(false);
         setSecondBackground(false);
-        setTimeout(pageTranistion, 6000); // Delay until all animations are complete
+        setTimeout(pageTranistion, 5000); // Delay until all animations are complete
     }
 
     // Delayed function call for smooth transition
@@ -59,7 +59,7 @@ function App() {
             {displayHome ? (
                 <Home />
             ) : (
-                <div className="h-screen flex bg-gray-800">
+                <div className="h-screen flex bg-gray-900">
                     <div className="flex justify-center items-center h-screen w-screen">
                         <div className="fixed bg-largeEclipse rounded-full w-screen h-screen blur-3xl sm:blur-[176px] bg-opacity-20"></div>
                         <div className="fixed bg-smallEclipse rounded-full w-1/2 h-3/5 blur-3xl sm:blur-[234px] bg-opacity-30 z-20"></div>
