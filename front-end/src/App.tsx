@@ -10,7 +10,8 @@ function App() {
     const [displayHome, setDisplayHome] = useState<boolean>(false); // For switching to the home page
     const [showPowerBtn, setShowPowerBtn] = useState<boolean>(true); // For initiating powerBtn fade
     const [titleMiddle, setTitleMiddle] = useState(true); // For indicating title transition
-    const [titleBackground, setTitleBackground] = useState<boolean>(true); // For
+    const [titleBackground, setTitleBackground] = useState<boolean>(true);
+    const [secondBackground, setSecondBackground] = useState<boolean>(true);
     const [disableBtn, setDisableBtn] = useState<boolean>(false); // Disables button upon click, so can't be clicked while animating
 
     // tailwind static to animation changes
@@ -28,8 +29,14 @@ function App() {
 
     const titleBackgroundClasses = `${
         titleBackground
-            ? "relative w-fit bottom-20 z-30 blur-[20px] text-transparent text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider font-bold font-mono"
-            : "relative z-30 w-fit blur-[20px] text-red-200 text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider bg-opacity-40 bg-red-400 font-bold font-mono sm:animate-titleBackground"
+            ? "relative w-fit bottom-20 z-30 text-transparent text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider font-bold font-mono"
+            : "relative z-30 w-fit blur-[2px] text-purple-400 text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider font-bold font-mono sm:animate-titleBackground"
+    }`;
+
+    const secondBackgroundClasses = `${
+        secondBackground
+            ? "relative w-fit bottom-20 z-30 text-transparent text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider font-bold font-mono"
+            : "relative z-30 w-fit blur-[20px] text-purple-500 text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider font-bold font-mono sm:animate-titleBackground"
     }`;
 
     // Called on PowerBtn Click
@@ -38,7 +45,8 @@ function App() {
         setDisableBtn(true);
         setTitleMiddle(false);
         setTitleBackground(false);
-        setTimeout(pageTranistion, 6000); // Delay until all animations are complete
+        setSecondBackground(false);
+        //setTimeout(pageTranistion, 6000); // Delay until all animations are complete
     }
 
     // Delayed function call for smooth transition
@@ -63,6 +71,11 @@ function App() {
                     </div>
                     <div className="absolute flex items-center justify-center w-screen h-screen">
                         <div className={titleBackgroundClasses}>
+                            JACOB JOHNSTONE
+                        </div>
+                    </div>
+                    <div className="absolute flex items-center justify-center w-screen h-screen">
+                        <div className={secondBackgroundClasses}>
                             JACOB JOHNSTONE
                         </div>
                     </div>
