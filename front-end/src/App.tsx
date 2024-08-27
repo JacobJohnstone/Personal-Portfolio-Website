@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Home from "./components/homePage/Home";
+import Home from "./components/homePage/NewHome";
 import power from "./images/Power-Btn.png";
 
 //https://www.youtube.com/watch?v=DSneWikjH5E has a good plugin for adding animations in tailwindcss without as many extra extensions
@@ -23,20 +23,20 @@ function App() {
 
     const titleClasses = `${
         titleMiddle
-            ? "relative bottom-20 w-fit text-[#777777] text-4xl sm:text-5xl md:text-7xl lg:text-9xl lg:tracking-wider font-thin font-mono z-40"
-            : "relative w-fit text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider font-light font-mono z-40 sm:animate-title"
+            ? "absolute top-60 w-fit text-[#777777] text-4xl sm:text-5xl md:text-7xl lg:text-9xl lg:tracking-wider font-thin font-mono z-40"
+            : "absolute w-fit text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-light font-mono z-40 animate-title"
     }`;
 
     const titleBackgroundClasses = `${
         titleBackground
-            ? "relative w-fit bottom-20 z-30 text-transparent text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider font-bold font-mono"
-            : "relative z-30 w-fit blur-[2px] text-purple-400 text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider font-bold font-mono sm:animate-titleBackground"
+            ? "absolute top-60 w-fit z-30 text-transparent text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider font-bold font-mono"
+            : "absolute z-30 w-fit blur-[2px] text-purple-400 text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider font-bold font-mono animate-titleBackground"
     }`;
 
     const secondBackgroundClasses = `${
         secondBackground
-            ? "relative w-fit bottom-20 z-30 text-transparent text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider font-bold font-mono"
-            : "relative z-30 w-fit blur-[20px] text-purple-500 text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider font-bold font-mono sm:animate-titleBackground"
+            ? "absolute top-60 w-fit z-30 text-transparent text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider font-bold font-mono"
+            : "absolute z-30 w-fit blur-[20px] text-purple-500 text-4xl sm:text-5xl md:text-8xl lg:text-9xl lg:tracking-wider font-bold font-mono animate-titleBackground"
     }`;
 
     // Called on PowerBtn Click
@@ -46,7 +46,7 @@ function App() {
         setTitleMiddle(false);
         setTitleBackground(false);
         setSecondBackground(false);
-        //setTimeout(pageTranistion, 6000); // Delay until all animations are complete
+        setTimeout(pageTranistion, 5000); // Delay until all animations are complete
     }
 
     // Delayed function call for smooth transition
@@ -57,11 +57,9 @@ function App() {
     return (
         <div>
             {displayHome ? (
-                <div className="h-fit flex items-center justify-center text-gray-500 bg-gray-800">
-                    <Home />
-                </div>
+                <Home />
             ) : (
-                <div className="h-screen flex bg-gray-800">
+                <div className="h-screen flex bg-gray-900">
                     <div className="flex justify-center items-center h-screen w-screen">
                         <div className="fixed bg-largeEclipse rounded-full w-screen h-screen blur-3xl sm:blur-[176px] bg-opacity-20"></div>
                         <div className="fixed bg-smallEclipse rounded-full w-1/2 h-3/5 blur-3xl sm:blur-[234px] bg-opacity-30 z-20"></div>
