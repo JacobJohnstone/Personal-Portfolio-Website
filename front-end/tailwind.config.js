@@ -21,7 +21,7 @@ module.exports = {
                     "51%": { color: "#CCCCCC" },
                     "100%": {
                         opacity: 1,
-                        bottom: "24.5rem",
+                        bottom: "24.25rem",
                         color: "#EBEBEB",
                     }, //28 on desktop
                 },
