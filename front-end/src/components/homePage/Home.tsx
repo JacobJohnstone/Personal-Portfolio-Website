@@ -17,28 +17,14 @@ const Home = () => {
 
     return (
         <div>
-            <h1
-                className="flex flex-row justify-center items-center text-transparent relative
-                text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-light font-mono z-30
-                bg-gradient-to-b from-red-300 to-bottomGradient bg-clip-text"
-            >
-                JACOB JOHNSTONE
-            </h1>
-            <h3
-                className="flex flex-row justify-center items-center text-transparent relative
-                text-3xl sm:text-4xl md:text-5xl font-light font-mono z-30
-                bg-gradient-to-b from-red-300 to-bottomGradient bg-clip-text"
-            >
-                B.E.Sc
-            </h3>
+            <h1 className="">JACOB JOHNSTONE</h1>
+            <h3 className="">B.E.Sc</h3>
             <div>
                 <About />
             </div>
 
-            <div className="bg-black flex justify-center items-center w-screen">
-                <h2 className="text-gray-100 text-bold text-3xl w-fit">
-                    SKILLS
-                </h2>
+            <div className="">
+                <h2 className="">SKILLS</h2>
                 <div>
                     <Skill
                         title="Software Development"
@@ -58,7 +44,7 @@ const Home = () => {
                     />
                 </div>
             </div>
-            <div className="bg-yellow-500">
+            <div className="">
                 <h2>PROJECTS</h2>
                 <Project
                     title="PROJECT 1 - Image Translation for Medical Students"
@@ -81,7 +67,7 @@ const Home = () => {
                     featureImages={[ER, pointers, backend]}
                 />
             </div>
-            <div className="bg-green-500">
+            <div className="">
                 <h4>TECHNOLOGIES USED IN THIS PORTFOLIO</h4>
                 <ul>
                     <li>HTML</li>
@@ -90,7 +76,7 @@ const Home = () => {
                     <li>React</li>
                 </ul>
             </div>
-            <div className="bg-purple-500">
+            <div className="">
                 <h2>Education</h2>
                 <h4>The University of Western Ontario</h4>
                 <div>September 2020 - April 2024</div>
