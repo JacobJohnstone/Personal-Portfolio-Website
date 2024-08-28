@@ -29,24 +29,27 @@ const Project = ({
     }
 
     return (
-        <div>
-            <h4>{title}</h4>
-            <p>{description}</p>
-            <div>
-                <ul>
-                    {features.map((feature, i) => (
-                        <li
-                            key={i}
-                            onClick={(e) => handleFeatureClick(i)}
-                            className="cursor-pointer"
-                        >
-                            <ProjectFeature name={features[i]} />
-                        </li>
-                    ))}
-                </ul>
+        <div className="my-10">
+            <div className="text-titleFinal text-4xl mb-5 font-mono">
+                {title}
             </div>
-            <div>
-                <img src={image} alt={alt} />
+            <div className="text-gray-300 text-2xl">{description}</div>
+            <div className="flex bg-gray-500 text-gray-500">
+                <div className="flex justify-start">
+                    <ul className="">
+                        {features.map((feature, i) => (
+                            <li
+                                key={i}
+                                onClick={(e) => handleFeatureClick(i)}
+                                className="bg-gray-700 bg-opacity-50 h-fit w-fit p-5 my-3 rounded-3xl cursor-pointer">
+                                <ProjectFeature name={features[i]} />
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div className="flex justify-end">
+                    <img src={image} alt={alt} />
+                </div>
             </div>
         </div>
     );

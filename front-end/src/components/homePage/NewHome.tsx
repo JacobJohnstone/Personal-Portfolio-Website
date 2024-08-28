@@ -6,6 +6,7 @@ import ER from "../../images/ER-Design.png";
 import backend from "../../images/PreviousSessionsBackendCode.png";
 import Title from "./Title";
 import SkillCollection from "./SkillCollection";
+import ProjectCollection from "./ProjectCollection";
 
 const Home = () => {
     return (
@@ -18,6 +19,9 @@ const Home = () => {
             </div>
             <div className="flex justify-center">
                 <SkillCollection />
+            </div>
+            <div className="flex justify-center">
+                <ProjectCollection />
             </div>
         </div>
     );

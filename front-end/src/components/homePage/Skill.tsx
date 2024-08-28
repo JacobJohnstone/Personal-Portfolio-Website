@@ -9,7 +9,7 @@ type SkillProps = {
 
 const Skill = ({ title, description }: SkillProps) => {
     return (
-        <div className="bg-gray-800 mx-7 rounded-3xl">
+        <div className="bg-gray-800 mx-7 rounded-3xl font-mono">
             <div className="text-gray-100 text-3xl text-center pt-5">
                 {title}
             </div>
