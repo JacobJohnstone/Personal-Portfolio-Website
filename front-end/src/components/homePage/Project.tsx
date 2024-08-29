@@ -37,7 +37,7 @@ const Project = ({
                 {description}
             </div>
             <div className="flex justify-between items-center h-fit p-5 text-gray-500">
-                <div className="flex justify-start items-center w-1/2 bg-gray-700">
+                <div className="flex justify-start relative items-center w-1/2 bg-gray-800 rounded-3xl">
                     <ul className="mr-2 h-60 p-3 overflow-y-scroll no-scrollbar flex-block justify-center">
                         {features.map((feature, i) => (
                             <li
@@ -49,6 +49,7 @@ const Project = ({
                             </li>
                         ))}
                     </ul>
+                    <div className="absolute bottom-0 w-full h-10 bg-gradient-to-t from-gray-800 to-transparent z-40 rounded-xl"></div>
                 </div>
                 <div className="flex justify-center items-center w-1/2 h-60 ml-2">
                     <img
