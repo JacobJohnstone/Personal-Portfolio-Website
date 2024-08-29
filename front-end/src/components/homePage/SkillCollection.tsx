@@ -18,7 +18,7 @@ const SkillCollection = () => {
                     </p>
                 </div>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center mt-16">
                 <div className="flex justify-center w-2/3 rounded-3xl m-10">
                     <Skill
                         title="Software Development"

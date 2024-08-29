@@ -5,7 +5,7 @@ import backend from "../../images/PreviousSessionsBackendCode.png";
 
 const ProjectCollection = () => {
     return (
-        <div className="relative w-fit h-fit">
+        <div className="relative w-fit h-fit mt-20">
             <div className="relative z-40">
                 <p className="text-sky-500 blur-[20px] w-screen text-center text-7xl animate-signGlow">
                     Projects
@@ -21,10 +21,10 @@ const ProjectCollection = () => {
                     </p>
                 </div>
             </div>
-            <div className="flex justify-center">
-                <div className="flex-block justify-center w-2/3">
+            <div className="flex justify-center mt-16">
+                <div className="flex-block w-2/3">
                     <Project
-                        title="PROJECT 1 - Image Translation for Medical Students"
+                        title="Image Translation for Medical Students"
                         description="Created an image translation program to be used for medical students in training, enhancing their training by allowing them to view a more realistic version when practicing mitral valve surgery procedures"
                         features={[
                             "Translated plastic, model heart images into realistic looking heart images",
@@ -33,7 +33,7 @@ const ProjectCollection = () => {
                         featureImages={[pointers, backend]}
                     />
                     <Project
-                        title="PROJECT 2 - Relational Database Design and Implementation"
+                        title="Relational Database Design and Implementation"
                         description="Created and designed a relational database. The focus was on the implementation and functionality of the database rather than the front-end design. Within the group, I was in charge of putting together the front end pages and completing the 'Member Info' page, as well as assisting the design and connection of the database"
                         features={[
                             "Relational database designed and implemented to be normalized (ER Picture)",
