@@ -34,20 +34,21 @@ const Project = ({
                 {title}
             </div>
             <div className="text-gray-300 text-2xl">{description}</div>
-            <div className="flex bg-gray-500 text-gray-500">
-                <div className="flex justify-start">
+            <div className="flex justify-between px-5 bg-purple-200 text-gray-500">
+                <div className="flex justify-start items-center w-1/2 bg-green-200">
                     <ul className="">
                         {features.map((feature, i) => (
                             <li
                                 key={i}
                                 onClick={(e) => handleFeatureClick(i)}
-                                className="bg-gray-700 bg-opacity-50 h-fit w-fit p-5 my-3 rounded-3xl cursor-pointer">
+                                className="bg-gray-700 bg-opacity-50 h-fit w-fit p-5 my-3 rounded-3xl cursor-pointer"
+                            >
                                 <ProjectFeature name={features[i]} />
                             </li>
                         ))}
                     </ul>
                 </div>
-                <div className="flex justify-end">
+                <div className="flex justify-end w-1/2 bg-red-200">
                     <img src={image} alt={alt} />
                 </div>
             </div>
