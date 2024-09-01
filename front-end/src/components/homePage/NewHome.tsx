@@ -7,10 +7,12 @@ import backend from "../../images/PreviousSessionsBackendCode.png";
 import Title from "./Title";
 import SkillCollection from "./SkillCollection";
 import ProjectCollection from "./ProjectCollection";
+import Education from "./Education";
+import Contact from "./Contact";
 
 const Home = () => {
     return (
-        <div className="bg-gray-900 overflow-x-hidden z-50">
+        <div className="bg-gray-900 overflow-x-hidden">
             <div className="h-screen w-screen">
                 <Title />
                 <div className="relative flex justify-center top-1/3">
@@ -22,6 +24,12 @@ const Home = () => {
             </div>
             <div className="flex justify-center">
                 <ProjectCollection />
+            </div>
+            <div className="flex justify-center">
+                <Education />
+            </div>
+            <div className="flex justify-center">
+                <Contact />
             </div>
         </div>
     );

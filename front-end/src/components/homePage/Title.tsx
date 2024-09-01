@@ -2,8 +2,8 @@ const Title = () => {
     return (
         <>
             <div className="fixed h-screen w-screen flex items-center justify-center">
-                <div className="flex items-center justify-center bg-largeEclipse h-screen w-screen rounded-full blur-[176px] bg-opacity-20">
-                    <div className="bg-smallEclipse h-3/5 w-1/2 rounded-full blur-[234px] bg-opacity-30 z-20"></div>
+                <div className="flex items-center justify-center bg-largeEclipse h-screen w-screen rounded-full blur-[176px] bg-opacity-20 z-0">
+                    <div className="bg-smallEclipse h-3/5 w-1/2 rounded-full blur-[234px] bg-opacity-30 z-0"></div>
                 </div>
             </div>
             <div className="flex justify-center text-center">

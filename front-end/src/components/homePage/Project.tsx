@@ -29,7 +29,7 @@ const Project = ({
     }
 
     return (
-        <div className="my-10 bg-gray-800 p-10 rounded-3xl bg-opacity-50">
+        <div className="my-10 bg-gray-800 p-10 rounded-3xl">
             <div className="text-titleFinal text-center text-4xl mb-5 font-mono">
                 {title}
             </div>
@@ -37,8 +37,11 @@ const Project = ({
                 {description}
             </div>
             <div className="flex justify-between items-center h-fit p-5 text-gray-500">
-                <div className="flex justify-start relative items-center w-1/2 bg-gray-800 rounded-3xl">
-                    <ul className="mr-2 h-60 p-3 overflow-y-scroll no-scrollbar flex-block justify-center">
+                <div className="flex-block justify-start relative items-center w-1/2">
+                    <div className="text-2xl text-titleFinal font-mono pl-3">
+                        Features
+                    </div>
+                    <ul className="mr-2 h-60 p-3 overflow-y-scroll no-scrollbar bg-gray-800 rounded-3xl flex-block justify-center w-full">
                         {features.map((feature, i) => (
                             <li
                                 key={i}
