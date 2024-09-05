@@ -2,12 +2,14 @@ import ProjectFeature from "./ProjectFeature";
 import loading from "../../images/loading.gif";
 import defaultDatabase from "../../images/DatabaseIcon.png";
 import { useEffect, useState } from "react";
+import express from "../../images/express.png";
 
 type ProjectProps = {
     title: string;
     description: string;
     features: string[];
     featureImages: string[];
+    technologyIcons: string[];
 };
 
 const Project = ({
@@ -15,9 +17,13 @@ const Project = ({
     features,
     description,
     featureImages,
+    technologyIcons,
 }: ProjectProps) => {
     const [image, setImage] = useState(loading);
     const [alt, setAlt] = useState("Loading...");
+    const [icon, setIcon] = useState(loading);
+
+    console.log(technologyIcons[1]);
 
     useEffect(() => {
         setImage(defaultDatabase); // title image
@@ -46,7 +52,7 @@ const Project = ({
                             <li
                                 key={i}
                                 onClick={(e) => handleFeatureClick(i)}
-                                className="bg-blue-700 bg-opacity-80 text-titleFinal bg-opacity-50 h-fit w-fit p-5 my-3 rounded-3xl cursor-pointer py-5"
+                                className="bg-blue-700 bg-opacity-80 text-titleFinal bg-opacity-50 h-fit w-fit px-3 my-2 rounded-3xl cursor-pointer py-2 hover:bg-sky-500 transition duration-500 linear"
                             >
                                 <ProjectFeature name={features[i]} />
                             </li>
@@ -60,6 +66,28 @@ const Project = ({
                         className="max-h-full rounded-3xl"
                         alt={alt}
                     />
+                </div>
+            </div>{" "}
+            {
+                //bg-gradient-to-r from-transparent via-gray-300 to-transparent
+            }
+            <div className="flex justify-center h-20 w-full bg-gray-400 rounded-3xl">
+                <div className="flex items-center justify-center max-w-full">
+                    {technologyIcons.map((technology, i) =>
+                        technology == express ? (
+                            <img
+                                key={i}
+                                src={technology}
+                                className="max-h-full max-w-full my-2 py-5 mx-5"
+                            />
+                        ) : (
+                            <img
+                                key={i}
+                                src={technology}
+                                className="max-h-full max-w-full my-2 py-2 mx-5"
+                            />
+                        )
+                    )}
                 </div>
             </div>
         </div>

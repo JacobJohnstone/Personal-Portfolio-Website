@@ -2,6 +2,14 @@ import Project from "./Project";
 import pointers from "../../images/PointerPictures.jpg";
 import ER from "../../images/ER-Design.png";
 import backend from "../../images/PreviousSessionsBackendCode.png";
+import bootStrap from "../../images/Bootstrap_logo.png";
+import express from "../../images/express.png";
+import mongoDB from "../../images/MongoDB-Logo.png";
+import nodeJS from "../../images/nodejs-1-logo-png-transparent.png";
+import python from "../../images/Python_logo_01.png";
+import reactIcon from "../../images/react.png";
+import sqlIcon from "../../images/Sql_data_base_with_logo.png";
+import pytorch from "../../images/Pytorch.png";
 
 const ProjectCollection = () => {
     return (
@@ -31,6 +39,7 @@ const ProjectCollection = () => {
                             "Implemented rapid image translation allowing rapid streaming from a camera",
                         ]}
                         featureImages={[pointers, backend]}
+                        technologyIcons={[python, pytorch]}
                     />
                     <Project
                         title="Relational Database Design and Implementation"
@@ -42,6 +51,13 @@ const ProjectCollection = () => {
                             "Made use of an Express backend used to manage queries and responses to and from the databse",
                         ]}
                         featureImages={[ER, pointers, backend]}
+                        technologyIcons={[
+                            nodeJS,
+                            express,
+                            reactIcon,
+                            bootStrap,
+                            sqlIcon,
+                        ]}
                     />
                 </div>
             </div>
