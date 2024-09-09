@@ -70,6 +70,10 @@ module.exports = {
                     "50%": { opacity: 0.5 },
                     to: { opacity: 1 },
                 },
+                fadeIn: {
+                    from: { opacity: 0 },
+                    to: { opacity: 1 },
+                },
             },
             colors: {
                 smallEclipse: "#554301",
@@ -83,6 +87,7 @@ module.exports = {
                 title: "titleComplete 4s linear 1s both",
                 titleBackground: "titleBackground 4s linear 1s both",
                 signGlow: "glow 5s linear infinite",
+                fadeIn: "fadeIn 0.5s linear forwards",
             },
         },
     },

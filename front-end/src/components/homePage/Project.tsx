@@ -50,9 +50,9 @@ const Project = ({
                 behavior: "smooth",
             });
             const { clientWidth, scrollWidth, scrollLeft } = iconDivRef.current;
-            const scrolledToRight = scrollLeft + clientWidth >= scrollWidth;
-            setIsScrolledRight(scrolledToRight);
-            const scrolledToLeft = scrollLeft === 0;
+            //const scrolledToRight = scrollLeft + clientWidth >= scrollWidth;
+            setIsScrolledRight(false);
+            const scrolledToLeft = scrollLeft - 300 <= 0;
             setIsScrolledLeft(scrolledToLeft);
         }
     }
@@ -70,10 +70,10 @@ const Project = ({
                 behavior: "smooth",
             });
             const { scrollWidth, clientWidth, scrollLeft } = iconDivRef.current;
-            const scrolledToRight = scrollLeft + clientWidth >= scrollWidth;
+            const scrolledToRight =
+                scrollLeft + 300 + clientWidth >= scrollWidth;
             setIsScrolledRight(scrolledToRight);
-            const scrolledToLeft = scrollLeft === 0;
-            setIsScrolledLeft(scrolledToLeft);
+            setIsScrolledLeft(false);
         }
     }
 
@@ -124,7 +124,7 @@ const Project = ({
                             alt="left arrow"
                             src={leftArrow}
                             onClick={handleScrollLeft}
-                            className="sticky left-0 p-5 bg-gradient-to-r from-white to-gray-400 rounded-3xl max-h-full cursor-pointer"
+                            className="sticky left-0 p-5 bg-gradient-to-r from-white to-gray-400 rounded-3xl max-h-full cursor-pointer animate-fadeIn"
                         />
                     ) : (
                         <></>
@@ -149,7 +149,7 @@ const Project = ({
                             alt="arrow"
                             ref={scrollBtnRef}
                             src={arrow}
-                            className="sticky right-0 bg-gradient-to-l from-white to-gray-400 rounded-3xl max-h-full cursor-pointer"
+                            className="sticky right-0 bg-gradient-to-l from-white to-gray-400 rounded-3xl max-h-full cursor-pointer animate-fadeIn"
                             onClick={handleScrollRight}
                         />
                     ) : (
