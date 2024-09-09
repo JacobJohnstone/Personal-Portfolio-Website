@@ -1,8 +1,10 @@
 import ProjectFeature from "./ProjectFeature";
 import loading from "../../images/loading.gif";
 import defaultDatabase from "../../images/DatabaseIcon.png";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import express from "../../images/express.png";
+import arrow from "../../images/arrow.png";
+import leftArrow from "../../images/leftArrow.png";
 
 type ProjectProps = {
     title: string;
@@ -22,20 +24,61 @@ const Project = ({
     const [image, setImage] = useState(loading);
     const [alt, setAlt] = useState("Loading...");
     const [icon, setIcon] = useState(loading);
-
-    console.log(technologyIcons[1]);
+    const iconDivRef = useRef<HTMLDivElement>(null);
+    const scrollBtnRef = useRef<HTMLImageElement>(null);
+    const [isOverflowing, setIsOverflowing] = useState<boolean>(true);
+    const [isScrolledRight, setIsScrolledRight] = useState<boolean>(false);
+    const [isScrolledLeft, setIsScrolledLeft] = useState<boolean>(true);
 
     useEffect(() => {
         setImage(defaultDatabase); // title image
+        showScrollArrow();
+        window.addEventListener("resize", showScrollArrow);
     }, [title]);
+
+    function showScrollArrow() {
+        if (iconDivRef.current) {
+            const { scrollWidth, clientWidth, scrollLeft } = iconDivRef.current;
+            setIsOverflowing(scrollWidth > clientWidth);
+        }
+    }
+
+    function handleScrollLeft() {
+        if (iconDivRef.current) {
+            iconDivRef.current.scrollTo({
+                left: iconDivRef.current.scrollLeft - 300,
+                behavior: "smooth",
+            });
+            const { clientWidth, scrollWidth, scrollLeft } = iconDivRef.current;
+            const scrolledToRight = scrollLeft + clientWidth >= scrollWidth;
+            setIsScrolledRight(scrolledToRight);
+            const scrolledToLeft = scrollLeft === 0;
+            setIsScrolledLeft(scrolledToLeft);
+        }
+    }
 
     function handleFeatureClick(index: number) {
         setImage(featureImages[index]);
         setAlt(features[index]);
     }
 
+    function handleScrollRight() {
+        //useRef, scroll div
+        if (iconDivRef.current) {
+            iconDivRef.current.scrollTo({
+                left: iconDivRef.current.scrollLeft + 300, // Adjust the value as needed
+                behavior: "smooth",
+            });
+            const { scrollWidth, clientWidth, scrollLeft } = iconDivRef.current;
+            const scrolledToRight = scrollLeft + clientWidth >= scrollWidth;
+            setIsScrolledRight(scrolledToRight);
+            const scrolledToLeft = scrollLeft === 0;
+            setIsScrolledLeft(scrolledToLeft);
+        }
+    }
+
     return (
-        <div className="my-10 bg-gray-800 p-10 rounded-3xl">
+        <div className="my-10 bg-gray-800 p-10 rounded-3xl w-full">
             <div className="text-titleFinal text-center text-4xl mb-5 font-mono">
                 {title}
             </div>
@@ -67,26 +110,50 @@ const Project = ({
                         alt={alt}
                     />
                 </div>
-            </div>{" "}
+            </div>
             {
-                //bg-gradient-to-r from-transparent via-gray-300 to-transparent
+                //  bg-gradient-to-r from-transparent via-gray-300 to-transparent
             }
-            <div className="flex justify-center h-20 w-full bg-gray-400 rounded-3xl">
-                <div className="flex items-center justify-center max-w-full">
+            <div className="flex justify-center">
+                <div
+                    ref={iconDivRef}
+                    className="relative flex h-16 w-fit max-w-full justify-start bg-gray-400 rounded-3xl items-center object-contain overflow-x-scroll no-scrollbar"
+                >
+                    {isOverflowing && !isScrolledLeft ? (
+                        <img
+                            alt="left arrow"
+                            src={leftArrow}
+                            onClick={handleScrollLeft}
+                            className="sticky left-0 p-5 bg-gradient-to-r from-white to-gray-400 rounded-3xl max-h-full cursor-pointer"
+                        />
+                    ) : (
+                        <></>
+                    )}
                     {technologyIcons.map((technology, i) =>
                         technology == express ? (
                             <img
                                 key={i}
                                 src={technology}
-                                className="max-h-full max-w-full my-2 py-5 mx-5"
+                                className="max-h-full py-5 px-5"
                             />
                         ) : (
                             <img
                                 key={i}
                                 src={technology}
-                                className="max-h-full max-w-full my-2 py-2 mx-5"
+                                className="max-h-full py-2 px-5"
                             />
                         )
+                    )}
+                    {isOverflowing && !isScrolledRight ? (
+                        <img
+                            alt="arrow"
+                            ref={scrollBtnRef}
+                            src={arrow}
+                            className="sticky right-0 bg-gradient-to-l from-white to-gray-400 rounded-3xl max-h-full cursor-pointer"
+                            onClick={handleScrollRight}
+                        />
+                    ) : (
+                        <></>
                     )}
                 </div>
             </div>
