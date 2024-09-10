@@ -10,6 +10,7 @@ import python from "../../images/Python_logo_01.png";
 import reactIcon from "../../images/react.png";
 import sqlIcon from "../../images/Sql_data_base_with_logo.png";
 import pytorch from "../../images/Pytorch.png";
+import restAPI from "../../images/rest-api-icon.png";
 
 const ProjectCollection = () => {
     return (
@@ -57,6 +58,7 @@ const ProjectCollection = () => {
                             reactIcon,
                             bootStrap,
                             sqlIcon,
+                            restAPI,
                         ]}
                     />
                 </div>

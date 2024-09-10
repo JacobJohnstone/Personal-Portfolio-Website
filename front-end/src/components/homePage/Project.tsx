@@ -111,23 +111,23 @@ const Project = ({
                     />
                 </div>
             </div>
-            {
-                //  bg-gradient-to-r from-transparent via-gray-300 to-transparent
-            }
-            <div className="flex justify-center">
+            <div className="flex justify-center items-center">
                 {isOverflowing && !isScrolledLeft ? (
                     <img
                         alt="left arrow"
                         src={leftArrow}
                         onClick={handleScrollLeft}
-                        className="sticky left-0 p-5 bg-gradient-to-r from-white to-gray-400 rounded-3xl h-16 cursor-pointer animate-fadeIn"
+                        className="relative left-0 p-5 mt-8 circle-gradient-bg rounded-3xl h-14 cursor-pointer animate-fadeIn"
                     />
                 ) : (
-                    <img src={leftArrow} className="opacity-0 h-16 p-5 " />
+                    <img
+                        src={leftArrow}
+                        className="opacity-0 h-16 p-5 rounded 3xl relative left-0"
+                    />
                 )}
                 <div
                     ref={iconDivRef}
-                    className="relative flex h-16 w-fit max-w-full justify-start bg-gray-400 rounded-3xl items-center object-contain overflow-x-scroll no-scrollbar"
+                    className="relative flex h-16 w-fit max-w-full mt-8 justify-start bg-gradient-to-l from-gray-400 via-gray-100 to-gray-400 rounded-3xl items-center object-contain overflow-x-scroll no-scrollbar"
                 >
                     {technologyIcons.map((technology, i) =>
                         technology == express ? (
@@ -150,11 +150,14 @@ const Project = ({
                         alt="arrow"
                         ref={scrollBtnRef}
                         src={arrow}
-                        className="sticky right-0 p-5 circle-gradient-bg rounded-3xl h-16 cursor-pointer animate-fadeIn"
+                        className="relative right-0 p-5 mt-8 circle-gradient-bg rounded-3xl h-14 cursor-pointer animate-fadeIn"
                         onClick={handleScrollRight}
                     />
                 ) : (
-                    <img src={arrow} className="h-16 opacity-0" />
+                    <img
+                        src={arrow}
+                        className="h-16 p-5 rounded-3xl opacity-0 relative right-0"
+                    />
                 )}
             </div>
         </div>
