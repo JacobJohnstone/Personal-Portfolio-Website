@@ -22,7 +22,7 @@ const Title = () => {
                         </p>
                     </div>
                 </div>
-                <div className="relative top-24 z-40">
+                <div className="relative z-40 animate-BEScFloat">
                     <p className="blur-[20px] text-purple-500 w-screen text-center font-bold text-4xl lg:text-6xl lg:tracking-wider font-mono animate-signGlow">
                         B.E.Sc
                     </p>

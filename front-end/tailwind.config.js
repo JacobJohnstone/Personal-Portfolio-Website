@@ -74,6 +74,14 @@ module.exports = {
                     from: { opacity: 0 },
                     to: { opacity: 1 },
                 },
+                floatIn: {
+                    from: { opacity: 0, top: "5rem" },
+                    to: { opacity: 1, top: "0rem" },
+                },
+                floatInBESc: {
+                    from: { opacity: 0, top: "10rem" },
+                    to: { opacity: 1, top: "6rem" },
+                },
             },
             colors: {
                 smallEclipse: "#554301",
@@ -88,6 +96,11 @@ module.exports = {
                 titleBackground: "titleBackground 4s linear 1s both",
                 signGlow: "glow 5s linear infinite",
                 fadeIn: "fadeIn 0.5s linear forwards",
+                tableOfContentsOne: "floatIn 1s linear both",
+                tableOfContentsTwo: "floatIn 1s linear 0.5s both",
+                tableOfContentsThree: "floatIn 1s linear 1s both",
+                tableOfContentsFour: "floatIn 1s linear 1.5s both",
+                BEScFloat: "floatInBESc 1s linear both",
             },
         },
     },
