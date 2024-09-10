@@ -13,28 +13,39 @@ const Contact = () => {
 
                 <div className="w-full flex justify-center">
                     <div className="flex h-20 w-fit justify-center items-center my-10 bg-gray-300 py-2 rounded-3xl">
-                        <img
-                            src={resume}
-                            className="max-h-full mx-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer"
-                        />
-
-                        <img
-                            src={github}
-                            className="max-h-full mx-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer"
-                        />
+                        <div className="h-20">
+                            <a
+                                href="..\..\assets\Jacob-Johnstone-Resume.pdf"
+                                target="_blank"
+                                className="max-h-full"
+                            >
+                                <img
+                                    src={resume}
+                                    className="h-20 mx-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer"
+                                />
+                            </a>
+                        </div>
+                        <a href="https://github.com/Jacob-13" target="_blank">
+                            <img
+                                src={github}
+                                className="max-h-full mx-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer"
+                            />
+                        </a>
                         <a
                             href="https://www.linkedin.com/in/jacobjohnstone/"
-                            className="max-h-full"
+                            target="_blank"
                         >
                             <img
                                 src={linkedin}
                                 className="max-h-full mx-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer"
                             />
                         </a>
-                        <img
-                            src={email}
-                            className="max-h-full mx-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer"
-                        />
+                        <a href="mailto:jjohnstone681@gmail.com">
+                            <img
+                                src={email}
+                                className="max-h-full mx-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer"
+                            />
+                        </a>
                     </div>
                 </div>
             </div>
