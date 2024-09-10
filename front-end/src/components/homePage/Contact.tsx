@@ -17,9 +17,9 @@ const Contact = () => {
                     <div className="flex h-20 w-fit justify-center items-center my-10 bg-gray-300 py-2 rounded-3xl">
                         <div className="h-20">
                             <a
-                                href="..\..\assets\Jacob-Johnstone-Resume.pdf"
+                                href="/assets/Jacob-Johnstone-Resume.pdf"
                                 target="_blank"
-                                className=""
+                                rel="noopener noreferrer"
                             >
                                 <img
                                     src={resume}
