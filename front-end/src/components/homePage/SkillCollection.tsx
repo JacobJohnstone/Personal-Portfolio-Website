@@ -2,18 +2,18 @@ import Skill from "./Skill";
 
 const SkillCollection = () => {
     return (
-        <div className="relative w-fit h-fit">
+        <div className="relative w-fit h-fit mt-20">
             <div className="relative z-40">
                 <p className="text-yellow-500 blur-[20px] w-screen text-center text-7xl animate-signGlow">
                     Skills
                 </p>
                 <div className="absolute top-0 z-20 w-fit">
-                    <p className="text-center blur-[4px] text-yellow-300 text-4xl lg:text-7xl w-screen animate-signGlow">
+                    <p className="text-center blur-[4px] text-yellow-300 text-7xl w-screen animate-signGlow">
                         Skills
                     </p>
                 </div>
                 <div className="absolute top-0 z-20 w-fit">
-                    <p className="text-center text-titleFinal text-7xl w-screen lg:text-7xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                    <p className="text-center text-titleFinal text-7xl w-screen drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                         Skills
                     </p>
                 </div>

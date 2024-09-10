@@ -20,12 +20,12 @@ const ProjectCollection = () => {
                     Projects
                 </p>
                 <div className="absolute top-0 z-20 w-fit">
-                    <p className="text-center blur-[4px] text-sky-300 text-4xl lg:text-7xl w-screen animate-signGlow">
+                    <p className="text-center blur-[4px] text-sky-300 text-7xl w-screen animate-signGlow">
                         Projects
                     </p>
                 </div>
                 <div className="absolute top-0 z-20 w-fit">
-                    <p className="text-center text-titleFinal text-7xl w-screen lg:text-7xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                    <p className="text-center text-titleFinal text-7xl w-screen drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                         Projects
                     </p>
                 </div>
