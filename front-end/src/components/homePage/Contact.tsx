@@ -7,8 +7,10 @@ const Contact = () => {
     return (
         <div className="w-screen h-fit flex justify-center mt-20 bg-gray-800 z-40 pt-10">
             <div className="flex-block w-2/3 justify-center">
-                <div className="text-titleFinal text-center text-7xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-                    Contact
+                <div className="flex justify-center">
+                    <p className="text-titleFinal text-center text-7xl rounded-xl w-fit drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                        Contact
+                    </p>
                 </div>
 
                 <div className="w-full flex justify-center">
@@ -17,35 +19,44 @@ const Contact = () => {
                             <a
                                 href="..\..\assets\Jacob-Johnstone-Resume.pdf"
                                 target="_blank"
-                                className="max-h-full"
+                                className=""
                             >
                                 <img
                                     src={resume}
-                                    className="h-20 mx-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer"
+                                    className="max-h-full mx-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer"
                                 />
                             </a>
                         </div>
-                        <a href="https://github.com/Jacob-13" target="_blank">
-                            <img
-                                src={github}
-                                className="max-h-full mx-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer"
-                            />
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/jacobjohnstone/"
-                            target="_blank"
-                        >
-                            <img
-                                src={linkedin}
-                                className="max-h-full mx-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer"
-                            />
-                        </a>
-                        <a href="mailto:jjohnstone681@gmail.com">
-                            <img
-                                src={email}
-                                className="max-h-full mx-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer"
-                            />
-                        </a>
+                        <div className="h-20">
+                            <a
+                                href="https://github.com/Jacob-13"
+                                target="_blank"
+                            >
+                                <img
+                                    src={github}
+                                    className="max-h-full mx-10 p-3 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer"
+                                />
+                            </a>
+                        </div>
+                        <div className="h-20">
+                            <a
+                                href="https://www.linkedin.com/in/jacobjohnstone/"
+                                target="_blank"
+                            >
+                                <img
+                                    src={linkedin}
+                                    className="max-h-full mx-10 p-3 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer"
+                                />
+                            </a>
+                        </div>
+                        <div className="h-20">
+                            <a href="mailto:jjohnstone681@gmail.com">
+                                <img
+                                    src={email}
+                                    className="max-h-full mx-10 p-2 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer"
+                                />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
