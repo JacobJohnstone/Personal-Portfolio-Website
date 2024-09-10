@@ -115,20 +115,20 @@ const Project = ({
                 //  bg-gradient-to-r from-transparent via-gray-300 to-transparent
             }
             <div className="flex justify-center">
+                {isOverflowing && !isScrolledLeft ? (
+                    <img
+                        alt="left arrow"
+                        src={leftArrow}
+                        onClick={handleScrollLeft}
+                        className="sticky left-0 p-5 bg-gradient-to-r from-white to-gray-400 rounded-3xl h-16 cursor-pointer animate-fadeIn"
+                    />
+                ) : (
+                    <img src={leftArrow} className="opacity-0 h-16 p-5 " />
+                )}
                 <div
                     ref={iconDivRef}
                     className="relative flex h-16 w-fit max-w-full justify-start bg-gray-400 rounded-3xl items-center object-contain overflow-x-scroll no-scrollbar"
                 >
-                    {isOverflowing && !isScrolledLeft ? (
-                        <img
-                            alt="left arrow"
-                            src={leftArrow}
-                            onClick={handleScrollLeft}
-                            className="sticky left-0 p-5 bg-gradient-to-r from-white to-gray-400 rounded-3xl max-h-full cursor-pointer animate-fadeIn"
-                        />
-                    ) : (
-                        <></>
-                    )}
                     {technologyIcons.map((technology, i) =>
                         technology == express ? (
                             <img
@@ -144,18 +144,18 @@ const Project = ({
                             />
                         )
                     )}
-                    {isOverflowing && !isScrolledRight ? (
-                        <img
-                            alt="arrow"
-                            ref={scrollBtnRef}
-                            src={arrow}
-                            className="sticky right-0 bg-gradient-to-l from-white to-gray-400 rounded-3xl max-h-full cursor-pointer animate-fadeIn"
-                            onClick={handleScrollRight}
-                        />
-                    ) : (
-                        <></>
-                    )}
                 </div>
+                {isOverflowing && !isScrolledRight ? (
+                    <img
+                        alt="arrow"
+                        ref={scrollBtnRef}
+                        src={arrow}
+                        className="sticky right-0 p-5 circle-gradient-bg rounded-3xl h-16 cursor-pointer animate-fadeIn"
+                        onClick={handleScrollRight}
+                    />
+                ) : (
+                    <img src={arrow} className="h-16 opacity-0" />
+                )}
             </div>
         </div>
     );
