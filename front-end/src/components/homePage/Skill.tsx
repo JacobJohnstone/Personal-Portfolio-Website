@@ -9,11 +9,11 @@ type SkillProps = {
 
 const Skill = ({ title, description }: SkillProps) => {
     return (
-        <div className="bg-gray-800 mx-2 my-2 rounded-3xl w-fit">
+        <div className="bg-gradient-to-b from-gray-800 via-gray-700 to-gray-800 border-2 border-gray-400 mx-2 my-2 rounded-3xl w-fit">
             <div className="text-gray-100 text-lg sm:text-2xl md:text-2xl text-center pt-5 px-1 font-mono">
                 {title}
             </div>
-            <div className="text-gray-400 text-center text-md md:text-lg pb-10 px-5 lg:px-2 pt-5">
+            <div className="text-gray-300 text-center text-md md:text-lg pb-10 px-5 lg:px-2 pt-5">
                 {String(description)}
             </div>
         </div>

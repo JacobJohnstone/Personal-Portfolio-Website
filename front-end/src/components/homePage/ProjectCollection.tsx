@@ -13,6 +13,8 @@ import pytorch from "../../images/Pytorch.png";
 import restAPI from "../../images/rest-api-icon.png";
 import linux from "../../images/linuxIcon.png";
 import modelSetup from "../../images/modelDisplay.jpeg";
+import instructors from "../../images/instructor-levels.png";
+import model from "../../images/modelImage.jpg";
 
 const ProjectCollection = () => {
     return (
@@ -41,7 +43,7 @@ const ProjectCollection = () => {
                             "Translated images taken of a plastic model heart into realistic heart images",
                             "Implemented streamed image translation allowing rapid, continual translation for a camera",
                         ]}
-                        featureImages={[modelSetup, backend]}
+                        featureImages={[modelSetup, model]}
                         technologyIcons={[python, pytorch, linux]}
                     />
                     <Project
@@ -50,10 +52,10 @@ const ProjectCollection = () => {
                         features={[
                             "Relational database designed and implemented to be normalized (ER Picture)",
                             "Member Info provides all the information connected to the member requested, such as the class sessions they're attending and what classes (offerings) they're a part of",
-                            "Able to track member statistics such as workout frequencies and class registrations",
+                            "Able to track member statistics such as workout frequencies and class registrations, as well as get available instructors by skill level",
                             "Made use of an Express backend used to manage queries and responses to and from the database",
                         ]}
-                        featureImages={[ER, pointers, backend]}
+                        featureImages={[ER, pointers, instructors, backend]}
                         technologyIcons={[
                             nodeJS,
                             express,

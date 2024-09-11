@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import express from "../../images/express.png";
 import arrow from "../../images/arrow.png";
 import leftArrow from "../../images/leftArrow.png";
+import heartIcon from "../../images/heartIcon.png";
 
 type ProjectProps = {
     title: string;
@@ -31,7 +32,11 @@ const Project = ({
     const [isScrolledLeft, setIsScrolledLeft] = useState<boolean>(true);
 
     useEffect(() => {
-        setImage(defaultDatabase); // title image
+        if (title == "Image Translation for Medical Students") {
+            setImage(heartIcon); // title image
+        } else {
+            setImage(defaultDatabase);
+        }
         showScrollArrow();
         window.addEventListener("resize", showScrollArrow);
     }, [title]);
@@ -78,32 +83,31 @@ const Project = ({
     }
 
     return (
-        <div className="my-10 bg-gray-800 p-10 rounded-3xl w-full">
+        <div className="my-10 bg-gradient-to-b from-gray-800 via-gray-600 to-gray-800 p-10 rounded-3xl w-full border-4 border-gray-400">
             <div className="text-titleFinal text-center text-2xl md:text-3xl lg:text-4xl mb-3 font-mono">
                 {title}
             </div>
-            <div className="text-gray-400 text-center text-md md:text-lg lg:text-xl my-3">
+            <div className="text-gray-300 text-center text-md md:text-lg lg:text-xl my-3">
                 {description}
             </div>
-            <div className="flex-block sm:flex justify-between items-center h-fit p-5 text-gray-500">
-                <div className="flex-block justify-start relative items-center sm:w-1/2">
+            <div className="flex-block md:flex justify-between items-center h-fit p-5 text-gray-500">
+                <div className="flex-block justify-start relative items-center md:w-1/2 lg:min-h-[25rem]">
                     <div className="text-lg sm:text-xl md:text-2xl text-titleFinal font-mono pl-3">
                         Features
                     </div>
-                    <ul className="mr-2 h-60 p-3 overflow-y-scroll no-scrollbar bg-gray-800 rounded-3xl flex-block justify-center w-full">
+                    <ul className="mr-2 h-60 lg:h-[25rem] p-3 overflow-y-scroll no-scrollbar bg-gray-800 rounded-3xl flex-block justify-center w-full">
                         {features.map((feature, i) => (
                             <li
                                 key={i}
                                 onClick={(e) => handleFeatureClick(i)}
-                                className="bg-blue-700 bg-opacity-80 text-titleFinal text-sm lg:text-base h-fit w-fit px-3 my-2 rounded-3xl cursor-pointer py-2 hover:bg-sky-600 transition duration-500 linear"
-                            >
+                                className="bg-blue-700 bg-opacity-80 text-titleFinal text-sm lg:text-base h-fit w-fit px-3 my-2 rounded-3xl cursor-pointer py-2 hover:bg-sky-600 transition duration-500 linear">
                                 <ProjectFeature name={features[i]} />
                             </li>
                         ))}
                     </ul>
                     <div className="absolute bottom-0 w-full h-10 bg-gradient-to-t from-gray-800 to-transparent z-40 rounded-xl"></div>
                 </div>
-                <div className="flex justify-center items-center sm:w-1/2 h-60 ml-2">
+                <div className="flex justify-center items-center md:w-1/2 sm:mt-5 md:h-[20rem] lg:h-[30rem] md:ml-5">
                     <img
                         src={image}
                         className="max-h-full rounded-3xl"
@@ -127,8 +131,7 @@ const Project = ({
                 )}
                 <div
                     ref={iconDivRef}
-                    className="relative flex-block h-fit xs:flex xs:h-16 mt-2 xs:w-fit max-w-full justify-start bg-gradient-to-l from-gray-400 via-gray-100 to-gray-400 rounded-3xl items-center object-contain overflow-x-scroll no-scrollbar"
-                >
+                    className="relative flex-block h-fit xs:flex xs:h-16 mt-2 xs:w-fit max-w-full justify-start bg-gradient-to-l from-gray-400 via-gray-100 to-gray-400 rounded-3xl items-center object-contain overflow-x-scroll no-scrollbar">
                     {technologyIcons.map((technology, i) =>
                         technology == express ? (
                             <img
