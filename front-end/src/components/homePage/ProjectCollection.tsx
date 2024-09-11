@@ -12,6 +12,7 @@ import sqlIcon from "../../images/Sql_data_base_with_logo.png";
 import pytorch from "../../images/Pytorch.png";
 import restAPI from "../../images/rest-api-icon.png";
 import linux from "../../images/linuxIcon.png";
+import modelSetup from "../../images/modelDisplay.jpeg";
 
 const ProjectCollection = () => {
     return (
@@ -40,7 +41,7 @@ const ProjectCollection = () => {
                             "Translated images taken of a plastic model heart into realistic heart images",
                             "Implemented streamed image translation allowing rapid, continual translation for a camera",
                         ]}
-                        featureImages={[pointers, backend]}
+                        featureImages={[modelSetup, backend]}
                         technologyIcons={[python, pytorch, linux]}
                     />
                     <Project
