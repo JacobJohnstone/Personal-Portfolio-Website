@@ -12,19 +12,8 @@ import Contact from "./Contact";
 import { useEffect, useState } from "react";
 
 const Home = () => {
-    const [width, setWidth] = useState<number>(0);
-
-    useEffect(() => {
-        const handleResize = () => setWidth(window.innerWidth);
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
     return (
         <div className="bg-gray-900 overflow-x-hidden">
-            <p className="text-3xl text-titleFinal top-0 left-0 fixed">
-                Width: {width}
-            </p>
             <div className="h-screen w-screen">
                 <Title />
                 <div className="relative flex justify-center top-1/4">

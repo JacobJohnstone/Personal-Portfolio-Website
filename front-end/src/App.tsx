@@ -55,12 +55,6 @@ function App() {
         setDisplayHome(true);
     }
 
-    useEffect(() => {
-        const handleResize = () => setWidth(window.innerWidth);
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
     return (
         <div>
             {displayHome ? (
@@ -69,9 +63,6 @@ function App() {
                 </div>
             ) : (
                 <div className="h-screen flex bg-gray-900">
-                    <p className="top-0 left-0 text-titleFinal text-3xl">
-                        Width: {width}
-                    </p>
                     <div className="fixed flex justify-center items-center h-screen w-screen">
                         <div className="fixed bg-largeEclipse rounded-full w-screen h-screen blur-3xl xs:blur-[176px] bg-opacity-20"></div>
                         <div className="fixed bg-smallEclipse rounded-full w-1/2 h-3/5 blur-3xl xs:blur-[234px] bg-opacity-30 z-20"></div>
