@@ -18,26 +18,26 @@ function App() {
     // tailwind static to animation changes
     const powerBtnClasses = `${
         showPowerBtn
-            ? "relative top-20 z-40 cursor-pointer bg-btnColour opacity-30 p-2 rounded-full h-9 w-9 sm:h-12 sm:w-12 hover:opacity-80 transition duration-300 linear"
-            : "relative top-20 bg-btnColour opacity-80 p-2 rounded-full h-9 w-9 sm:h-12 sm:w-12 animate-powerDisable"
+            ? "relative top-5 md:top-20 z-40 cursor-pointer bg-btnColour opacity-30 p-2 rounded-full h-9 w-9 sm:h-12 sm:w-12 hover:opacity-80 transition duration-300 linear"
+            : "relative top-5 md:top-20 bg-btnColour opacity-80 p-2 rounded-full h-9 w-9 sm:h-12 sm:w-12 animate-powerDisable"
     }`;
 
     const titleClasses = `${
         titleMiddle
-            ? "absolute top-60 w-fit text-[#777777] text-5xl sm:text-7xl lg:text-9xl lg:tracking-wider font-thin font-mono z-40"
-            : "absolute w-fit text-5xl sm:text-7xl lg:text-9xl lg:tracking-wider drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-light font-mono z-40 animate-title"
+            ? "absolute top-60 w-fit text-[#777777] text-5xl  sm:text-6xl md:text-7xl lg:text-9xl lg:tracking-wider font-thin font-mono z-40"
+            : "absolute w-fit text-5xl  sm:text-6xl md:text-7xl lg:text-9xl lg:tracking-wider drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-light font-mono z-40 animate-title"
     }`;
 
     const titleBackgroundClasses = `${
         titleBackground
-            ? "absolute top-60 w-fit z-30 text-transparent text-5xl sm:text-7xl lg:text-9xl lg:tracking-wider font-bold font-mono"
-            : "absolute z-30 w-fit blur-[2px] text-purple-400 text-5xl sm:text-7xl lg:text-9xl lg:tracking-wider font-bold font-mono animate-titleBackground"
+            ? "absolute top-60 w-fit z-30 text-transparent text-5xl  sm:text-6xl md:text-7xl lg:text-9xl lg:tracking-wider font-bold font-mono"
+            : "absolute z-30 w-fit blur-[2px] text-purple-400 text-5xl  sm:text-6xl md:text-7xl lg:text-9xl lg:tracking-wider font-bold font-mono animate-titleBackground"
     }`;
 
     const secondBackgroundClasses = `${
         secondBackground
-            ? "absolute top-60 w-fit z-30 text-transparent text-5xl sm:text-7xl lg:text-9xl lg:tracking-wider font-bold font-mono"
-            : "absolute z-30 w-fit blur-[20px] text-purple-500 text-5xl sm:text-7xl lg:text-9xl lg:tracking-wider font-bold font-mono animate-titleBackground"
+            ? "absolute top-60 w-fit z-30 text-transparent text-5xl sm:text-6xl  md:text-7xl lg:text-9xl lg:tracking-wider font-bold font-mono"
+            : "absolute z-30 w-fit blur-[20px] text-purple-500 text-5xl sm:text-6xl  md:text-7xl lg:text-9xl lg:tracking-wider font-bold font-mono animate-titleBackground"
     }`;
 
     // Called on PowerBtn Click
@@ -67,7 +67,7 @@ function App() {
                 <div className="no-scrollbar">
                     <Home />
                 </div>
-            ) : 5
+            ) : (
                 <div className="h-screen flex bg-gray-900">
                     <p className="top-0 left-0 text-titleFinal text-3xl">
                         Width: {width}
