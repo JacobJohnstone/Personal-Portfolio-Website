@@ -95,7 +95,7 @@ const Project = ({
                             <li
                                 key={i}
                                 onClick={(e) => handleFeatureClick(i)}
-                                className="bg-blue-700 bg-opacity-80 text-titleFinal text-sm md:text-lg lg:text-xl bg-opacity-50 h-fit w-fit px-3 my-2 rounded-3xl cursor-pointer py-2 hover:bg-sky-600 transition duration-500 linear"
+                                className="bg-blue-700 bg-opacity-80 text-titleFinal text-sm lg:text-base h-fit w-fit px-3 my-2 rounded-3xl cursor-pointer py-2 hover:bg-sky-600 transition duration-500 linear"
                             >
                                 <ProjectFeature name={features[i]} />
                             </li>
@@ -134,13 +134,13 @@ const Project = ({
                             <img
                                 key={i}
                                 src={technology}
-                                className="max-h-full xs:py-5 xs:px-5"
+                                className="max-h-full my-8 xs:my-0 xs:py-5 xs:px-5"
                             />
                         ) : (
                             <img
                                 key={i}
                                 src={technology}
-                                className="max-h-full xs:py-2 xs:px-5"
+                                className="max-h-full my-8 xs:my-0 xs:py-2 xs:px-5"
                             />
                         )
                     )}

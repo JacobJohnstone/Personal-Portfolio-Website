@@ -6,7 +6,7 @@ import email from "../../images/gmailIcon.webp";
 const Contact = () => {
     return (
         <div className="w-screen h-fit flex justify-center mt-20 bg-gray-800 z-40 pt-7 xs:pt-10">
-            <div className="flex-block w-3/4 xs:w-2/3 justify-center">
+            <div className="flex-block w-3/4 xs:w-2/3 lg:w-fit justify-center">
                 <div className="flex justify-center">
                     <p className="text-titleFinal text-center text-5xl sm:text-6xl lg:text-7xl rounded-xl w-fit drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                         Contact

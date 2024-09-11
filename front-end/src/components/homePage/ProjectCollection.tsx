@@ -11,6 +11,7 @@ import reactIcon from "../../images/react.png";
 import sqlIcon from "../../images/Sql_data_base_with_logo.png";
 import pytorch from "../../images/Pytorch.png";
 import restAPI from "../../images/rest-api-icon.png";
+import linux from "../../images/linuxIcon.png";
 
 const ProjectCollection = () => {
     return (
@@ -36,20 +37,20 @@ const ProjectCollection = () => {
                         title="Image Translation for Medical Students"
                         description="Created an image translation program to be used for medical students in training, enhancing their training by allowing them to view a more realistic version when practicing mitral valve surgery procedures"
                         features={[
-                            "Translated plastic, model heart images into realistic looking heart images",
-                            "Implemented rapid image translation allowing rapid streaming from a camera",
+                            "Translated images taken of a plastic model heart into realistic heart images",
+                            "Implemented streamed image translation allowing rapid, continual translation for a camera",
                         ]}
                         featureImages={[pointers, backend]}
-                        technologyIcons={[python, pytorch]}
+                        technologyIcons={[python, pytorch, linux]}
                     />
                     <Project
                         title="Relational Database Design and Implementation"
                         description="Created and designed a relational database. The focus was on the implementation and functionality of the database rather than the front-end design. Within the group, I was in charge of putting together the front end pages and completing the 'Member Info' page, as well as assisting the design and connection of the database"
                         features={[
                             "Relational database designed and implemented to be normalized (ER Picture)",
-                            "Member Info provides all the information connected to the member requestsed, such as the class sessions they will be attending and what classes (offerings) they are a part of",
-                            "Able to track member statistics such as workout frequencies and class registrations enabling more business decision to be made more effectively",
-                            "Made use of an Express backend used to manage queries and responses to and from the databse",
+                            "Member Info provides all the information connected to the member requested, such as the class sessions they're attending and what classes (offerings) they're a part of",
+                            "Able to track member statistics such as workout frequencies and class registrations",
+                            "Made use of an Express backend used to manage queries and responses to and from the database",
                         ]}
                         featureImages={[ER, pointers, backend]}
                         technologyIcons={[
