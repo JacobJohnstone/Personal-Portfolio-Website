@@ -17,7 +17,7 @@ const Education = () => {
                 </div>
             </div>
             <div className="flex justify-center">
-                <div className="bg-gray-800 w-2/3 h-fit flex-block mt-6 p-10 rounded-3xl">
+                <div className="bg-gray-800 w-5/6 xs:w-2/3 h-fit flex-block mt-6 p-10 rounded-3xl">
                     <div className="text-titleFinal text-lg md:text-2xl">
                         The University of Western Ontario
                     </div>
@@ -27,7 +27,7 @@ const Education = () => {
                     <div className="text-titleFinal text-lg md:text-xl mt-5">
                         Relevant Coursework
                     </div>
-                    <div className="text-gray-400 text-md md:text-lg ml-10 mt-2">
+                    <div className="text-gray-400 text-md md:text-lg xs:ml-10 mt-2">
                         Web Technologies, Database Management Systems, Data
                         Structures and Algorithms, Operating Systems, Artificial
                         Intelligence, Software Engineering Design, Information

@@ -85,8 +85,8 @@ const Project = ({
             <div className="text-gray-400 text-center text-md md:text-lg lg:text-xl my-3">
                 {description}
             </div>
-            <div className="flex justify-between items-center h-fit p-5 text-gray-500">
-                <div className="flex-block justify-start relative items-center w-1/2">
+            <div className="flex-block sm:flex justify-between items-center h-fit p-5 text-gray-500">
+                <div className="flex-block justify-start relative items-center sm:w-1/2">
                     <div className="text-lg sm:text-xl md:text-2xl text-titleFinal font-mono pl-3">
                         Features
                     </div>
@@ -103,7 +103,7 @@ const Project = ({
                     </ul>
                     <div className="absolute bottom-0 w-full h-10 bg-gradient-to-t from-gray-800 to-transparent z-40 rounded-xl"></div>
                 </div>
-                <div className="flex justify-center items-center w-1/2 h-60 ml-2">
+                <div className="flex justify-center items-center sm:w-1/2 h-60 ml-2">
                     <img
                         src={image}
                         className="max-h-full rounded-3xl"
@@ -127,20 +127,20 @@ const Project = ({
                 )}
                 <div
                     ref={iconDivRef}
-                    className="relative flex h-16 mt-2 w-fit max-w-full justify-start bg-gradient-to-l from-gray-400 via-gray-100 to-gray-400 rounded-3xl items-center object-contain overflow-x-scroll no-scrollbar"
+                    className="relative flex-block h-fit xs:flex xs:h-16 mt-2 xs:w-fit max-w-full justify-start bg-gradient-to-l from-gray-400 via-gray-100 to-gray-400 rounded-3xl items-center object-contain overflow-x-scroll no-scrollbar"
                 >
                     {technologyIcons.map((technology, i) =>
                         technology == express ? (
                             <img
                                 key={i}
                                 src={technology}
-                                className="max-h-full py-5 px-5"
+                                className="max-h-full xs:py-5 xs:px-5"
                             />
                         ) : (
                             <img
                                 key={i}
                                 src={technology}
-                                className="max-h-full py-2 px-5"
+                                className="max-h-full xs:py-2 xs:px-5"
                             />
                         )
                     )}

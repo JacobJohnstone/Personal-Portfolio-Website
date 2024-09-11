@@ -14,7 +14,7 @@ import restAPI from "../../images/rest-api-icon.png";
 
 const ProjectCollection = () => {
     return (
-        <div className="relative w-fit h-fit mt-10">
+        <div className="relative w-screen h-fit mt-10">
             <div className="relative z-40">
                 <p className="text-sky-500 blur-[20px] w-screen text-center text-5xl sm:text-6xl lg:text-7xl animate-signGlow">
                     Projects
@@ -31,7 +31,7 @@ const ProjectCollection = () => {
                 </div>
             </div>
             <div className="flex justify-center mt-6">
-                <div className="flex-block w-2/3">
+                <div className="flex-block w-5/6 xs:w-2/3">
                     <Project
                         title="Image Translation for Medical Students"
                         description="Created an image translation program to be used for medical students in training, enhancing their training by allowing them to view a more realistic version when practicing mitral valve surgery procedures"

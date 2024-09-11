@@ -2,7 +2,7 @@ import Skill from "./Skill";
 
 const SkillCollection = () => {
     return (
-        <div className="relative w-fit h-fit mt-20">
+        <div className="relative w-screen h-fit mt-20">
             <div className="relative z-40">
                 <p className="text-yellow-500 blur-[20px] w-screen text-center text-5xl sm:text-6xl lg:text-7xl animate-signGlow">
                     Skills
@@ -19,7 +19,7 @@ const SkillCollection = () => {
                 </div>
             </div>
             <div className="flex justify-center mt-6">
-                <div className="flex-block mdlg:flex items-center justify-center w-2/3 rounded-3xl m-10">
+                <div className="flex-block mdlg:flex items-center justify-center w-5/6 xs:w-2/3 rounded-3xl m-10">
                     <Skill
                         title="Software Development"
                         description="Best practices, OOP, Version control: Java, JavaScript, TypeScript, Python"
