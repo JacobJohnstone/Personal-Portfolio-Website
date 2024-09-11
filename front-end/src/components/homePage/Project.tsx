@@ -46,13 +46,13 @@ const Project = ({
     function handleScrollLeft() {
         if (iconDivRef.current) {
             iconDivRef.current.scrollTo({
-                left: iconDivRef.current.scrollLeft - 300,
+                left: iconDivRef.current.scrollLeft - 100,
                 behavior: "smooth",
             });
             const { clientWidth, scrollWidth, scrollLeft } = iconDivRef.current;
             //const scrolledToRight = scrollLeft + clientWidth >= scrollWidth;
             setIsScrolledRight(false);
-            const scrolledToLeft = scrollLeft - 300 <= 0;
+            const scrolledToLeft = scrollLeft - 100 <= 0;
             setIsScrolledLeft(scrolledToLeft);
         }
     }
@@ -66,12 +66,12 @@ const Project = ({
         //useRef, scroll div
         if (iconDivRef.current) {
             iconDivRef.current.scrollTo({
-                left: iconDivRef.current.scrollLeft + 300, // Adjust the value as needed
+                left: iconDivRef.current.scrollLeft + 100, // Adjust the value as needed
                 behavior: "smooth",
             });
             const { scrollWidth, clientWidth, scrollLeft } = iconDivRef.current;
             const scrolledToRight =
-                scrollLeft + 300 + clientWidth >= scrollWidth;
+                scrollLeft + 100 + clientWidth >= scrollWidth;
             setIsScrolledRight(scrolledToRight);
             setIsScrolledLeft(false);
         }
@@ -79,15 +79,15 @@ const Project = ({
 
     return (
         <div className="my-10 bg-gray-800 p-10 rounded-3xl w-full">
-            <div className="text-titleFinal text-center text-4xl mb-5 font-mono">
+            <div className="text-titleFinal text-center text-2xl md:text-3xl lg:text-4xl mb-3 font-mono">
                 {title}
             </div>
-            <div className="text-gray-400 text-center text-2xl my-5">
+            <div className="text-gray-400 text-center text-md md:text-lg lg:text-xl my-3">
                 {description}
             </div>
             <div className="flex justify-between items-center h-fit p-5 text-gray-500">
                 <div className="flex-block justify-start relative items-center w-1/2">
-                    <div className="text-2xl text-titleFinal font-mono pl-3">
+                    <div className="text-lg sm:text-xl md:text-2xl text-titleFinal font-mono pl-3">
                         Features
                     </div>
                     <ul className="mr-2 h-60 p-3 overflow-y-scroll no-scrollbar bg-gray-800 rounded-3xl flex-block justify-center w-full">
@@ -95,7 +95,7 @@ const Project = ({
                             <li
                                 key={i}
                                 onClick={(e) => handleFeatureClick(i)}
-                                className="bg-blue-700 bg-opacity-80 text-titleFinal bg-opacity-50 h-fit w-fit px-3 my-2 rounded-3xl cursor-pointer py-2 hover:bg-sky-500 transition duration-500 linear"
+                                className="bg-blue-700 bg-opacity-80 text-titleFinal text-sm md:text-lg lg:text-xl bg-opacity-50 h-fit w-fit px-3 my-2 rounded-3xl cursor-pointer py-2 hover:bg-sky-600 transition duration-500 linear"
                             >
                                 <ProjectFeature name={features[i]} />
                             </li>
@@ -117,7 +117,7 @@ const Project = ({
                         alt="left arrow"
                         src={leftArrow}
                         onClick={handleScrollLeft}
-                        className="relative left-0 p-5 mt-8 circle-gradient-bg rounded-3xl h-14 cursor-pointer animate-fadeIn"
+                        className="relative left-0 p-5 mt-2 circle-gradient-bg rounded-3xl h-14 cursor-pointer animate-fadeIn"
                     />
                 ) : (
                     <img
@@ -127,7 +127,7 @@ const Project = ({
                 )}
                 <div
                     ref={iconDivRef}
-                    className="relative flex h-16 w-fit max-w-full mt-8 justify-start bg-gradient-to-l from-gray-400 via-gray-100 to-gray-400 rounded-3xl items-center object-contain overflow-x-scroll no-scrollbar"
+                    className="relative flex h-16 mt-2 w-fit max-w-full justify-start bg-gradient-to-l from-gray-400 via-gray-100 to-gray-400 rounded-3xl items-center object-contain overflow-x-scroll no-scrollbar"
                 >
                     {technologyIcons.map((technology, i) =>
                         technology == express ? (
@@ -150,7 +150,7 @@ const Project = ({
                         alt="arrow"
                         ref={scrollBtnRef}
                         src={arrow}
-                        className="relative right-0 p-5 mt-8 circle-gradient-bg rounded-3xl h-14 cursor-pointer animate-fadeIn"
+                        className="relative right-0 p-5 mt-2 circle-gradient-bg rounded-3xl h-14 cursor-pointer animate-fadeIn"
                         onClick={handleScrollRight}
                     />
                 ) : (
