@@ -17,9 +17,21 @@ import git from "../../images/git-icon.png";
 import aws from "../../images/aws-icon.webp";
 import html from "../../images/html-icon.webp";
 import cssIcon from "../../images/css-icon.png";
+import Cuda from "../../images/CUDAIcon.png";
+import insomniaIcon from "../../images/insomnia-icon.png";
+import fireBaseIcon from "../../images/firebaseIcon.webp";
+import MusicLanding from "../../images/MusicLanding.jpg";
+import MusicAdmin from "../../images/Admin.jpg";
+import MusicUser from "../../images/User-home.jpg";
+import musicPwdChange from "../../images/password-change.jpg";
+import musicPlayable from "../../images/Track-playable.jpg";
+import musicPublicPlaylists from "../../images/public-playlists.jpg";
+import musicSignin from "../../images/Sign-in.jpg";
+import musicSearch from "../../images/MusicSearch.gif";
 import modelSetup from "../../images/modelDisplay.jpeg";
 import instructors from "../../images/instructor-levels.png";
 import model from "../../images/modelImage.jpg";
+import modelHeart2 from "../../images/modelHeart2.jpg";
 import pokedex from "../../images/Pokedex.jpg";
 import pokedexBoundary from "../../images/Pokedex-boundary.jpg";
 import pokedexSearch from "../../images/Pokedex-number.jpg";
@@ -57,13 +69,14 @@ const ProjectCollection = () => {
                 <div className="flex-block w-5/6 xs:w-2/3">
                     <Project
                         title="Image Translation for Medical Students"
-                        description="Created an image translation program to be used for medical students in training, enhancing their training by allowing them to view a more realistic version when practicing mitral valve surgery procedures"
+                        description="Created an image translation program to be used for medical students in training, enhancing their practice by creating a more realistic visual for simulated mitral valve surgery procedures. The images displayed only show the artificial heart valve before AI translations."
                         features={[
                             "Translated images taken of a plastic model heart into realistic heart images",
                             "Implemented streamed image translation allowing rapid, continual translation for a camera",
+                            "Displayed results using OpenCV, achieving up to 10 frames per second",
                         ]}
-                        featureImages={[modelSetup, model]}
-                        technologyIcons={[python, pytorch, linux]}
+                        featureImages={[modelSetup, model, modelHeart2]}
+                        technologyIcons={[python, pytorch, git, linux, Cuda]}
                     />
                     <Project
                         title="Relational Database Design and Implementation"
@@ -82,29 +95,43 @@ const ProjectCollection = () => {
                             bootStrap,
                             sqlIcon,
                             restAPI,
+                            git,
                         ]}
                     />
                     {seeAllProjectsBtn && (
                         <div>
                             <div className="relative h-64 xs:h-96 overflow-hidden -top-10">
                                 <Project
-                                    title="Simple Pokedex"
-                                    description="Created a small pokedex using vanilla JavaScript, HTML, and CSS enableing users to search for a pokemon. Search results provide extra information such as rarity."
+                                    title="Music Web App"
+                                    description="A music web application built with an express back-end supported by firebase and a react front-end. Users can sign-up, manage their accounts, and create playlists from the available music data."
                                     features={[
-                                        "Displays the first 20 pokemon in the pokedex with they index and name",
-                                        "Allows users to search for pokemon and displays an alert with the search results",
-                                        "Implemented input validation to ensure name search only contains alphabetical characters and number search is within the boundaries",
+                                        "Has a landing page that includes a welcome message and public playlists created by other users",
+                                        "Includes a public playlist section that displays playlists that have been created by others users and have the public flag",
+                                        "Implemented user authentication and authorization using firebase that ensures input validation for emails and strong password recommendations",
+                                        "Login brings users to their home page where they can create/modify playlists and search for songs",
+                                        "Includes dynamic search results while looking for different tracks",
+                                        "Each search result includes a dropdown option that includes a play button, bringing them to YouTube with search results for the specified track",
+                                        "Users can also logout and are able to change their password if they wish",
+                                        "The admin accounts created to add other admins as well as remove users",
                                     ]}
                                     featureImages={[
-                                        pokedex,
-                                        pokedexSearch,
-                                        pokedexBoundary,
+                                        MusicLanding,
+                                        musicPublicPlaylists,
+                                        musicSignin,
+                                        MusicUser,
+                                        musicSearch,
+                                        musicPlayable,
+                                        musicPwdChange,
+                                        MusicAdmin,
                                     ]}
                                     technologyIcons={[
-                                        html,
-                                        cssIcon,
-                                        javascript,
                                         git,
+                                        fireBaseIcon,
+                                        express,
+                                        reactIcon,
+                                        insomniaIcon,
+                                        nodeJS,
+                                        restAPI,
                                         aws,
                                     ]}
                                 />
@@ -122,9 +149,42 @@ const ProjectCollection = () => {
                             </div>
                         </div>
                     )}
-
                     {seeAllProjects && (
                         <div>
+                            <Project
+                                title="Music Web App"
+                                description="A music web application built with an express back-end supported by firebase and a react front-end. Users can sign-up, manage their accounts, and create playlists from the available music data."
+                                features={[
+                                    "Has a landing page that includes a welcome message and public playlists created by other users",
+                                    "Includes a public playlist section that displays playlists that have been created by others users and have the public flag",
+                                    "Implemented user authentication and authorization using firebase that ensures input validation for emails and strong password recommendations",
+                                    "Login brings users to their home page where they can create/modify playlists and search for songs",
+                                    "Includes dynamic search results while looking for different tracks",
+                                    "Each search result includes a dropdown option that includes a play button, bringing them to YouTube with search results for the specified track",
+                                    "Users can also logout and are able to change their password if they wish",
+                                    "The admin accounts created to add other admins as well as remove users",
+                                ]}
+                                featureImages={[
+                                    MusicLanding,
+                                    musicPublicPlaylists,
+                                    musicSignin,
+                                    MusicUser,
+                                    musicSearch,
+                                    musicPlayable,
+                                    musicPwdChange,
+                                    MusicAdmin,
+                                ]}
+                                technologyIcons={[
+                                    git,
+                                    fireBaseIcon,
+                                    express,
+                                    reactIcon,
+                                    insomniaIcon,
+                                    nodeJS,
+                                    restAPI,
+                                    aws,
+                                ]}
+                            />
                             <Project
                                 title="Simple Pokedex"
                                 description="Created a small pokedex using vanilla JavaScript, HTML, and CSS enableing users to search for a pokemon. Search results provide extra information such as rarity."
