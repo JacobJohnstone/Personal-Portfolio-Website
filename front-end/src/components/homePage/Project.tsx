@@ -6,6 +6,7 @@ import express from "../../images/express.png";
 import arrow from "../../images/arrow.png";
 import leftArrow from "../../images/leftArrow.png";
 import heartIcon from "../../images/heartIcon.png";
+import pokeball from "../../images/pokeball-icon.png";
 
 type ProjectProps = {
     title: string;
@@ -34,6 +35,8 @@ const Project = ({
     useEffect(() => {
         if (title == "Image Translation for Medical Students") {
             setImage(heartIcon); // title image
+        } else if (title == "Simple Pokedex") {
+            setImage(pokeball);
         } else {
             setImage(defaultDatabase);
         }
@@ -83,34 +86,37 @@ const Project = ({
     }
 
     return (
-        <div className="my-10 bg-gradient-to-b from-gray-800 via-gray-600 to-gray-800 p-10 rounded-3xl w-full border-4 border-gray-400">
+        <div className="my-10 bg-gradient-to-b from-gray-800 via-gray-600 to-gray-800 p-5 rounded-3xl w-full border-4 border-gray-400">
             <div className="text-titleFinal text-center text-2xl md:text-3xl lg:text-4xl mb-3 font-mono">
                 {title}
             </div>
-            <div className="text-gray-300 text-center text-md md:text-lg lg:text-xl my-3">
+            <div className="text-gray-300 text-center text-md md:text-lg lg:text-xl">
                 {description}
             </div>
-            <div className="flex-block md:flex justify-between items-center h-fit p-5 text-gray-500">
-                <div className="flex-block justify-start relative items-center md:w-1/2 lg:min-h-[25rem]">
-                    <div className="text-lg sm:text-xl md:text-2xl text-titleFinal font-mono pl-3">
-                        Features
+            <div className="flex-block md:flex mt-4 items-center h-fit text-gray-500">
+                <div className="flex justify-start items-center md:w-1/2 lg:min-h-[25rem]">
+                    <div className="flex-block relative">
+                        <div className="text-lg sm:text-xl md:text-2xl text-titleFinal font-mono pl-3">
+                            Features
+                        </div>
+                        <ul className="relative mr-2 h-full p-3 overflow-y-scroll no-scrollbar bg-gray-800 rounded-3xl flex-block justify-center w-full">
+                            {features.map((feature, i) => (
+                                <li
+                                    key={i}
+                                    onClick={(e) => handleFeatureClick(i)}
+                                    className="bg-blue-700 bg-opacity-80 text-titleFinal text-sm lg:text-base h-fit w-fit px-3 my-2 rounded-3xl cursor-pointer py-2 hover:bg-sky-600 transition duration-500 linear"
+                                >
+                                    <ProjectFeature name={features[i]} />
+                                </li>
+                            ))}
+                        </ul>
+                        <div className="absolute bottom-0 w-full h-10 bg-gradient-to-t from-gray-800 to-transparent z-40 rounded-3xl"></div>
                     </div>
-                    <ul className="mr-2 h-60 lg:h-[25rem] p-3 overflow-y-scroll no-scrollbar bg-gray-800 rounded-3xl flex-block justify-center w-full">
-                        {features.map((feature, i) => (
-                            <li
-                                key={i}
-                                onClick={(e) => handleFeatureClick(i)}
-                                className="bg-blue-700 bg-opacity-80 text-titleFinal text-sm lg:text-base h-fit w-fit px-3 my-2 rounded-3xl cursor-pointer py-2 hover:bg-sky-600 transition duration-500 linear">
-                                <ProjectFeature name={features[i]} />
-                            </li>
-                        ))}
-                    </ul>
-                    <div className="absolute bottom-0 w-full h-10 bg-gradient-to-t from-gray-800 to-transparent z-40 rounded-xl"></div>
                 </div>
-                <div className="flex justify-center items-center md:w-1/2 sm:mt-5 md:h-[20rem] lg:h-[30rem] md:ml-5">
+                <div className="flex justify-center items-center md:w-1/2 sm:mt-5 md:mt-0 md:h-[20rem] lg:h-[25rem] md:ml-5">
                     <img
                         src={image}
-                        className="max-h-full rounded-3xl"
+                        className="md:h-fit mt-4 md:mt-0 max-h-full rounded-3xl"
                         alt={alt}
                     />
                 </div>
@@ -121,7 +127,7 @@ const Project = ({
                         alt="left arrow"
                         src={leftArrow}
                         onClick={handleScrollLeft}
-                        className="relative left-0 p-5 mt-2 circle-gradient-bg rounded-3xl h-14 cursor-pointer animate-fadeIn"
+                        className="relative left-0 p-5 mt-4 circle-gradient-bg rounded-3xl h-14 cursor-pointer animate-fadeIn"
                     />
                 ) : (
                     <img
@@ -131,19 +137,20 @@ const Project = ({
                 )}
                 <div
                     ref={iconDivRef}
-                    className="relative flex-block h-fit xs:flex xs:h-16 mt-2 xs:w-fit max-w-full justify-start bg-gradient-to-l from-gray-400 via-gray-100 to-gray-400 rounded-3xl items-center object-contain overflow-x-scroll no-scrollbar">
+                    className="relative flex-block h-fit xs:flex xs:h-16 mt-4 xs:w-fit max-w-full justify-start bg-gradient-to-l from-gray-400 via-gray-100 to-gray-400 rounded-3xl items-center object-contain overflow-x-scroll no-scrollbar"
+                >
                     {technologyIcons.map((technology, i) =>
                         technology == express ? (
                             <img
                                 key={i}
                                 src={technology}
-                                className="max-h-full my-8 xs:my-0 xs:py-5 xs:px-5"
+                                className="max-h-full w-fit my-8 px-2 xs:my-0 xs:py-5 xs:px-5"
                             />
                         ) : (
                             <img
                                 key={i}
                                 src={technology}
-                                className="max-h-full my-8 xs:my-0 xs:py-2 xs:px-5"
+                                className="max-h-full w-fit my-8 px-2 xs:my-0 xs:py-2 xs:px-5"
                             />
                         )
                     )}
@@ -153,7 +160,7 @@ const Project = ({
                         alt="arrow"
                         ref={scrollBtnRef}
                         src={arrow}
-                        className="relative right-0 p-5 mt-2 circle-gradient-bg rounded-3xl h-14 cursor-pointer animate-fadeIn"
+                        className="relative right-0 p-5 mt-4 circle-gradient-bg rounded-3xl h-14 cursor-pointer animate-fadeIn"
                         onClick={handleScrollRight}
                     />
                 ) : (
