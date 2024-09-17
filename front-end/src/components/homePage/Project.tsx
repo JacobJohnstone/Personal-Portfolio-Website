@@ -8,6 +8,7 @@ import leftArrow from "../../images/leftArrow.png";
 import heartIcon from "../../images/heartIcon.png";
 import pokeball from "../../images/pokeball-icon.png";
 import musicAppIcon from "../../images/headphoneIcon.webp";
+import githubIcon from "../../images/githubIcon.png";
 
 type ProjectProps = {
     title: string;
@@ -15,6 +16,7 @@ type ProjectProps = {
     features: string[];
     featureImages: string[];
     technologyIcons: string[];
+    gitLink?: string;
 };
 
 const Project = ({
@@ -23,6 +25,7 @@ const Project = ({
     description,
     featureImages,
     technologyIcons,
+    gitLink,
 }: ProjectProps) => {
     const [image, setImage] = useState(loading);
     const [alt, setAlt] = useState("Loading...");
@@ -169,6 +172,16 @@ const Project = ({
                     />
                 )}
             </div>
+            {gitLink != null && (
+                <div className="flex justify-center h-14">
+                    <a href={gitLink} target="_blank">
+                        <img
+                            className="max-h-full bg-gray-400 rounded-full p-1 my-12 cursor-pointer hover:bg-white transition duration-500 linear"
+                            src={githubIcon}
+                        />
+                    </a>
+                </div>
+            )}
         </div>
     );
 };

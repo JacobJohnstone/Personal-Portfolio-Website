@@ -97,6 +97,7 @@ const ProjectCollection = () => {
                             restAPI,
                             git,
                         ]}
+                        gitLink="https://github.com/Jacob-13/Gym-Database-Management-System"
                     />
                     {seeAllProjectsBtn && (
                         <div>
@@ -184,6 +185,7 @@ const ProjectCollection = () => {
                                     restAPI,
                                     aws,
                                 ]}
+                                gitLink="https://github.com/Jacob-13/Music-Web-Application"
                             />
                             <Project
                                 title="Simple Pokedex"
@@ -205,6 +207,7 @@ const ProjectCollection = () => {
                                     git,
                                     aws,
                                 ]}
+                                gitLink="https://github.com/Jacob-13/se3316-lab1-jjohn483"
                             />
                             <div className="flex justify-center items-center">
                                 <div
