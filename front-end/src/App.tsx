@@ -2,10 +2,6 @@ import { useEffect, useState } from "react";
 import Home from "./components/homePage/NewHome";
 import power from "./images/Power-Btn.png";
 
-//https://www.youtube.com/watch?v=DSneWikjH5E has a good plugin for adding animations in tailwindcss without as many extra extensions
-
-// Idea: gradient box under sticky name title going gradient-to-top, from transparent, to background colour
-
 function App() {
     const [displayHome, setDisplayHome] = useState<boolean>(false); // For switching to the home page
     const [showPowerBtn, setShowPowerBtn] = useState<boolean>(true); // For initiating powerBtn fade

@@ -71,7 +71,7 @@ const ProjectCollection = () => {
                         title="Image Translation for Medical Students"
                         description="Created an image translation program to be used for medical students in training, enhancing their practice by creating a more realistic visual for simulated mitral valve surgery procedures. The images displayed only show the artificial heart valve before AI translations."
                         features={[
-                            "Translated images taken of a plastic model heart into realistic heart images",
+                            "Translated images taken of an artificial model heart into realistic heart images",
                             "Implemented streamed image translation allowing rapid, continual translation for a camera",
                             "Displayed results using OpenCV, achieving up to 10 frames per second",
                         ]}
@@ -80,12 +80,12 @@ const ProjectCollection = () => {
                     />
                     <Project
                         title="Relational Database Design and Implementation"
-                        description="Created and designed a relational database. The focus was on the implementation and functionality of the database rather than the front-end design. Within the group, I was in charge of putting together the front end pages and completing the 'Member Info' page, as well as assisting the design and connection of the database"
+                        description="Designed and implemented a relational database focused on gym services. Within a group of 4 I assisted with both the design/implementation of the database and the creation of the express backend. I also completed the 'Member Info' UI and ensured all group members pages routed properly."
                         features={[
-                            "Relational database designed and implemented to be normalized (ER Picture)",
-                            "Member Info provides all the information connected to the member requested, such as the class sessions they're attending and what classes (offerings) they're a part of",
-                            "Able to track member statistics such as workout frequencies and class registrations, as well as get available instructors by skill level",
-                            "Made use of an Express backend used to manage queries and responses to and from the database",
+                            "Created a relational database, designed and implemented to be normalized",
+                            "Member Info provides all information connected to the specific member requested, such as the class sessions they're attending and what classes (offerings) they are enrolled in",
+                            "Able to track member statistics such as workout frequencies and class registrations, as well as find available instructors sorted by skill level",
+                            "Made use of an Express backend to manage front-end requests and queries/responses for the database",
                         ]}
                         featureImages={[ER, pointers, instructors, backend]}
                         technologyIcons={[
@@ -106,18 +106,16 @@ const ProjectCollection = () => {
                                     title="Music Web App"
                                     description="A music web application built with an express back-end supported by firebase and a react front-end. Users can sign-up, manage their accounts, and create playlists from the available music data."
                                     features={[
-                                        "Has a landing page that includes a welcome message and public playlists created by other users",
-                                        "Includes a public playlist section that displays playlists that have been created by others users and have the public flag",
+                                        "Opens to a landing page with public playlists created by other users",
                                         "Implemented user authentication and authorization using firebase that ensures input validation for emails and strong password recommendations",
-                                        "Login brings users to their home page where they can create/modify playlists and search for songs",
+                                        "Login brings users to their homepage where they can create/modify playlists and search for songs",
                                         "Includes dynamic search results while looking for different tracks",
                                         "Each search result includes a dropdown option that includes a play button, bringing them to YouTube with search results for the specified track",
-                                        "Users can also logout and are able to change their password if they wish",
-                                        "The admin accounts created to add other admins as well as remove users",
+                                        "Users can also logout and are able to change their password",
+                                        "The admin accounts are able to authorize other admin accounts as well as disable users",
                                     ]}
                                     featureImages={[
                                         MusicLanding,
-                                        musicPublicPlaylists,
                                         musicSignin,
                                         MusicUser,
                                         musicSearch,
