@@ -51,7 +51,9 @@ const Project = ({
     }, [title]);
 
     function showScrollArrow() {
-        if (iconDivRef.current) {
+        if (window.innerWidth < 500) {
+            setIsOverflowing(false);
+        } else if (iconDivRef.current) {
             const { scrollWidth, clientWidth, scrollLeft } = iconDivRef.current;
             setIsOverflowing(scrollWidth > clientWidth);
         }
@@ -96,32 +98,9 @@ const Project = ({
             <div className="text-titleFinal text-center text-2xl md:text-3xl lg:text-4xl mb-3 font-mono">
                 {title}
             </div>
+
             <div className="text-gray-300 text-center text-md md:text-lg lg:text-xl">
                 {description}
-            </div>
-            <div className="flex-block md:flex mt-4 items-center h-fit text-gray-500">
-                <div className="flex justify-start items-center md:w-1/2 lg:h-[25rem]">
-                    <div className="flex-block relative">
-                        <div className="text-lg sm:text-xl md:text-2xl text-titleFinal font-mono pl-3">
-                            Features
-                        </div>
-                        <ul className="relative mr-2 h-[20rem] p-3 overflow-y-scroll no-scrollbar bg-gray-800 rounded-3xl flex-block justify-center w-full">
-                            {features.map((feature, i) => (
-                                <li
-                                    key={i}
-                                    onClick={(e) => handleFeatureClick(i)}
-                                    className="bg-blue-700 bg-opacity-80 text-titleFinal text-sm lg:text-base h-fit w-fit px-3 my-2 rounded-3xl cursor-pointer py-2 hover:bg-sky-600 transition duration-500 linear"
-                                >
-                                    <ProjectFeature name={features[i]} />
-                                </li>
-                            ))}
-                        </ul>
-                        <div className="absolute bottom-0 w-full h-10 bg-gradient-to-t from-gray-800 to-transparent z-40 rounded-3xl"></div>
-                    </div>
-                </div>
-                <div className="flex justify-center items-center md:w-1/2 mt-5 md:mt-0 h-[20rem] md:ml-5 bg-white p-5 rounded-3xl">
-                    <img src={image} className="max-h-full" alt={alt} />
-                </div>
             </div>
             <div className="flex justify-center items-center">
                 {isOverflowing && !isScrolledLeft ? (
@@ -129,17 +108,14 @@ const Project = ({
                         alt="left arrow"
                         src={leftArrow}
                         onClick={handleScrollLeft}
-                        className="relative left-0 p-5 mt-4 circle-gradient-bg rounded-3xl h-14 cursor-pointer animate-fadeIn"
+                        className="relative left-0 p-5 mt-3 mb-3 md:mb-0 circle-gradient-bg rounded-3xl h-14 cursor-pointer animate-fadeIn"
                     />
                 ) : (
-                    <img
-                        src={leftArrow}
-                        className="opacity-0 h-16 p-5 rounded 3xl relative left-0"
-                    />
+                    <></>
                 )}
                 <div
                     ref={iconDivRef}
-                    className="relative w-full flex h-[4rem] xs:h-16 mt-4 xs:w-fit max-w-full justify-start bg-gradient-to-l from-gray-400 via-gray-100 to-gray-400 rounded-3xl items-center object-contain overflow-x-scroll overflow-y-hidden no-scrollbar"
+                    className="relative w-full flex h-[4rem] xs:h-16 mt-3 mb-3 md:mb-0 xs:w-fit max-w-full justify-start bg-gradient-to-l from-gray-400 via-white to-gray-400 rounded-3xl items-center object-contain overflow-x-scroll overflow-y-hidden no-scrollbar"
                 >
                     {technologyIcons.map((technology, i) =>
                         technology == express ? (
@@ -162,21 +138,44 @@ const Project = ({
                         alt="arrow"
                         ref={scrollBtnRef}
                         src={arrow}
-                        className="relative right-0 p-5 mt-4 circle-gradient-bg rounded-3xl h-14 cursor-pointer animate-fadeIn"
+                        className="relative right-0 p-5 mt-3 mb-3 md:mb-0 circle-gradient-bg rounded-3xl h-14 cursor-pointer animate-fadeIn"
                         onClick={handleScrollRight}
                     />
                 ) : (
-                    <img
-                        src={arrow}
-                        className="h-16 p-5 rounded-3xl opacity-0 relative right-0"
-                    />
+                    <></>
                 )}
             </div>
+            <div className="flex-block md:flex items-center h-fit text-gray-500">
+                <div className="flex justify-start items-center md:w-1/2 lg:h-[25rem]">
+                    <div className="flex-block relative">
+                        <div className="text-lg sm:text-xl md:text-2xl text-titleFinal font-mono pl-3">
+                            Features
+                        </div>
+                        <ul className="relative mr-2 h-[20rem] p-3 overflow-y-scroll no-scrollbar bg-gray-800 rounded-3xl flex-block justify-center w-full">
+                            {features.map((feature, i) => (
+                                <li
+                                    key={i}
+                                    onClick={(e) => handleFeatureClick(i)}
+                                    className="bg-blue-700 bg-opacity-80 text-titleFinal text-sm lg:text-base h-fit w-fit px-3 my-2 rounded-3xl cursor-pointer py-2 hover:bg-sky-600 transition duration-500 linear"
+                                >
+                                    <ProjectFeature name={features[i]} />
+                                </li>
+                            ))}
+                        </ul>
+                        <div className="absolute bottom-0 w-full h-10 bg-gradient-to-t from-gray-800 to-transparent z-40 rounded-3xl"></div>
+                    </div>
+                </div>
+
+                <div className="relative top-4 flex justify-center items-center md:w-1/2 mt-5 md:mt-0 h-[20rem] md:ml-5 bg-white p-5 rounded-3xl">
+                    <img src={image} className="max-h-full" alt={alt} />
+                </div>
+            </div>
+
             {gitLink != null && (
                 <div className="flex justify-center h-14">
                     <a href={gitLink} target="_blank">
                         <img
-                            className="max-h-full bg-gray-400 rounded-full p-1 my-12 cursor-pointer hover:bg-white transition duration-500 linear"
+                            className="max-h-full bg-gray-400 rounded-full mt-12 md:mt-0 p-1 cursor-pointer hover:bg-white transition duration-500 linear"
                             src={githubIcon}
                         />
                     </a>

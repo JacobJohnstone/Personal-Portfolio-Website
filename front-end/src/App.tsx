@@ -3,7 +3,7 @@ import Home from "./components/homePage/NewHome";
 import power from "./images/Power-Btn.png";
 
 function App() {
-    const [displayHome, setDisplayHome] = useState<boolean>(false); // For switching to the home page
+    const [displayHome, setDisplayHome] = useState<boolean>(true); // For switching to the home page
     const [showPowerBtn, setShowPowerBtn] = useState<boolean>(true); // For initiating powerBtn fade
     const [titleMiddle, setTitleMiddle] = useState(true); // For indicating title transition
     const [titleBackground, setTitleBackground] = useState<boolean>(true);

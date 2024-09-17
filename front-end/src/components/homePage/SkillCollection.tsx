@@ -26,7 +26,7 @@ const SkillCollection = () => {
                     />
                     <Skill
                         title="Fullstack Development"
-                        description="Web applications built with HTML, CSS, JS, and React : Supported by RESTful APIs, Express backends, and both relational and NoSQL databases"
+                        description="Web applications built with HTML, CSS, JS, and React: Supported by RESTful APIs, Express backends, and relational/NoSQL databases"
                     />
                     <Skill
                         title="AI Driven Solutions"
