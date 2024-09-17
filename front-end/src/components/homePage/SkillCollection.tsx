@@ -22,7 +22,7 @@ const SkillCollection = () => {
                 <div className="flex-block mdlg:flex items-center justify-center w-5/6 xs:w-2/3 rounded-3xl m-10">
                     <Skill
                         title="Software Development"
-                        description="Best practices, OOP, Version control: Java, JavaScript, TypeScript, Python"
+                        description="Best practices, OOP, Version control: Java, JavaScript, C#, Python"
                     />
                     <Skill
                         title="Fullstack Development"
