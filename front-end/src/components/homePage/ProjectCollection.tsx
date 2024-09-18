@@ -51,11 +51,11 @@ const ProjectCollection = () => {
     return (
         <div className="relative w-screen h-fit mt-10">
             <div className="relative z-40">
-                <p className="text-sky-500 blur-[20px] w-screen text-center text-5xl sm:text-6xl lg:text-7xl animate-signGlow">
+                <p className="text-sky-300 blur-[8px] w-screen text-center text-5xl sm:text-6xl lg:text-7xl animate-signGlow">
                     Projects
                 </p>
                 <div className="absolute top-0 z-20 w-fit">
-                    <p className="text-center blur-[4px] text-sky-300 text-5xl sm:text-6xl lg:text-7xl w-screen animate-signGlow">
+                    <p className="text-center blur-[4px] text-blue-500 text-5xl sm:text-6xl lg:text-7xl w-screen animate-signGlow">
                         Projects
                     </p>
                 </div>
@@ -65,7 +65,7 @@ const ProjectCollection = () => {
                     </p>
                 </div>
             </div>
-            <div className="flex justify-center mt-6">
+            <div className="flex justify-center mt-0 md:mt-3">
                 <div className="flex-block w-5/6 xs:w-2/3">
                     <Project
                         title="Image Translation for Medical Students"

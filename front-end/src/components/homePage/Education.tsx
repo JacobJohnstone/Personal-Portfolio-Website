@@ -2,7 +2,7 @@ const Education = () => {
     return (
         <div className="relative w-fit h-fit mt-10">
             <div className="relative z-40">
-                <p className="text-indigo-500 blur-[20px] w-screen text-center text-5xl sm:text-6xl lg:text-7xl animate-signGlow">
+                <p className="text-indigo-500 blur-[8px] w-screen text-center text-5xl sm:text-6xl lg:text-7xl animate-signGlow">
                     Education
                 </p>
                 <div className="absolute top-0 z-20 w-fit">

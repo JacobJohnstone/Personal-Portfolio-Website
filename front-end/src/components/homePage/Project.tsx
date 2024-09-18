@@ -94,8 +94,8 @@ const Project = ({
     }
 
     return (
-        <div className="my-10 bg-gradient-to-b from-gray-800 via-gray-600 to-gray-800 p-5 rounded-3xl w-full border-4 border-gray-400">
-            <div className="text-titleFinal text-center text-2xl md:text-3xl lg:text-4xl mb-3 font-mono">
+        <div className="my-10 bg-gradient-to-b from-gray-800 via-gray-700 to-gray-800 p-5 rounded-3xl w-full border-4 border-gray-400">
+            <div className="text-titleFinal text-center text-2xl md:text-3xl lg:text-4xl mt-3 mb-3 font-semibold font-mono drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] pb-4 border-b-2 border-gray-500">
                 {title}
             </div>
 
@@ -147,7 +147,7 @@ const Project = ({
             </div>
             <div className="flex-block md:flex items-center h-fit text-gray-500">
                 <div className="flex justify-start items-center md:w-1/2 lg:h-[25rem]">
-                    <div className="flex-block relative">
+                    <div className="flex-block relative mb-2">
                         <div className="text-lg sm:text-xl md:text-2xl text-titleFinal font-mono pl-3">
                             Features
                         </div>
@@ -166,7 +166,7 @@ const Project = ({
                     </div>
                 </div>
 
-                <div className="relative top-4 flex justify-center items-center md:w-1/2 mt-5 md:mt-0 h-[20rem] md:ml-5 bg-white p-5 rounded-3xl">
+                <div className="relative top-4 flex justify-center items-center md:w-1/2 mb-2 md:mt-0 h-[20rem] md:ml-5 bg-white p-5 rounded-3xl">
                     <img src={image} className="max-h-full" alt={alt} />
                 </div>
             </div>

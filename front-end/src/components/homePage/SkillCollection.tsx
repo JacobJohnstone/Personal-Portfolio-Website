@@ -4,11 +4,11 @@ const SkillCollection = () => {
     return (
         <div className="relative w-screen h-fit mt-20">
             <div className="relative z-40">
-                <p className="text-yellow-500 blur-[20px] w-screen text-center text-5xl sm:text-6xl lg:text-7xl animate-signGlow">
+                <p className="text-yellow-300 blur-[8px] w-screen text-center text-5xl sm:text-6xl lg:text-7xl animate-signGlow">
                     Skills
                 </p>
                 <div className="absolute top-0 z-20 w-fit">
-                    <p className="text-center blur-[4px] text-yellow-300 text-5xl sm:text-6xl lg:text-7xl w-screen animate-signGlow">
+                    <p className="text-center blur-[4px] text-yellow-500 text-5xl sm:text-6xl lg:text-7xl w-screen animate-signGlow">
                         Skills
                     </p>
                 </div>
@@ -18,8 +18,8 @@ const SkillCollection = () => {
                     </p>
                 </div>
             </div>
-            <div className="flex justify-center mt-6">
-                <div className="flex-block mdlg:flex items-center justify-center w-5/6 xs:w-2/3 rounded-3xl m-10">
+            <div className="flex justify-center">
+                <div className="flex-block mdlg:flex items-start justify-center w-5/6 xs:w-2/3 rounded-3xl m-10">
                     <Skill
                         title="Software Development"
                         description="Best practices, OOP, Version control: Java, JavaScript, C#, Python"
