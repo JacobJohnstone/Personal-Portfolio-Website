@@ -146,7 +146,7 @@ const Project = ({
                 )}
             </div>
             <div className="flex-block md:flex items-center h-fit text-gray-500">
-                <div className="flex justify-start items-start md:w-1/2 lg:h-[25rem]">
+                <div className="flex justify-start items-start md:w-1/2 lg:h-[25rem] sm:mt-4">
                     <div className="flex-block relative mb-2">
                         <div className="text-lg sm:text-xl md:text-2xl text-titleFinal font-mono pl-3">
                             Features
