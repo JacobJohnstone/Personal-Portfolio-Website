@@ -146,17 +146,17 @@ const Project = ({
                 )}
             </div>
             <div className="flex-block md:flex items-center h-fit text-gray-500">
-                <div className="flex justify-start items-center md:w-1/2 lg:h-[25rem]">
+                <div className="flex justify-start items-start md:w-1/2 lg:h-[25rem]">
                     <div className="flex-block relative mb-2">
                         <div className="text-lg sm:text-xl md:text-2xl text-titleFinal font-mono pl-3">
                             Features
                         </div>
-                        <ul className="relative mr-2 h-[20rem] p-3 overflow-y-scroll no-scrollbar bg-gray-800 rounded-3xl flex-block justify-center w-full">
+                        <ul className="relative mr-2 max-h-[20rem] p-3 overflow-y-scroll no-scrollbar bg-gray-800 rounded-3xl flex-block justify-center w-full">
                             {features.map((feature, i) => (
                                 <li
                                     key={i}
                                     onClick={(e) => handleFeatureClick(i)}
-                                    className="bg-blue-700 bg-opacity-80 text-titleFinal text-sm lg:text-base h-fit w-fit px-3 my-2 rounded-3xl cursor-pointer py-2 hover:bg-sky-600 transition duration-500 linear"
+                                    className="bg-blue-700 bg-opacity-80 text-titleFinal text-sm lg:text-base h-fit w-full px-3 my-2 rounded-3xl cursor-pointer py-2 hover:bg-sky-600 transition duration-500 linear"
                                 >
                                     <ProjectFeature name={features[i]} />
                                 </li>
@@ -166,7 +166,7 @@ const Project = ({
                     </div>
                 </div>
 
-                <div className="relative top-4 flex justify-center items-center md:w-1/2 mb-2 md:mt-0 h-[20rem] md:ml-5 bg-white p-5 rounded-3xl">
+                <div className="relative flex justify-center items-center md:w-1/2 mb-2 md:mt-0 h-[20rem] md:ml-5 bg-white p-5 rounded-3xl">
                     <img src={image} className="max-h-full" alt={alt} />
                 </div>
             </div>

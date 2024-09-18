@@ -80,14 +80,13 @@ const ProjectCollection = () => {
                     />
                     <Project
                         title="Relational Database Design and Implementation"
-                        description="Designed and implemented a relational database focused on gym services. Within a group of 4 I assisted with both the design/implementation of the database and the creation of the express backend. I also completed the 'Member Info' UI and ensured all group members pages routed properly."
+                        description="Designed and implemented a relational database focused on gym services. I completed the 'Member Info' UI and connected all pages."
                         features={[
                             "Created a relational database, designed and implemented to be normalized",
-                            "Member Info provides all information connected to the specific member requested, such as the class sessions they're attending and what classes (offerings) they are enrolled in",
-                            "Able to track member statistics such as workout frequencies and class registrations, as well as find available instructors sorted by skill level",
-                            "Made use of an Express backend to manage front-end requests and queries/responses for the database",
+                            "Member Info provides all information connected to the specific member requested",
+                            "Able to track member statistics and find available instructors sorted by skill level",
                         ]}
-                        featureImages={[ER, pointers, instructors, backend]}
+                        featureImages={[ER, pointers, instructors]}
                         technologyIcons={[
                             nodeJS,
                             express,
@@ -152,25 +151,21 @@ const ProjectCollection = () => {
                         <div>
                             <Project
                                 title="Music Web App"
-                                description="A music web application built with an express back-end supported by firebase and a react front-end. Users can sign-up, manage their accounts, and create playlists from the available music data."
+                                description="A music web application where users can sign-up, manage their accounts, and create playlists from the available music data."
                                 features={[
-                                    "Has a landing page that includes a welcome message and public playlists created by other users",
-                                    "Includes a public playlist section that displays playlists that have been created by others users and have the public flag",
-                                    "Implemented user authentication and authorization using firebase that ensures input validation for emails and strong password recommendations",
-                                    "Login brings users to their home page where they can create/modify playlists and search for songs",
-                                    "Includes dynamic search results while looking for different tracks",
-                                    "Each search result includes a dropdown option that includes a play button, bringing them to YouTube with search results for the specified track",
-                                    "Users can also logout and are able to change their password if they wish",
+                                    "Has a landing page with public playlists created by other users",
+                                    "Implemented user authentication and authorization with input validation",
+                                    "Home page allows users to create/modify playlists and search for songs",
+                                    "Includes dynamic search results",
+                                    "Each result includes a play button, bringing the user to YouTube",
                                     "The admin accounts created to add other admins as well as remove users",
                                 ]}
                                 featureImages={[
                                     MusicLanding,
-                                    musicPublicPlaylists,
                                     musicSignin,
                                     MusicUser,
                                     musicSearch,
                                     musicPlayable,
-                                    musicPwdChange,
                                     MusicAdmin,
                                 ]}
                                 technologyIcons={[
@@ -189,9 +184,9 @@ const ProjectCollection = () => {
                                 title="Simple Pokedex"
                                 description="Created a small pokedex using vanilla JavaScript, HTML, and CSS enableing users to search for a pokemon. Search results provide extra information such as rarity."
                                 features={[
-                                    "Displays the first 20 pokemon in the pokedex with they index and name",
-                                    "Allows users to search for pokemon and displays an alert with the search results",
-                                    "Implemented input validation to ensure name search only contains alphabetical characters and number search is within the boundaries",
+                                    "Displays the first 20 pokemon in the pokedex",
+                                    "Allows users to search for each pokemon by number or name",
+                                    "Implemented input validation",
                                 ]}
                                 featureImages={[
                                     pokedex,
