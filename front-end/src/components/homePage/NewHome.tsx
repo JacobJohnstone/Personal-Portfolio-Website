@@ -16,7 +16,7 @@ const Home = () => {
         <div className="bg-gray-900 overflow-x-hidden">
             <div className="h-screen w-screen">
                 <Title />
-                <div className="relative flex justify-center top-[8rem] sm:top-[6rem]">
+                <div className="relative flex justify-center top-[10rem] md:top-[6rem]">
                     <About />
                 </div>
             </div>
