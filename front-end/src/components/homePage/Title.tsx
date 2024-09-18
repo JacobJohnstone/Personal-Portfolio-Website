@@ -4,12 +4,12 @@ const Title = () => {
     return (
         <>
             <div className="fixed h-screen w-screen flex items-center justify-center">
-                <div className="flex items-center justify-center bg-largeEclipse h-screen w-screen rounded-full blur-3xl xs:blur-[176px] bg-opacity-20 z-0">
-                    <div className="bg-smallEclipse h-3/5 w-1/2 rounded-full blur-3xl xs:blur-[234px] bg-opacity-30 z-0"></div>
+                <div className="flex items-center justify-center bg-largeEclipse h-screen w-screen rounded-full blur-3xl xs:blur-[176px] bg-opacity-0 xs:bg-opacity-20 z-0">
+                    <div className="bg-smallEclipse h-3/5 w-1/2 rounded-full blur-3xl xs:blur-[234px] bg-opacity-20 xs:bg-opacity-30 z-0"></div>
                 </div>
                 <div className="absolute w-screen h-fit flex left-0">
                     <img
-                        className="z-0 opacity-10 md:opacity-10 blur-[2px] xs:blur-[4px] sm:blur-[6px] lg:blur-[6px] min-w-[50rem] sm:min-w-fit lg:min-w-[100rem]"
+                        className="z-0 opacity-5 md:opacity-10 blur-[2px] xs:blur-[4px] sm:blur-[6px] lg:blur-[6px] min-w-[50rem] sm:min-w-fit lg:min-w-[100rem]"
                         src={backgroundCode}
                     />
                 </div>
