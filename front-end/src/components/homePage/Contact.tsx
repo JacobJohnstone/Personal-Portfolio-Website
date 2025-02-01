@@ -28,7 +28,7 @@ const Contact = () => {
                         </div>
                         <div className="h-14 xs:h-16 lg:h-20">
                             <a
-                                href="https://github.com/Jacob-13"
+                                href="https://github.com/JacobJohnstone"
                                 target="_blank">
                                 <img
                                     src={github}
