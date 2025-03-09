@@ -115,8 +115,7 @@ const Project = ({
                 )}
                 <div
                     ref={iconDivRef}
-                    className="relative w-full flex h-[4rem] xs:h-16 mt-3 mb-3 md:mb-0 xs:w-fit max-w-full justify-start bg-gradient-to-l from-gray-400 via-white to-gray-400 rounded-3xl items-center object-contain overflow-x-scroll overflow-y-hidden no-scrollbar"
-                >
+                    className="relative w-full flex h-[4rem] xs:h-16 mt-3 mb-3 md:mb-0 xs:w-fit max-w-full justify-start bg-gradient-to-l from-gray-400 via-white to-gray-400 rounded-3xl items-center object-contain overflow-x-scroll overflow-y-hidden no-scrollbar">
                     {technologyIcons.map((technology, i) =>
                         technology == express ? (
                             <img
@@ -156,8 +155,7 @@ const Project = ({
                                 <li
                                     key={i}
                                     onClick={(e) => handleFeatureClick(i)}
-                                    className="bg-blue-700 bg-opacity-80 text-titleFinal text-sm lg:text-base h-fit w-full px-3 my-2 rounded-3xl cursor-pointer py-2 hover:bg-sky-600 transition duration-500 linear"
-                                >
+                                    className="bg-blue-700 bg-opacity-80 text-titleFinal text-sm lg:text-base h-fit w-full px-3 my-2 rounded-3xl cursor-pointer py-2 hover:bg-sky-600 transition duration-500 linear">
                                     <ProjectFeature name={features[i]} />
                                 </li>
                             ))}
@@ -173,7 +171,10 @@ const Project = ({
 
             {gitLink != null && (
                 <div className="flex justify-center h-14">
-                    <a href={gitLink} target="_blank">
+                    <a
+                        href={gitLink}
+                        target="_blank"
+                        className="flex justify-center">
                         <img
                             className="max-h-full bg-gray-400 rounded-full mt-12 md:mt-0 p-1 cursor-pointer hover:bg-white transition duration-500 linear"
                             src={githubIcon}
