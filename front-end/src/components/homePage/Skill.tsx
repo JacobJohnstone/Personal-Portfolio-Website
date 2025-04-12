@@ -8,7 +8,6 @@ type SkillProps = {
 };
 
 const Skill = ({ title, description }: SkillProps) => {
-    //from-sky-00 to-[#00296b]
     return (
         <div className="xs:bg-gray-600 bg-opacity-80 mx-2 my-2 lg:my-0 w-fit rounded-3xl p-2 md:p-3">
             <div className="text-yellow-200 text-lg sm:text-2xl md:text-2xl text-center bg-gray-700 bg-opacity-80 py-3 px-2 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-semibold font-mono border-2 border-gray-100">

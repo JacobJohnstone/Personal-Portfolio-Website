@@ -1,15 +1,9 @@
 import About from "./About";
-import Skill from "./Skill";
-import Project from "./Project";
-import pointers from "../../images/PointerPictures.jpg";
-import ER from "../../images/ER-Design.png";
-import backend from "../../images/PreviousSessionsBackendCode.png";
 import Title from "./Title";
 import SkillCollection from "./SkillCollection";
 import ProjectCollection from "./ProjectCollection";
 import Education from "./Education";
 import Contact from "./Contact";
-import { useEffect, useState } from "react";
 
 const Home = () => {
     return (

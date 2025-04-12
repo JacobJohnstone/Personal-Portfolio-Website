@@ -1,10 +1,8 @@
 import Project from "./Project";
 import pointers from "../../images/PointerPictures.jpg";
 import ER from "../../images/ER-Design.png";
-import backend from "../../images/PreviousSessionsBackendCode.png";
 import bootStrap from "../../images/Bootstrap_logo.png";
 import express from "../../images/express.png";
-import mongoDB from "../../images/MongoDB-Logo.png";
 import nodeJS from "../../images/nodejs-1-logo-png-transparent.png";
 import python from "../../images/Python_logo_01.png";
 import reactIcon from "../../images/react.png";
@@ -23,9 +21,7 @@ import fireBaseIcon from "../../images/firebaseIcon.webp";
 import MusicLanding from "../../images/MusicLanding.jpg";
 import MusicAdmin from "../../images/Admin.jpg";
 import MusicUser from "../../images/User-home.jpg";
-import musicPwdChange from "../../images/password-change.jpg";
 import musicPlayable from "../../images/Track-playable.jpg";
-import musicPublicPlaylists from "../../images/public-playlists.jpg";
 import musicSignin from "../../images/Sign-in.jpg";
 import musicSearch from "../../images/MusicSearch.gif";
 import modelSetup from "../../images/modelDisplay.jpeg";
@@ -35,6 +31,18 @@ import modelHeart2 from "../../images/modelHeart2.jpg";
 import pokedex from "../../images/Pokedex.jpg";
 import pokedexBoundary from "../../images/Pokedex-boundary.jpg";
 import pokedexSearch from "../../images/Pokedex-number.jpg";
+import hauntingGrounds from "../../images/gameplay_1.png";
+import libraryGrounds from "../../images/libraryGameplay_1.png";
+import unityIcon from "../../images/Unity-icon.png";
+import CSharp from "../../images/c-sharp-icon.png";
+import asepriteIcon from "../../images/aseprite-icon.png";
+import flStudio from "../../images/FL_Studio_11_icon.webp";
+import astroHome from "../../images/astronomy-home.png";
+import astroGallery from "../../images/astro-gallery.png";
+import astroAdmin from "../../images/astro-admin-panel.png";
+import nextJS from "../../images/nextjs-icon.png";
+import typescriptIcon from "../../images/typescript-icon.png";
+import neonDBIcon from "../../images/neon-db-icon.png";
 import { useState } from "react";
 
 const ProjectCollection = () => {
@@ -68,6 +76,44 @@ const ProjectCollection = () => {
             <div className="flex justify-center mt-0 md:mt-3">
                 <div className="flex-block w-5/6 xs:w-2/3">
                     <Project
+                        title="Astrophotography Portfolio"
+                        description="A beautiful gallery display for an astrophotographer. Includes an admin panel for easy upload, edit, and removal of images."
+                        features={[
+                            "Includes nicely styled home, about, and gallery pages",
+                            "Displays all images in the gallery allowing the photographer to pin favourite images at the top",
+                            "The admin panel allows full control over naming, types, and the images uploaded",
+                        ]}
+                        featureImages={[astroHome, astroGallery, astroAdmin]}
+                        technologyIcons={[
+                            git,
+                            nodeJS,
+                            reactIcon,
+                            sqlIcon,
+                            neonDBIcon,
+                            aws,
+                            typescriptIcon,
+                            nextJS,
+                        ]}
+                        otherLink="https://astronomy-portfolio.vercel.app/"
+                    />
+                    <Project
+                        title="Haunting Grounds - Pirate Software Game Jam"
+                        description="A strategy stealth game made with Unity, C#, Aseprite, and FL Studio, following the theme YOU ARE THE WEAPON. Submitted haunting grounds in the pirate software game jam."
+                        features={[
+                            "Game mechanics include interacting, invisibility, sanity levels, time of day, and flashlight damage",
+                            "Controls: WASD/Arrow keys to move, Q for invisibility, E for interacting, and M for the instructions menu",
+                        ]}
+                        featureImages={[hauntingGrounds, libraryGrounds]}
+                        technologyIcons={[
+                            unityIcon,
+                            CSharp,
+                            asepriteIcon,
+                            flStudio,
+                            git,
+                        ]}
+                        gitLink="https://github.com/JacobJohnstone/piratesoftware-gamejam16-polished"
+                    />
+                    <Project
                         title="Image Translation for Medical Students"
                         description="Created an image translation program to be used for medical students in training, enhancing their practice by creating a more realistic visual for simulated mitral valve surgery procedures. The images displayed only show the artificial heart valve before AI translations."
                         features={[
@@ -78,68 +124,57 @@ const ProjectCollection = () => {
                         featureImages={[modelSetup, model, modelHeart2]}
                         technologyIcons={[python, pytorch, git, linux, Cuda]}
                     />
-                    <Project
-                        title="Relational Database Design and Implementation"
-                        description="Designed and implemented a relational database focused on gym services. I completed the 'Member Info' UI and connected all pages."
-                        features={[
-                            "Created a relational database, designed and implemented to be normalized",
-                            "Member Info provides all information connected to the specific member requested",
-                            "Able to track member statistics and find available instructors sorted by skill level",
-                        ]}
-                        featureImages={[ER, pointers, instructors]}
-                        technologyIcons={[
-                            nodeJS,
-                            express,
-                            reactIcon,
-                            bootStrap,
-                            sqlIcon,
-                            restAPI,
-                            git,
-                        ]}
-                        gitLink="https://github.com/Jacob-13/Gym-Database-Management-System"
-                    />
+                    {seeAllProjects && (
+                        <Project
+                            title="Relational Database Design and Implementation"
+                            description="Designed and implemented a relational database focused on gym services. I completed the 'Member Info' UI and connected all pages."
+                            features={[
+                                "Created a relational database, designed and implemented to be normalized",
+                                "Member Info provides all information connected to the specific member requested",
+                                "Able to track member statistics and find available instructors sorted by skill level",
+                            ]}
+                            featureImages={[ER, pointers, instructors]}
+                            technologyIcons={[
+                                nodeJS,
+                                express,
+                                reactIcon,
+                                bootStrap,
+                                sqlIcon,
+                                restAPI,
+                                git,
+                            ]}
+                            gitLink="https://github.com/Jacob-13/Gym-Database-Management-System"
+                        />
+                    )}
                     {seeAllProjectsBtn && (
                         <div>
                             <div className="relative h-64 xs:h-96 overflow-hidden -top-10">
                                 <Project
-                                    title="Music Web App"
-                                    description="A music web application built with an express back-end supported by firebase and a react front-end. Users can sign-up, manage their accounts, and create playlists from the available music data."
+                                    title="Relational Database Design and Implementation"
+                                    description="Designed and implemented a relational database focused on gym services. I completed the 'Member Info' UI and connected all pages."
                                     features={[
-                                        "Opens to a landing page with public playlists created by other users",
-                                        "Implemented user authentication and authorization using firebase that ensures input validation for emails and strong password recommendations",
-                                        "Login brings users to their homepage where they can create/modify playlists and search for songs",
-                                        "Includes dynamic search results while looking for different tracks",
-                                        "Each search result includes a dropdown option that includes a play button, bringing them to YouTube with search results for the specified track",
-                                        "Users can also logout and are able to change their password",
-                                        "The admin accounts are able to authorize other admin accounts as well as disable users",
+                                        "Created a relational database, designed and implemented to be normalized",
+                                        "Member Info provides all information connected to the specific member requested",
+                                        "Able to track member statistics and find available instructors sorted by skill level",
                                     ]}
-                                    featureImages={[
-                                        MusicLanding,
-                                        musicSignin,
-                                        MusicUser,
-                                        musicSearch,
-                                        musicPlayable,
-                                        musicPwdChange,
-                                        MusicAdmin,
-                                    ]}
+                                    featureImages={[ER, pointers, instructors]}
                                     technologyIcons={[
-                                        git,
-                                        fireBaseIcon,
+                                        nodeJS,
                                         express,
                                         reactIcon,
-                                        insomniaIcon,
-                                        nodeJS,
+                                        bootStrap,
+                                        sqlIcon,
                                         restAPI,
-                                        aws,
+                                        git,
                                     ]}
+                                    gitLink="https://github.com/Jacob-13/Gym-Database-Management-System"
                                 />
                                 <div className="absolute bottom-0 w-full h-64 xs:h-96 bg-gradient-to-t from-gray-950 to-transparent"></div>
                             </div>
                             <div className="flex justify-center items-center">
                                 <div
                                     className="relative bottom-6 w-fit bg-gray-800 rounded-3xl cursor-pointer pb-1 px-2 hover:bg-gray-600 transition duration-300 linear"
-                                    onClick={handleMoreProjects}
-                                >
+                                    onClick={handleMoreProjects}>
                                     <p className="text-2xl text-titleFinal">
                                         See More Projects
                                     </p>
@@ -205,8 +240,7 @@ const ProjectCollection = () => {
                             <div className="flex justify-center items-center">
                                 <div
                                     className="w-fit bg-gray-700 rounded-3xl cursor-pointer pb-1 px-2 hover:bg-gray-500 transition duration-300 linear"
-                                    onClick={handleMoreProjects}
-                                >
+                                    onClick={handleMoreProjects}>
                                     <p className="text-2xl text-titleFinal">
                                         Hide More Projects
                                     </p>

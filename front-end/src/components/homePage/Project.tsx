@@ -9,6 +9,8 @@ import heartIcon from "../../images/heartIcon.png";
 import pokeball from "../../images/pokeball-icon.png";
 import musicAppIcon from "../../images/headphoneIcon.webp";
 import githubIcon from "../../images/githubIcon.png";
+import titleScreen from "../../images/title-screen.png";
+import orionNebula from "../../images/orion-nebula.png";
 
 type ProjectProps = {
     title: string;
@@ -17,6 +19,7 @@ type ProjectProps = {
     featureImages: string[];
     technologyIcons: string[];
     gitLink?: string;
+    otherLink?: string;
 };
 
 const Project = ({
@@ -26,10 +29,10 @@ const Project = ({
     featureImages,
     technologyIcons,
     gitLink,
+    otherLink,
 }: ProjectProps) => {
     const [image, setImage] = useState(loading);
     const [alt, setAlt] = useState("Loading...");
-    const [icon, setIcon] = useState(loading);
     const iconDivRef = useRef<HTMLDivElement>(null);
     const scrollBtnRef = useRef<HTMLImageElement>(null);
     const [isOverflowing, setIsOverflowing] = useState<boolean>(true);
@@ -43,6 +46,10 @@ const Project = ({
             setImage(pokeball);
         } else if (title == "Music Web App") {
             setImage(musicAppIcon);
+        } else if (title == "Haunting Grounds - Pirate Software Game Jam") {
+            setImage(titleScreen);
+        } else if (title === "Astrophotography Portfolio") {
+            setImage(orionNebula);
         } else {
             setImage(defaultDatabase);
         }
@@ -54,7 +61,7 @@ const Project = ({
         if (window.innerWidth < 500) {
             setIsOverflowing(false);
         } else if (iconDivRef.current) {
-            const { scrollWidth, clientWidth, scrollLeft } = iconDivRef.current;
+            const { scrollWidth, clientWidth } = iconDivRef.current;
             setIsOverflowing(scrollWidth > clientWidth);
         }
     }
@@ -65,8 +72,7 @@ const Project = ({
                 left: iconDivRef.current.scrollLeft - 100,
                 behavior: "smooth",
             });
-            const { clientWidth, scrollWidth, scrollLeft } = iconDivRef.current;
-            //const scrolledToRight = scrollLeft + clientWidth >= scrollWidth;
+            const { scrollLeft } = iconDivRef.current;
             setIsScrolledRight(false);
             const scrolledToLeft = scrollLeft - 100 <= 0;
             setIsScrolledLeft(scrolledToLeft);
@@ -169,7 +175,7 @@ const Project = ({
                 </div>
             </div>
 
-            {gitLink != null && (
+            {gitLink && (
                 <div className="flex justify-center h-14">
                     <a
                         href={gitLink}
@@ -179,6 +185,18 @@ const Project = ({
                             className="max-h-full bg-gray-400 rounded-full mt-12 md:mt-0 p-1 cursor-pointer hover:bg-white transition duration-500 linear"
                             src={githubIcon}
                         />
+                    </a>
+                </div>
+            )}
+            {otherLink && (
+                <div className="flex justify-center h-14">
+                    <a
+                        href={otherLink}
+                        target="_blank"
+                        className="flex justify-center">
+                        <p className="text-white font-bold bg-gray-600 hover:bg-gray-400 transition duration-500 linear flex justify-center items-center p-5 rounded-xl">
+                            VIEW
+                        </p>
                     </a>
                 </div>
             )}
