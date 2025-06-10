@@ -43,6 +43,11 @@ import astroAdmin from "../../images/astro-admin-panel.png";
 import nextJS from "../../images/nextjs-icon.png";
 import typescriptIcon from "../../images/typescript-icon.png";
 import neonDBIcon from "../../images/neon-db-icon.png";
+import androidStudioIcon from "../../images/android-studio-png.png";
+import explorePage from "../../images/couples-explore-page.png";
+import messagesPage from "../../images/couples-messages-page.png";
+import dateIdeas from "../../images/couples-date-ideas.png";
+import loveNote from "../../images/couples-love-note.png";
 import { useState } from "react";
 
 const ProjectCollection = () => {
@@ -75,6 +80,31 @@ const ProjectCollection = () => {
             </div>
             <div className="flex justify-center mt-0 md:mt-3">
                 <div className="flex-block w-5/6 xs:w-2/3">
+                    <Project
+                        title="React Native Couple's App"
+                        description="An app for couples to connect and come closer to one another!"
+                        features={[
+                            "Connects users to their partners allowing them to answer questions and play games that attempt to dig deeper into the relationship",
+                            "Each user can upload memories to look back on and remember their adventures together",
+                            "There are a list of date ideas that users can scroll through. Each date idea comes with a checklist of required resources (e.g., paint for a painting date) and the ability to set the completion status",
+                            "Partners can send love notes to each other as a surprise when opening the app",
+                        ]}
+                        featureImages={[
+                            explorePage,
+                            messagesPage,
+                            dateIdeas,
+                            loveNote,
+                        ]}
+                        technologyIcons={[
+                            git,
+                            nodeJS,
+                            reactIcon,
+                            aws,
+                            typescriptIcon,
+                            fireBaseIcon,
+                            androidStudioIcon,
+                        ]}
+                    />
                     <Project
                         title="Astrophotography Portfolio"
                         description="A beautiful gallery display for an astrophotographer. Includes an admin panel for easy upload, edit, and removal of images."

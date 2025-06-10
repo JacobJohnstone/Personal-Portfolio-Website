@@ -11,6 +11,7 @@ import musicAppIcon from "../../images/headphoneIcon.webp";
 import githubIcon from "../../images/githubIcon.png";
 import titleScreen from "../../images/title-screen.png";
 import orionNebula from "../../images/orion-nebula.png";
+import coupleAppIcon from "../../images/coupleAppIcon.png";
 
 type ProjectProps = {
     title: string;
@@ -50,6 +51,8 @@ const Project = ({
             setImage(titleScreen);
         } else if (title === "Astrophotography Portfolio") {
             setImage(orionNebula);
+        } else if (title === "React Native Couple's App") {
+            setImage(coupleAppIcon);
         } else {
             setImage(defaultDatabase);
         }
