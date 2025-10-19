@@ -30,7 +30,7 @@ const Title = () => {
                         </p>
                     </div>
                 </div>
-                <div className="relative z-40 top-[7rem] md:top-[3rem]">
+                {/* <div className="relative z-40 top-[7rem] md:top-[3rem]">
                     <p className="blur-[20px] text-purple-500 w-screen text-center font-bold text-4xl sm:text-5xl lg:text-6xl lg:tracking-wider font-mono animate-signGlow">
                         B.E.Sc
                     </p>
@@ -44,7 +44,7 @@ const Title = () => {
                             B.E.Sc
                         </p>
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     );
