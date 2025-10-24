@@ -1,13 +1,11 @@
 import { Analytics } from "@vercel/analytics/react";
-import Home from "./components/homePage/NewHome";
+import Hero from "./components/hero/";
 
 function App() {
     return (
-        <div>
-            <div className="no-scrollbar">
-                <Home />
-                <Analytics />
-            </div>
+        <div className="no-scrollbar">
+            <Hero />
+            <Analytics />
         </div>
     );
 }

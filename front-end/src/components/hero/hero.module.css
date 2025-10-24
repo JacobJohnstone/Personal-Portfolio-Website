@@ -1,0 +1,55 @@
+.root {
+    height: 100lvh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #111;
+}
+
+.bachelorsText {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.textContainer {
+    position: relative;
+    padding: 8rem 10rem;
+    border-radius: 50%;
+    background: radial-gradient(
+        rgba(12, 56, 100, 0.3) 0%,
+        rgba(200, 200, 200, 0) 65%
+    );
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-20px);
+}
+
+.nameText {
+    /* font-family: "Nunito", sans-serif; */
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 1rem 0;
+    height: fit-content;
+    width: fit-content;
+}
+
+.highColor {
+    color: dodgerblue;
+}
+
+.heroItem {
+    /* font-family: "Nunito", sans-serif; */
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0 0 3rem 0;
+}
