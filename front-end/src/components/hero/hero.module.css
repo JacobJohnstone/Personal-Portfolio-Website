@@ -21,10 +21,11 @@
     padding: 8rem 10rem;
     border-radius: 50%;
     background: radial-gradient(
-        rgba(12, 56, 100, 0.3) 0%,
-        rgba(200, 200, 200, 0) 65%
+        rgba(17, 17, 17, 1) 10%,
+        rgba(17, 17, 17, 0.8) 50%,
+        rgba(17, 17, 17, 0) 80%
     );
-    backdrop-filter: blur(2px);
+    /* backdrop-filter: blur(2px); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,4 +53,14 @@
     color: #fff;
     line-height: 1.6;
     margin: 0 0 3rem 0;
+}
+
+.particlesCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
 }

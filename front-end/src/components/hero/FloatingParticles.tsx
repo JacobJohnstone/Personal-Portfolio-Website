@@ -1,0 +1,115 @@
+import React, { useEffect, useRef } from "react";
+import styles from "./hero.module.css";
+
+interface Particle {
+    x: number;
+    y: number;
+    vx: number;
+    vy: number;
+    size: number;
+    opacity: number;
+}
+
+const FloatingParticles: React.FC = () => {
+    const canvasRef = useRef<HTMLCanvasElement>(null);
+    const particlesRef = useRef<Particle[]>([]);
+    const animationRef = useRef<number>();
+
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
+
+        // Set canvas size to match container
+        const resizeCanvas = () => {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        };
+
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+
+        // Create particles
+        const createParticles = () => {
+            const particleCount = 120;
+            particlesRef.current = [];
+
+            for (let i = 0; i < particleCount; i++) {
+                particlesRef.current.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    size: Math.random() * 3 + 1,
+                    opacity: Math.random() * 0.8 + 0.2,
+                });
+            }
+        };
+
+        createParticles();
+
+        // Animation loop
+        const animate = () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            particlesRef.current.forEach((particle) => {
+                // Update position
+                particle.x += particle.vx;
+                particle.y += particle.vy;
+
+                // Wrap around edges
+                if (particle.x < 0) particle.x = canvas.width;
+                if (particle.x > canvas.width) particle.x = 0;
+                if (particle.y < 0) particle.y = canvas.height;
+                if (particle.y > canvas.height) particle.y = 0;
+
+                // Draw particle with neon glow
+                ctx.save();
+                ctx.globalAlpha = particle.opacity;
+
+                // Create glow effect
+                ctx.shadowColor = "#ff8c00";
+                ctx.shadowBlur = 15;
+                ctx.shadowOffsetX = 0;
+                ctx.shadowOffsetY = 0;
+
+                ctx.fillStyle = "#ff8c00";
+                ctx.beginPath();
+                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Add inner bright core
+                ctx.shadowBlur = 0;
+                ctx.fillStyle = "#ffa500";
+                ctx.beginPath();
+                ctx.arc(
+                    particle.x,
+                    particle.y,
+                    particle.size * 0.6,
+                    0,
+                    Math.PI * 2
+                );
+                ctx.fill();
+
+                ctx.restore();
+            });
+
+            animationRef.current = requestAnimationFrame(animate);
+        };
+
+        animate();
+
+        return () => {
+            window.removeEventListener("resize", resizeCanvas);
+            if (animationRef.current) {
+                cancelAnimationFrame(animationRef.current);
+            }
+        };
+    }, []);
+
+    return <canvas ref={canvasRef} className={styles.particlesCanvas} />;
+};
+
+export default FloatingParticles;
