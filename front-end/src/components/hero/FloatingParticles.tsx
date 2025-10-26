@@ -14,6 +14,7 @@ const FloatingParticles: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const particlesRef = useRef<Particle[]>([]);
     const animationRef = useRef<number>();
+    const lastTimeRef = useRef<number>(0);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -51,13 +52,23 @@ const FloatingParticles: React.FC = () => {
         createParticles();
 
         // Animation loop
-        const animate = () => {
+        const animate = (currentTime: number) => {
+            // Calculate delta time for frame-rate independent movement
+            const deltaTime =
+                lastTimeRef.current > 0
+                    ? (currentTime - lastTimeRef.current) / 1000 // Convert to seconds
+                    : 0;
+            lastTimeRef.current = currentTime;
+
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+            // Speed multiplier to keep consistent movement (units per second)
+            const speedMultiplier = 120; // Adjust this to control overall speed
+
             particlesRef.current.forEach((particle) => {
-                // Update position
-                particle.x += particle.vx;
-                particle.y += particle.vy;
+                // Update position with delta time for frame-rate independence
+                particle.x += particle.vx * speedMultiplier * deltaTime;
+                particle.y += particle.vy * speedMultiplier * deltaTime;
 
                 // Wrap around edges
                 if (particle.x < 0) particle.x = canvas.width;
@@ -99,13 +110,14 @@ const FloatingParticles: React.FC = () => {
             animationRef.current = requestAnimationFrame(animate);
         };
 
-        animate();
+        animate(0);
 
         return () => {
             window.removeEventListener("resize", resizeCanvas);
             if (animationRef.current) {
                 cancelAnimationFrame(animationRef.current);
             }
+            lastTimeRef.current = 0;
         };
     }, []);
 
