@@ -34,7 +34,7 @@ const FloatingParticles: React.FC = () => {
 
         // Create particles
         const createParticles = () => {
-            const particleCount = 120;
+            const particleCount = 420;
             particlesRef.current = [];
 
             for (let i = 0; i < particleCount; i++) {
@@ -63,7 +63,7 @@ const FloatingParticles: React.FC = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             // Speed multiplier to keep consistent movement (units per second)
-            const speedMultiplier = 120; // Adjust this to control overall speed
+            const speedMultiplier = 170; // Adjust this to control overall speed
 
             particlesRef.current.forEach((particle) => {
                 // Update position with delta time for frame-rate independence
