@@ -29,10 +29,16 @@ const Timeline = () => {
                 "Successfully completed my academic journey and graduated with a strong foundation in computer science.",
         },
         {
-            year: "May 2024 - Present",
+            year: "May 2025 - Present",
             title: "First Mobile App Published",
             description:
                 "Built and published my first mobile application to the App Store, marking a significant milestone in my development career.",
+        },
+        {
+            year: "Future Aspirations",
+            title: "Masters and Professional Work",
+            description:
+                "As I continue to learn and grow I am hoping to land a full-time position, as well as complete a masters and artificial intelligence/machine learning.",
         },
     ];
 

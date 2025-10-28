@@ -14,94 +14,92 @@ const projects: Project[] = [
         title: "Couples App",
         description:
             "A mobile app for couples to share moments, plan dates, and strengthen relationships",
-        image: "/src/images/couples-chatting-page.png",
+        image: "/assets/images/amorie/amorieDownloadPreview.jpg",
         technologies: [
-            "/src/images/react.png",
-            "/src/images/firebaseIcon.webp",
-            "/src/images/javascriptIcon.png",
-            "/src/images/css-icon.png",
-            "/src/images/html-icon.webp",
-            "/src/images/git-icon.png",
-            "/src/images/githubIcon.png",
+            "/assets/images/technologies/react.png",
+            "/assets/images/technologies/firebaseIcon.webp",
+            "/assets/images/technologies/javascriptIcon.png",
+            "/assets/images/technologies/css-icon.png",
+            "/assets/images/technologies/html-icon.webp",
+            "/assets/images/technologies/git-icon.png",
         ],
     },
     {
         id: 2,
-        title: "Music Streaming Platform",
+        title: "Astronomy Gallery",
         description:
-            "Full-stack music streaming application with playlist management and social features",
-        image: "/src/images/MusicLanding.jpg",
+            "Web application showcasing astronomical including nebulas, galaxies, and more",
+        image: "/assets/images/astroApp/orionNebula.png",
         technologies: [
-            "/src/images/react.png",
-            "/src/images/nodejs-1-logo-png-transparent.png",
-            "/src/images/MongoDB-Logo.png",
-            "/src/images/javascriptIcon.png",
-            "/src/images/css-icon.png",
-            "/src/images/express.png",
-            "/src/images/git-icon.png",
+            "/assets/images/technologies/react.png",
+            "/assets/images/technologies/typescript-icon.png",
+            "/assets/images/technologies/css-icon.png",
+            "/assets/images/technologies/html-icon.webp",
+            "/assets/images/technologies/git-icon.png",
+            "/assets/images/technologies/githubIcon.png",
+            "/assets/images/technologies/nextjs-icon.png",
         ],
     },
     {
         id: 3,
-        title: "Pokédex Application",
+        title: "The Last Descent",
         description:
-            "Interactive Pokédex with search functionality and detailed Pokémon information",
-        image: "/src/images/Pokedex.jpg",
+            "A short action/adventure game submitted to the 17th Pirate Software game jam",
+        image: "/assets/images/theLastDescent/theLastDescent.png",
         technologies: [
-            "/src/images/react.png",
-            "/src/images/javascriptIcon.png",
-            "/src/images/css-icon.png",
-            "/src/images/html-icon.webp",
-            "/src/images/git-icon.png",
-            "/src/images/githubIcon.png",
+            "/assets/images/technologies/react.png",
+            "/assets/images/technologies/javascriptIcon.png",
+            "/assets/images/technologies/css-icon.png",
+            "/assets/images/technologies/html-icon.webp",
+            "/assets/images/technologies/git-icon.png",
+            "/assets/images/technologies/githubIcon.png",
         ],
     },
     {
         id: 4,
-        title: "Astronomy Gallery",
+        title: "AI Image Translation",
         description:
-            "Web application showcasing astronomical images and educational content",
-        image: "/src/images/astronomy-home.png",
+            "A system designed to transform artificial surgery practice into a realistic image",
+        image: "/assets/images/aiImageTranslation/modelImage.jpg",
         technologies: [
-            "/src/images/react.png",
-            "/src/images/typescript-icon.png",
-            "/src/images/css-icon.png",
-            "/src/images/html-icon.webp",
-            "/src/images/git-icon.png",
-            "/src/images/githubIcon.png",
-            "/src/images/nextjs-icon.png",
+            "/assets/images/technologies/react.png",
+            "/assets/images/technologies/typescript-icon.png",
+            "/assets/images/technologies/css-icon.png",
+            "/assets/images/technologies/html-icon.webp",
+            "/assets/images/technologies/git-icon.png",
+            "/assets/images/technologies/githubIcon.png",
+            "/assets/images/technologies/nextjs-icon.png",
+            "/assets/images/technologies/neon-db-icon.png",
         ],
     },
     {
         id: 5,
-        title: "Admin Dashboard",
+        title: "Haunting Grounds",
         description:
-            "Comprehensive admin panel for managing users, content, and system settings",
-        image: "/src/images/astro-admin-panel.png",
+            "A mini steal/action game created for the 16th Pirate Software game jam",
+        image: "/assets/images/hauntingGrounds/titleScreen.png",
         technologies: [
-            "/src/images/react.png",
-            "/src/images/typescript-icon.png",
-            "/src/images/css-icon.png",
-            "/src/images/html-icon.webp",
-            "/src/images/git-icon.png",
-            "/src/images/githubIcon.png",
-            "/src/images/nextjs-icon.png",
-            "/src/images/neon-db-icon.png",
+            "/assets/images/technologies/Unity-icon.png",
+            "/assets/images/technologies/c-sharp-icon.png",
+            "/assets/images/technologies/git-icon.png",
+            "/assets/images/technologies/githubIcon.png",
+            "/assets/images/technologies/FL_Studio_11_icon.webp",
+            "/assets/images/technologies/aseprite-icon.png",
         ],
     },
     {
         id: 6,
-        title: "Game Development",
+        title: "Pokédex Application",
         description:
-            "Unity-based game with custom mechanics and engaging gameplay experience",
-        image: "/src/images/gameplay_1.png",
+            "Interactive Pokédex with search functionality and detailed Pokémon information",
+        image: "/assets/images/Pokedex.jpg",
         technologies: [
-            "/src/images/Unity-icon.png",
-            "/src/images/c-sharp-icon.png",
-            "/src/images/git-icon.png",
-            "/src/images/githubIcon.png",
-            "/src/images/FL_Studio_11_icon.webp",
-            "/src/images/aseprite-icon.png",
+            "/assets/images/technologies/react.png",
+            "/assets/images/technologies/javascriptIcon.png",
+            "/assets/images/technologies/css-icon.png",
+            "/assets/images/technologies/html-icon.webp",
+            "/assets/images/technologies/git-icon.png",
+            "/assets/images/technologies/githubIcon.png",
         ],
     },
 ];
@@ -120,8 +118,7 @@ const Projects = () => {
                     <div
                         key={project.id}
                         className={styles.projectCard}
-                        onClick={() => handleProjectClick(project.id)}
-                    >
+                        onClick={() => handleProjectClick(project.id)}>
                         <div className={styles.imageContainer}>
                             <img
                                 src={project.image}
@@ -143,15 +140,6 @@ const Projects = () => {
                                     {project.technologies.map((tech, index) => (
                                         <img
                                             key={index}
-                                            src={tech}
-                                            alt={`Technology ${index + 1}`}
-                                            className={styles.techIcon}
-                                        />
-                                    ))}
-                                    {/* Duplicate icons for seamless carousel */}
-                                    {project.technologies.map((tech, index) => (
-                                        <img
-                                            key={`duplicate-${index}`}
                                             src={tech}
                                             alt={`Technology ${index + 1}`}
                                             className={styles.techIcon}

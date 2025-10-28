@@ -92,8 +92,8 @@
 
 /* Technology Section */
 .techSection {
-    height: 10%; /* Small section at bottom */
-    background: rgba(0, 0, 0, 0.5);
+    height: 15%; /* Small section at bottom */
+    background: rgba(60, 60, 60);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
@@ -110,6 +110,7 @@
 .techIcons {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     height: 100%;
     animation: scroll 20s linear infinite;
     gap: 0.5rem;
@@ -117,8 +118,8 @@
 }
 
 .techIcon {
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     object-fit: contain;
     flex-shrink: 0;
     opacity: 0.8;
@@ -127,21 +128,6 @@
 
 .techIcon:hover {
     opacity: 1;
-}
-
-/* Carousel Animation */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-/* Pause animation on hover */
-.projectCard:hover .techIcons {
-    animation-play-state: paused;
 }
 
 /* Responsive design */
