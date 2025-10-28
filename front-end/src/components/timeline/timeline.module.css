@@ -74,7 +74,16 @@
 .cardContent:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-    border-color: rgba(102, 126, 234, 0.5);
+    border-color: rgba(255, 140, 0, 0.5);
+}
+
+.cardContent:hover .year {
+    color: #ff8c00;
+}
+
+.timelineCard:hover .timelineDot {
+    background: #ff8c00;
+    box-shadow: 0 0 0 4px rgba(255, 140, 0, 0.3);
 }
 
 .year {

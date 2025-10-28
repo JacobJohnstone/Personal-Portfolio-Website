@@ -41,8 +41,8 @@ const FloatingParticles: React.FC = () => {
                 particlesRef.current.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 0.5,
-                    vy: (Math.random() - 0.5) * 0.5,
+                    vx: Math.random() * 0.3 + 0.1, // Move right (positive x)
+                    vy: Math.random() * 0.3 + 0.1, // Move down (positive y)
                     size: Math.random() * 3 + 1,
                     opacity: Math.random() * 0.8 + 0.2,
                 });

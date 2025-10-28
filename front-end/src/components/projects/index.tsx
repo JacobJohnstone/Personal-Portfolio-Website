@@ -92,7 +92,7 @@ const projects: Project[] = [
         title: "Pokédex Application",
         description:
             "Interactive Pokédex with search functionality and detailed Pokémon information",
-        image: "/assets/images/Pokedex.jpg",
+        image: "/assets/images/pokedex/Pokedex.jpg",
         technologies: [
             "/assets/images/technologies/react.png",
             "/assets/images/technologies/javascriptIcon.png",
@@ -111,7 +111,7 @@ const Projects = () => {
     };
 
     return (
-        <section className={styles.projectsSection}>
+        <section id="projects" className={styles.projectsSection}>
             <h2 className={styles.sectionTitle}>My Projects</h2>
             <div className={styles.projectsGrid}>
                 {projects.map((project) => (
