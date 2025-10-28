@@ -43,7 +43,7 @@ const FloatingParticles: React.FC = () => {
                     y: Math.random() * canvas.height,
                     vx: Math.random() * 0.3 + 0.1, // Move right (positive x)
                     vy: Math.random() * 0.3 + 0.1, // Move down (positive y)
-                    size: Math.random() * 3 + 1,
+                    size: Math.random() * 5 + 1,
                     opacity: Math.random() * 0.8 + 0.2,
                 });
             }

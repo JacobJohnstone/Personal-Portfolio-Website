@@ -17,9 +17,9 @@ const HeroText = () => {
     return (
         <div className={styles.textContainer}>
             <div className={styles.nameText}>
-                <h1>Hello, I'm Jacob</h1>
-                <h1>
-                    I am a{" "}
+                <h1>Hello, I'm JACOB</h1>
+                <h1 className={styles.lineTwo}>
+                    I am an aspiring{" "}
                     <span className={styles.highColor}>
                         full stack developer!
                     </span>
@@ -30,12 +30,12 @@ const HeroText = () => {
                 <button
                     className={styles.projectsButton}
                     onClick={scrollToProjects}>
-                    View Projects
+                    VIEW PROJECTS
                 </button>
                 <button
                     className={styles.connectButton}
                     onClick={handleConnectClick}>
-                    Let's Connect!
+                    LET'S CONNECT!
                 </button>
             </div>
         </div>
