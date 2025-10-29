@@ -8,6 +8,8 @@ interface Particle {
     vy: number;
     size: number;
     opacity: number;
+    rotation: number;
+    rotationSpeed: number;
 }
 
 const FloatingParticles: React.FC = () => {
@@ -15,6 +17,7 @@ const FloatingParticles: React.FC = () => {
     const particlesRef = useRef<Particle[]>([]);
     const animationRef = useRef<number>();
     const lastTimeRef = useRef<number>(0);
+    const leafImageRef = useRef<HTMLCanvasElement | null>(null);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -32,6 +35,78 @@ const FloatingParticles: React.FC = () => {
         resizeCanvas();
         window.addEventListener("resize", resizeCanvas);
 
+        // Pre-render leaf shape to offscreen canvas (only once for performance)
+        const createLeafImage = () => {
+            // Base size for the leaf sprite (will be scaled when drawing)
+            const baseSize = 20;
+            const leafCanvas = document.createElement("canvas");
+            leafCanvas.width = baseSize * 2;
+            leafCanvas.height = baseSize * 2.4;
+            const leafCtx = leafCanvas.getContext("2d");
+
+            if (!leafCtx) return null;
+
+            // Draw cherry blossom petal shape
+            leafCtx.beginPath();
+            const width = baseSize;
+            const height = baseSize * 1.2;
+
+            // Center the leaf in the canvas
+            const centerX = baseSize;
+            const centerY = baseSize * 1.2;
+
+            // Start at top center
+            leafCtx.moveTo(centerX, centerY - height / 2);
+
+            // Left side curve
+            leafCtx.quadraticCurveTo(
+                centerX - width / 2,
+                centerY,
+                centerX - width / 3,
+                centerY + height / 2
+            );
+
+            // Bottom point
+            leafCtx.lineTo(centerX, centerY + height / 2);
+
+            // Right side curve
+            leafCtx.quadraticCurveTo(
+                centerX + width / 2,
+                centerY,
+                centerX,
+                centerY - height / 2
+            );
+
+            leafCtx.closePath();
+            leafCtx.fillStyle = "#FF8FA3";
+            leafCtx.fill();
+
+            // Add inner bright core
+            leafCtx.beginPath();
+            leafCtx.moveTo(centerX, centerY - (height * 0.7) / 2);
+            leafCtx.quadraticCurveTo(
+                centerX - (width * 0.7) / 2,
+                centerY,
+                centerX - (width * 0.7) / 3,
+                centerY + (height * 0.7) / 2
+            );
+            leafCtx.lineTo(centerX, centerY + (height * 0.7) / 2);
+            leafCtx.quadraticCurveTo(
+                centerX + (width * 0.7) / 2,
+                centerY,
+                centerX,
+                centerY - (height * 0.7) / 2
+            );
+            leafCtx.closePath();
+            leafCtx.fillStyle = "#FFB6C1";
+            leafCtx.fill();
+
+            return leafCanvas;
+        };
+
+        // Create cached leaf image
+        leafImageRef.current = createLeafImage();
+
         // Create particles
         const createParticles = () => {
             const particleCount = 420;
@@ -43,8 +118,10 @@ const FloatingParticles: React.FC = () => {
                     y: Math.random() * canvas.height,
                     vx: Math.random() * 0.3 + 0.1, // Move right (positive x)
                     vy: Math.random() * 0.3 + 0.1, // Move down (positive y)
-                    size: Math.random() * 5 + 1,
-                    opacity: Math.random() * 0.8 + 0.2,
+                    size: Math.random() * 13 + 2,
+                    opacity: Math.random() * 0.4 + 0.2,
+                    rotation: Math.random() * Math.PI * 2,
+                    rotationSpeed: (Math.random() - 0.5) * 2, // Random rotation speed
                 });
             }
         };
@@ -70,41 +147,43 @@ const FloatingParticles: React.FC = () => {
                 particle.x += particle.vx * speedMultiplier * deltaTime;
                 particle.y += particle.vy * speedMultiplier * deltaTime;
 
+                // Update rotation for tumbling effect
+                particle.rotation += particle.rotationSpeed * deltaTime;
+
                 // Wrap around edges
                 if (particle.x < 0) particle.x = canvas.width;
                 if (particle.x > canvas.width) particle.x = 0;
                 if (particle.y < 0) particle.y = canvas.height;
                 if (particle.y > canvas.height) particle.y = 0;
 
-                // Draw particle with neon glow
-                ctx.save();
-                ctx.globalAlpha = particle.opacity;
+                // Draw pre-rendered leaf image (much faster than drawing path each frame)
+                if (leafImageRef.current) {
+                    ctx.save();
+                    ctx.globalAlpha = particle.opacity;
 
-                // Create glow effect
-                ctx.shadowColor = "#ff8c00";
-                ctx.shadowBlur = 15;
-                ctx.shadowOffsetX = 0;
-                ctx.shadowOffsetY = 0;
+                    // Create glow effect
+                    ctx.shadowColor = "#FF6B9D";
+                    ctx.shadowBlur = 15;
+                    ctx.shadowOffsetX = 0;
+                    ctx.shadowOffsetY = 0;
 
-                ctx.fillStyle = "#ff8c00";
-                ctx.beginPath();
-                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-                ctx.fill();
+                    // Scale factor (base size is 20, so scale to particle.size)
+                    const scale = particle.size / 20;
 
-                // Add inner bright core
-                ctx.shadowBlur = 0;
-                ctx.fillStyle = "#ffa500";
-                ctx.beginPath();
-                ctx.arc(
-                    particle.x,
-                    particle.y,
-                    particle.size * 0.6,
-                    0,
-                    Math.PI * 2
-                );
-                ctx.fill();
+                    // Translate and rotate around the leaf center
+                    ctx.translate(particle.x, particle.y);
+                    ctx.rotate(particle.rotation);
+                    ctx.scale(scale, scale);
 
-                ctx.restore();
+                    // Draw the cached leaf image (centered)
+                    ctx.drawImage(
+                        leafImageRef.current,
+                        -leafImageRef.current.width / 2,
+                        -leafImageRef.current.height / 2
+                    );
+
+                    ctx.restore();
+                }
             });
 
             animationRef.current = requestAnimationFrame(animate);

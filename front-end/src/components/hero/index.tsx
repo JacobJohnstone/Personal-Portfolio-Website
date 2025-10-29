@@ -8,6 +8,7 @@ const Hero = () => {
         <div className={styles.root}>
             <FloatingParticles />
             <HeroText />
+            <div className={styles.particleFade}></div>
         </div>
     );
 };

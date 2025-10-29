@@ -1,0 +1,352 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal {
+    position: relative;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(146, 214, 189, 0.2);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    line-height: 1;
+}
+
+.modalContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.imageContainer {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+.modalImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contentSection {
+    padding: 2rem;
+}
+
+.modalTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+    background: linear-gradient(45deg, #ffffff, #a8e6cf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.headerInfo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.modalYear {
+    font-size: 1rem;
+    color: #888;
+    font-weight: 400;
+    margin: 0;
+}
+
+.usersCount {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #a8e6cf;
+    font-size: 1rem;
+}
+
+.usersCount svg {
+    color: #a8e6cf;
+}
+
+.usersNumber {
+    font-weight: 600;
+    color: #a8e6cf;
+    font-size: 1.1rem;
+}
+
+.usersLabel {
+    color: #888;
+    font-weight: 400;
+}
+
+.modalDescription {
+    font-size: 1.1rem;
+    color: #cccccc;
+    line-height: 1.6;
+    margin: 0 0 2rem 0;
+}
+
+.nextStepsSection {
+    margin: 2rem 0;
+}
+
+.nextStepsTitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #888;
+    margin: 0 0 0.75rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nextStepsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nextStepsItem {
+    font-size: 0.95rem;
+    color: #bbb;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.nextStepsItem::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a8e6cf;
+    font-weight: bold;
+}
+
+.linksSection {
+    margin: 2rem 0;
+}
+
+.linksTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #a8e6cf;
+    margin: 0 0 1rem 0;
+}
+
+.linksContainer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.linkButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(146, 214, 189, 0.1);
+    color: rgb(146, 214, 189);
+    border: 1px solid rgba(146, 214, 189, 0.3);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.linkButton:hover {
+    background: rgba(146, 214, 189, 0.2);
+    border-color: rgba(146, 214, 189, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(146, 214, 189, 0.2);
+}
+
+.linkButton svg {
+    width: 18px;
+    height: 18px;
+}
+
+.technologiesSection {
+    margin-top: 2rem;
+}
+
+.technologiesTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #a8e6cf;
+    margin: 0 0 1rem 0;
+}
+
+.technologiesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.techIconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.techIconWrapper:hover {
+    background: rgba(146, 214, 189, 0.1);
+    border-color: rgba(146, 214, 189, 0.3);
+    transform: translateY(-4px);
+}
+
+.techIcon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: brightness(0.9);
+    transition: all 0.3s ease;
+}
+
+.techIconWrapper:hover .techIcon {
+    filter: brightness(1.1);
+}
+
+/* Scrollbar styling for modal */
+.modal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background: rgba(146, 214, 189, 0.3);
+    border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+    background: rgba(146, 214, 189, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .overlay {
+        padding: 1rem;
+    }
+
+    .modal {
+        max-height: 95vh;
+    }
+
+    .imageContainer {
+        height: 200px;
+    }
+
+    .contentSection {
+        padding: 1.5rem;
+    }
+
+    .modalTitle {
+        font-size: 1.5rem;
+    }
+
+    .modalDescription {
+        font-size: 1rem;
+    }
+
+    .technologiesGrid {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+        gap: 0.75rem;
+    }
+
+    .techIcon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .techIconWrapper {
+        padding: 0.75rem;
+    }
+
+    .closeButton {
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 2rem;
+        width: 35px;
+        height: 35px;
+    }
+
+    .linkButton {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .linksContainer {
+        gap: 0.75rem;
+    }
+}
+
