@@ -73,7 +73,7 @@
         "detailedDescription": "This innovative AI-powered system translates surgical training simulations into photorealistic images, bridging the gap between virtual practice and real-world scenarios. The system employs generative adversarial networks (GANs, specifically CycleGAN) to convert synthetic medical images into realistic representations.",
         "image": "/assets/images/aiImageTranslation/modelImage.jpg",
         "technologies": [
-            "/assets/images/technologies/python_logo_01.png",
+            "/assets/images/technologies/Python_logo_01.png",
             "/assets/images/technologies/Pytorch.png",
             "/assets/images/technologies/git-icon.png",
             "/assets/images/technologies/githubIcon.png"
