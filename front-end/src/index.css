@@ -18,6 +18,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Set dark background for the entire page */
+html, body {
+    background-color: #111;
+    margin: 0;
+    padding: 0;
+}
+
 @layer utilities {
     @variants responsive {
         html {
