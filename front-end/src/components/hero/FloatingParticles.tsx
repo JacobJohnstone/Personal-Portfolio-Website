@@ -109,7 +109,7 @@ const FloatingParticles: React.FC = () => {
 
         // Create particles
         const createParticles = () => {
-            const particleCount = 420;
+            const particleCount = 120;
             particlesRef.current = [];
 
             for (let i = 0; i < particleCount; i++) {

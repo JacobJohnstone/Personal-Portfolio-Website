@@ -29,7 +29,7 @@
         "id": 2,
         "title": "Astronomy Gallery",
         "year": 2025,
-        "description": "Web application showcasing astronomical including nebulas, galaxies, and more",
+        "description": "Web application showcasing astronomical images including nebulas, galaxies, and more",
         "detailedDescription": "This Astronomy Gallery was built to showcase the images of a specific astrophotographer. The application includes a homepage, about section, and a gallery. I built a hidden admin panel to allow the photographer to upload, edit, or delete images displayed in the gallery. The images are stored in an AWS S3 bucket with their paths and meta-data stored in a Neon DB.",
         "nextSteps": ["Admin panel drag-and-drop image order re-arrange"],
         "image": "/assets/images/astroApp/orionNebula.png",
@@ -51,7 +51,7 @@
         "title": "The Last Descent",
         "year": 2025,
         "description": "A short action/adventure game submitted to the 17th Pirate Software game jam",
-        "detailedDescription": "The Last Descent is an exhilarating action-adventure game created for the 17th Pirate Software game jam. Players navigate through treacherous underground caverns, solving puzzles and battling enemies as they descend deeper into the earth. The game features pixel-perfect art, challenging platforming mechanics, and a compelling narrative about an explorer's journey to reach the world's deepest point. Created in Unity with C# scripting and custom sprites designed in Aseprite.",
+        "detailedDescription": "The Last Descent is an action-adventure game created for the 17th Pirate Software game jam. Created in Unity with C# scripting and custom sprites designed in Aseprite. I followed Object-Oriented Programming principles to create a modular, event-driven codebase that I can continue to build on.",
         "image": "/assets/images/theLastDescent/theLastDescent.png",
         "technologies": [
             "/assets/images/technologies/Unity-icon.png",
@@ -70,7 +70,7 @@
         "title": "AI Image Translation",
         "year": 2024,
         "description": "A system designed to transform artificial surgery practice into a realistic image",
-        "detailedDescription": "This innovative AI-powered system translates surgical training simulations into photorealistic images, bridging the gap between virtual practice and real-world scenarios. Using advanced PyTorch-based neural networks, the system employs generative adversarial networks (GANs) to convert synthetic medical images into realistic representations. This technology enables medical professionals to train with more lifelike simulations and enhances the effectiveness of surgical education programs.",
+        "detailedDescription": "This innovative AI-powered system translates surgical training simulations into photorealistic images, bridging the gap between virtual practice and real-world scenarios. The system employs generative adversarial networks (GANs, specifically CycleGAN) to convert synthetic medical images into realistic representations.",
         "image": "/assets/images/aiImageTranslation/modelImage.jpg",
         "technologies": [
             "/assets/images/technologies/python_logo_01.png",
@@ -85,7 +85,7 @@
         "title": "Haunting Grounds",
         "year": 2024,
         "description": "A mini stealth/action game created for the 16th Pirate Software game jam",
-        "detailedDescription": "Haunting Grounds is a stealth-action mini game where players must navigate through haunted environments while avoiding detection by supernatural entities. The game challenges players to use stealth mechanics, environmental awareness, and quick reflexes to survive. Featuring original soundtrack composed in FL Studio, hand-crafted pixel art animations, and tense gameplay that keeps players on the edge of their seats. Developed in Unity with C# for responsive controls and engaging combat systems.",
+        "detailedDescription": "Haunting Grounds is a stealth-action mini game where players enter as the ghost entity and try to rid the castle of it's residents by scaring them to death. The game challenges players to use stealth mechanics and environmental awareness to complete the objective. Featuring original soundtrack composed in FL Studio, hand-crafted pixel art animations, and interesting gameplay mechanics. Developed in Unity with C#, while making use of the A* algorithm for NPC pathfinding.",
         "image": "/assets/images/hauntingGrounds/titleScreen.png",
         "technologies": [
             "/assets/images/technologies/Unity-icon.png",
@@ -105,7 +105,7 @@
         "title": "Pokédex Application",
         "year": 2023,
         "description": "Interactive Pokédex with search functionality and detailed Pokémon information",
-        "detailedDescription": "A fully interactive web-based Pokédex application that provides comprehensive information about Pokémon from all generations. Features include advanced search and filtering capabilities, detailed stats display, type effectiveness charts, evolution chains, and beautiful card-based layouts. The application uses the PokeAPI for accurate data and implements smooth animations and transitions for an engaging user experience. Built with vanilla JavaScript, HTML5, and CSS3 for optimal performance across all devices.",
+        "detailedDescription": "An interactive web-based Pokédex application that provides information about 20 Pokémon. Features include searching by name or number (with input validation) to display simple details about the Pokémon. Built with vanilla JavaScript, HTML5, and CSS3 as an introductory project to web development.",
         "image": "/assets/images/pokedex/Pokedex.jpg",
         "technologies": [
             "/assets/images/technologies/javascriptIcon.png",

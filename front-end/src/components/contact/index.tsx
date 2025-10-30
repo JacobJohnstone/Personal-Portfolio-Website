@@ -1,7 +1,4 @@
 import styles from "./contact.module.css";
-import gmailIcon from "../../images/gmailIcon.webp";
-import linkedinIcon from "../../images/linkedinIcon.webp";
-import resumeIcon from "../../images/resumeIcon.png";
 
 const Contact = () => {
     return (
@@ -14,24 +11,26 @@ const Contact = () => {
                 </p>
                 <div className={styles.contactLinks}>
                     <a
-                        href="mailto:your.email@example.com"
+                        href="mailto:jjohnstone681@gmail.com"
                         className={styles.contactLink}
-                        aria-label="Send email">
+                        aria-label="Send email"
+                    >
                         <img
-                            src={gmailIcon}
+                            src="/assets/images/socials/gmailIcon.webp"
                             alt="Email"
                             className={styles.contactIcon}
                         />
                         <span>Email</span>
                     </a>
                     <a
-                        href="https://linkedin.com/in/your-profile"
+                        href="https://linkedin.com/in/jacobjohnstone"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles.contactLink}
-                        aria-label="LinkedIn profile">
+                        aria-label="LinkedIn profile"
+                    >
                         <img
-                            src={linkedinIcon}
+                            src="/assets/images/socials/linkedinIcon.webp"
                             alt="LinkedIn"
                             className={styles.contactIcon}
                         />
@@ -42,13 +41,28 @@ const Contact = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles.contactLink}
-                        aria-label="View resume">
+                        aria-label="View resume"
+                    >
                         <img
-                            src={resumeIcon}
+                            src="/assets/images/socials/resumeIcon.png"
                             alt="Resume"
                             className={styles.contactIcon}
                         />
                         <span>Resume</span>
+                    </a>
+                    <a
+                        href="https://github.com/jacobjohnstone"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.contactLink}
+                        aria-label="GitHub profile"
+                    >
+                        <img
+                            src="/assets/images/technologies/githubIcon.png"
+                            alt="GitHub"
+                            className={styles.contactIcon}
+                        />
+                        <span>GitHub</span>
                     </a>
                 </div>
             </div>
