@@ -18,6 +18,7 @@ const FloatingParticles: React.FC = () => {
     const animationRef = useRef<number>();
     const lastTimeRef = useRef<number>(0);
     const leafImageRef = useRef<HTMLCanvasElement | null>(null);
+    const isVisibleRef = useRef<boolean>(true);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -109,7 +110,7 @@ const FloatingParticles: React.FC = () => {
 
         // Create particles
         const createParticles = () => {
-            const particleCount = 120;
+            const particleCount = 60; // Reduced from 120 for better performance
             particlesRef.current = [];
 
             for (let i = 0; i < particleCount; i++) {
@@ -130,6 +131,12 @@ const FloatingParticles: React.FC = () => {
 
         // Animation loop
         const animate = (currentTime: number) => {
+            // Skip animation if not visible (performance optimization)
+            if (!isVisibleRef.current) {
+                animationRef.current = requestAnimationFrame(animate);
+                return;
+            }
+
             // Calculate delta time for frame-rate independent movement
             const deltaTime =
                 lastTimeRef.current > 0
@@ -156,14 +163,25 @@ const FloatingParticles: React.FC = () => {
                 if (particle.y < 0) particle.y = canvas.height;
                 if (particle.y > canvas.height) particle.y = 0;
 
+                // Visibility culling - only draw particles that are on screen
+                const margin = 50; // Extra margin for smooth transitions
+                if (
+                    particle.x < -margin ||
+                    particle.x > canvas.width + margin ||
+                    particle.y < -margin ||
+                    particle.y > canvas.height + margin
+                ) {
+                    return; // Skip rendering this particle
+                }
+
                 // Draw pre-rendered leaf image (much faster than drawing path each frame)
                 if (leafImageRef.current) {
                     ctx.save();
                     ctx.globalAlpha = particle.opacity;
 
-                    // Create glow effect
+                    // Create subtle glow effect (reduced blur for performance)
                     ctx.shadowColor = "#FF6B9D";
-                    ctx.shadowBlur = 15;
+                    ctx.shadowBlur = 5; // Reduced from 15 for better performance
                     ctx.shadowOffsetX = 0;
                     ctx.shadowOffsetY = 0;
 
@@ -189,10 +207,23 @@ const FloatingParticles: React.FC = () => {
             animationRef.current = requestAnimationFrame(animate);
         };
 
+        // Set up intersection observer for performance
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    isVisibleRef.current = entry.isIntersecting;
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        observer.observe(canvas);
+
         animate(0);
 
         return () => {
             window.removeEventListener("resize", resizeCanvas);
+            observer.disconnect();
             if (animationRef.current) {
                 cancelAnimationFrame(animationRef.current);
             }
