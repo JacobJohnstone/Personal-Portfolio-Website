@@ -36,8 +36,10 @@ const HeroText = () => {
     };
 
     const handleConnectClick = () => {
-        // You can add contact functionality here later
-        console.log("Let's Connect clicked!");
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
     };
 
     return (
