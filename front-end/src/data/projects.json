@@ -1,0 +1,121 @@
+[
+    {
+        "id": 1,
+        "title": "Couples App",
+        "year": "PRESENT",
+        "description": "A mobile app for couples to share moments, plan dates, and strengthen relationships",
+        "detailedDescription": "A comprehensive mobile application for couples. Built with React Native for cross-platform compatibility, the app integrates Firebase as a back-end service and serves images from an AWS S3 bucket. I've employed local storing, pagination, and memoization techniques to improve load times and enhance offline funcitonality.",
+        "nextSteps": [
+            "Pet customizations",
+            "Message reactions",
+            "Future Spring back-end migration"
+        ],
+        "image": "/assets/images/amorie/amorieDownloadPreview.jpg",
+        "technologies": [
+            "/assets/images/technologies/nodejs-1-logo-png-transparent.png",
+            "/assets/images/technologies/android-studio-png.png",
+            "/assets/images/technologies/aws-icon.webp",
+            "/assets/images/technologies/react.png",
+            "/assets/images/technologies/firebaseIcon.webp",
+            "/assets/images/technologies/typescript-icon.png",
+            "/assets/images/technologies/git-icon.png"
+        ],
+        "users": 50,
+        "links": {
+            "view": "https://getamorie.app"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Astronomy Gallery",
+        "year": 2025,
+        "description": "Web application showcasing astronomical images including nebulas, galaxies, and more",
+        "detailedDescription": "This Astronomy Gallery was built to showcase the images of a specific astrophotographer. The application includes a homepage, about section, and a gallery. I built a hidden admin panel to allow the photographer to upload, edit, or delete images displayed in the gallery. The images are stored in an AWS S3 bucket with their paths and meta-data stored in a Neon DB.",
+        "nextSteps": ["Admin panel drag-and-drop image order re-arrange"],
+        "image": "/assets/images/astroApp/orionNebula.png",
+        "technologies": [
+            "/assets/images/technologies/react.png",
+            "/assets/images/technologies/typescript-icon.png",
+            "/assets/images/technologies/git-icon.png",
+            "/assets/images/technologies/nextjs-icon.png",
+            "/assets/images/technologies/neon-db-icon.png",
+            "/assets/images/technologies/nodejs-1-logo-png-transparent.png"
+        ],
+        "links": {
+            "github": "https://github.com/JacobJohnstone/astronomy-portfolio",
+            "view": "https://astronomy-portfolio.vercel.app/"
+        }
+    },
+    {
+        "id": 3,
+        "title": "The Last Descent",
+        "year": 2025,
+        "description": "A short action/adventure game submitted to the 17th Pirate Software game jam",
+        "detailedDescription": "The Last Descent is an action-adventure game created for the 17th Pirate Software game jam. Created in Unity with C# scripting and custom sprites designed in Aseprite. I followed Object-Oriented Programming principles to create a modular, event-driven codebase that I can continue to build on.",
+        "image": "/assets/images/theLastDescent/theLastDescent.png",
+        "technologies": [
+            "/assets/images/technologies/Unity-icon.png",
+            "/assets/images/technologies/c-sharp-icon.png",
+            "/assets/images/technologies/git-icon.png",
+            "/assets/images/technologies/githubIcon.png",
+            "/assets/images/technologies/aseprite-icon.png"
+        ],
+        "links": {
+            "github": "https://github.com/JacobJohnstone/Adventure-Game",
+            "view": "https://rocket-dev.itch.io/adventure-only-one"
+        }
+    },
+    {
+        "id": 4,
+        "title": "AI Image Translation",
+        "year": 2024,
+        "description": "A system designed to transform artificial surgery practice into a realistic image",
+        "detailedDescription": "This innovative AI-powered system translates surgical training simulations into photorealistic images, bridging the gap between virtual practice and real-world scenarios. The system employs generative adversarial networks (GANs, specifically CycleGAN) to convert synthetic medical images into realistic representations.",
+        "image": "/assets/images/aiImageTranslation/modelImage.jpg",
+        "technologies": [
+            "/assets/images/technologies/python_logo_01.png",
+            "/assets/images/technologies/Pytorch.png",
+            "/assets/images/technologies/git-icon.png",
+            "/assets/images/technologies/githubIcon.png"
+        ],
+        "links": {}
+    },
+    {
+        "id": 5,
+        "title": "Haunting Grounds",
+        "year": 2024,
+        "description": "A mini stealth/action game created for the 16th Pirate Software game jam",
+        "detailedDescription": "Haunting Grounds is a stealth-action mini game where players enter as the ghost entity and try to rid the castle of it's residents by scaring them to death. The game challenges players to use stealth mechanics and environmental awareness to complete the objective. Featuring original soundtrack composed in FL Studio, hand-crafted pixel art animations, and interesting gameplay mechanics. Developed in Unity with C#, while making use of the A* algorithm for NPC pathfinding.",
+        "image": "/assets/images/hauntingGrounds/titleScreen.png",
+        "technologies": [
+            "/assets/images/technologies/Unity-icon.png",
+            "/assets/images/technologies/c-sharp-icon.png",
+            "/assets/images/technologies/git-icon.png",
+            "/assets/images/technologies/githubIcon.png",
+            "/assets/images/technologies/FL_Studio_11_icon.webp",
+            "/assets/images/technologies/aseprite-icon.png"
+        ],
+        "links": {
+            "github": "https://github.com/JacobJohnstone/piratesoftware-gamejam16-polished",
+            "view": "https://rocket-dev.itch.io/haunting-grounds-v11"
+        }
+    },
+    {
+        "id": 6,
+        "title": "Pokédex Application",
+        "year": 2023,
+        "description": "Interactive Pokédex with search functionality and detailed Pokémon information",
+        "detailedDescription": "An interactive web-based Pokédex application that provides information about 20 Pokémon. Features include searching by name or number (with input validation) to display simple details about the Pokémon. Built with vanilla JavaScript, HTML5, and CSS3 as an introductory project to web development.",
+        "image": "/assets/images/pokedex/Pokedex.jpg",
+        "technologies": [
+            "/assets/images/technologies/javascriptIcon.png",
+            "/assets/images/technologies/css-icon.png",
+            "/assets/images/technologies/html-icon.webp",
+            "/assets/images/technologies/git-icon.png",
+            "/assets/images/technologies/githubIcon.png"
+        ],
+        "links": {
+            "github": "https://github.com/JacobJohnstone/se3316-lab1-jjohn483"
+        }
+    }
+]

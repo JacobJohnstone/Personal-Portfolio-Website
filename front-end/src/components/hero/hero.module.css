@@ -1,0 +1,238 @@
+.root {
+    height: 100lvh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.textContainer {
+    position: relative;
+    z-index: 1;
+    padding: 8rem 10rem;
+    border-radius: 50%;
+    background: radial-gradient(
+        rgba(17, 17, 17, 1) 10%,
+        rgba(17, 17, 17, 0.8) 40%,
+        rgba(17, 17, 17, 0.4) 60%,
+        rgba(17, 17, 17, 0) 80%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-20px);
+}
+
+.bachelorsText {
+    /* font-family: "TiroKannada", sans-serif; */
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.nameText {
+    /* font-family: "TiroKannada", sans-serif; */
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ddd;
+    margin: 0 0 1rem 0;
+    height: fit-content;
+    width: fit-content;
+}
+
+.lineTwo {
+    font-size: 3rem;
+}
+
+.highColor {
+    color: #92d6bd;
+    font-family: "TiroKannada", sans-serif;
+    /* font-style: italic; */
+    text-shadow:
+        0 0 10px rgba(146, 214, 189, 0.6),
+        0 0 20px rgba(146, 214, 189, 0.4),
+        0 0 30px rgba(146, 214, 189, 0.2);
+}
+
+.cursor {
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-left: 2px;
+    animation: fade 1.2s infinite ease-in-out;
+    color: #a8e6cf;
+    width: 0.5em;
+    visibility: visible;
+}
+
+.cursorHidden {
+    visibility: hidden;
+    animation: none;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.particlesCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particleFade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to top, #111 0%, rgba(17, 17, 17, 0) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.cherryBranch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 800px;
+    height: 1000px;
+    background-image: url("/public/assets/images/hero/cherryBlossomBranch.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 1;
+    animation: gentleSway 10s ease-in-out infinite;
+    transform-origin: top right;
+}
+
+@keyframes gentleSway {
+    0%,
+    100% {
+        transform: rotate(0deg) translateY(0px);
+    }
+    25% {
+        transform: rotate(1deg) translateY(-3px);
+    }
+    50% {
+        transform: rotate(0deg) translateY(-5px);
+    }
+    75% {
+        transform: rotate(-1deg) translateY(-3px);
+    }
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectsButton {
+    /* font-family: "TiroKannada", sans-serif; */
+    background: #333;
+    color: #ddd;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.projectsButton:hover {
+    background: #555;
+    color: #ddd;
+    transform: scale(1.03);
+}
+
+.connectButton {
+    /* font-family: "TiroKannada", sans-serif; */
+    background: linear-gradient(45deg, #a8e6cf, #d4f5eb);
+    color: #333;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(168, 230, 207, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.connectButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.5s;
+}
+
+.connectButton:hover::before {
+    left: 100%;
+}
+
+.connectButton:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px rgba(168, 230, 207, 0.8);
+    background: linear-gradient(45deg, #d4f5eb, #a8e6cf);
+}
+
+/* Responsive design for cherry branch */
+@media (max-width: 768px) {
+    .cherryBranch {
+        width: 400px;
+        height: 500px;
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .cherryBranch {
+        width: 300px;
+        height: 400px;
+        opacity: 0.4;
+    }
+}

@@ -1,0 +1,52 @@
+.projectsSection {
+    padding: 4rem 2rem 0 2rem;
+    margin-top: 2rem;
+    background: #111;
+    min-height: 100vh;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #ff8fa3;
+    text-shadow:
+        0 0 10px rgba(255, 143, 163, 0.6),
+        0 0 20px rgba(255, 143, 163, 0.4),
+        0 0 30px rgba(255, 143, 163, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .projectsSection {
+        padding: 2rem 1rem 0 1rem;
+        margin-top: 1rem;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.viewMoreContainer {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 1rem;
+}
+
+.viewMore {
+    font-size: 0.8rem;
+    color: rgb(128, 206, 180);
+    background: transparent;
+    border: none;
+    /* cursor: pointer; */
+    transition: color 0.3s ease;
+}
+
+.viewMore:hover {
+    color: rgb(168, 230, 207);
+}
