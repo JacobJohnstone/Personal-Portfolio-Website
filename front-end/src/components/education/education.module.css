@@ -1,0 +1,117 @@
+.educationSection {
+    padding: 4rem 2rem;
+    margin-top: 2rem;
+    background: #111;
+    min-height: 50vh;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #ff8fa3;
+    text-shadow:
+        0 0 10px rgba(255, 143, 163, 0.6),
+        0 0 20px rgba(255, 143, 163, 0.4),
+        0 0 30px rgba(255, 143, 163, 0.2);
+}
+
+.educationContent {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.schoolCard {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.14) 0%,
+        rgba(255, 255, 255, 0.08) 100%
+    );
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: 2px solid rgba(255, 143, 163, 0.3);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        0 0 20px rgba(255, 143, 163, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.schoolName {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ff8fa3;
+    margin: 0 0 2rem 0;
+    text-shadow: 0 0 10px rgba(255, 143, 163, 0.5);
+}
+
+.courseWorkSection {
+    margin-top: 2rem;
+}
+
+.courseWorkTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ff8fa3;
+    margin: 0 0 1.5rem 0;
+    text-shadow: 0 0 10px rgba(255, 143, 163, 0.5);
+}
+
+.courseList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    text-align: left;
+}
+
+.courseItem {
+    color: #ddd;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .educationSection {
+        padding: 2rem 1rem;
+        margin-top: 1rem;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .schoolCard {
+        padding: 2rem 1.5rem;
+    }
+
+    .schoolName {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .courseWorkTitle {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .courseList {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .courseItem {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+

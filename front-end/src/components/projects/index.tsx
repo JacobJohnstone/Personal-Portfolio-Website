@@ -45,9 +45,9 @@ const Projects = () => {
                     projects={projects}
                     onProjectClick={handleProjectClick}
                 />
-                <div className={styles.viewMoreContainer}>
+                {/* <div className={styles.viewMoreContainer}>
                     <p className={styles.viewMore}>MORE COMING SOON!</p>
-                </div>
+                </div> */}
             </section>
             <ProjectModal
                 project={selectedProject}

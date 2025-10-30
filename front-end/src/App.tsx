@@ -3,6 +3,7 @@ import Hero from "./components/hero/";
 import Timeline from "./components/timeline";
 import "./App.css";
 import Projects from "./components/projects";
+import Education from "./components/education";
 import Contact from "./components/contact";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
             <Analytics />
             <Timeline />
             <Projects />
+            <Education />
             <Contact />
         </div>
     );
