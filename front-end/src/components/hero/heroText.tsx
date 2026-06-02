@@ -8,7 +8,7 @@ const HeroText = () => {
     useEffect(() => {
         const buildString = async () => {
             let currentString = "";
-            const subString = "software engineer";
+            const subString = "software developer";
             const stringArr = subString.split("");
 
             // Helper function to convert setTimeout to a Promise
@@ -47,7 +47,7 @@ const HeroText = () => {
             <div className={styles.nameText}>
                 <h1>Hello, I'm JACOB</h1>
                 <h1 className={styles.lineTwo}>
-                    I am an aspiring{" "}
+                    I am an associate{" "}
                     <span className={styles.highColor}>
                         {heroString}
                         <span

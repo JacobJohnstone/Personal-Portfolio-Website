@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import ReactMarkdown from "react-markdown";
 import styles from "./projectModal.module.css";
 
 interface Project {
@@ -6,7 +7,7 @@ interface Project {
     title: string;
     year?: number;
     description: string;
-    detailedDescription?: string;
+    detailedDescription?: string[];
     nextSteps?: string[];
     image: string;
     technologies: string[];
@@ -147,9 +148,13 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                                 </div>
                             )}
                         </div>
-                        <p className={styles.modalDescription}>
-                            {project.detailedDescription || project.description}
-                        </p>
+                        <div className={styles.modalDescription}>
+                            <ReactMarkdown>
+                                {project.detailedDescription
+                                    ? project.detailedDescription.join("\n\n")
+                                    : project.description}
+                            </ReactMarkdown>
+                        </div>
                         {project.nextSteps && project.nextSteps.length > 0 && (
                             <div className={styles.nextStepsSection}>
                                 <h3 className={styles.nextStepsTitle}>

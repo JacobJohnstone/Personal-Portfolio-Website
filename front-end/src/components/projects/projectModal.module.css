@@ -145,6 +145,23 @@
     margin: 0 0 2rem 0;
 }
 
+.modalDescription p {
+    margin: 0 0 1rem 0;
+}
+
+.modalDescription p:last-child {
+    margin-bottom: 0;
+}
+
+.modalDescription a {
+    color: #a8e6cf;
+    text-decoration: underline;
+}
+
+.modalDescription a:hover {
+    color: #ffffff;
+}
+
 .nextStepsSection {
     margin: 2rem 0;
 }

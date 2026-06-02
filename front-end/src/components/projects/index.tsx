@@ -9,7 +9,7 @@ interface Project {
     title: string;
     year?: number;
     description: string;
-    detailedDescription?: string;
+    detailedDescription?: string[];
     nextSteps?: string[];
     image: string;
     technologies: string[];

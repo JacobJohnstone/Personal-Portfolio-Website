@@ -4,7 +4,9 @@
         "title": "Couples App",
         "year": "PRESENT",
         "description": "A mobile app for couples to share moments, plan dates, and strengthen relationships",
-        "detailedDescription": "A comprehensive mobile application for couples. Built with React Native for cross-platform compatibility, the app integrates Firebase as a back-end service and serves images from an AWS S3 bucket. I've employed local storing, pagination, and memoization techniques to improve load times and enhance offline funcitonality.",
+        "detailedDescription": [
+            "A comprehensive mobile application for couples. Built with React Native for cross-platform compatibility, the app integrates Firebase as a back-end service and serves images from an AWS S3 bucket. I've employed local storing, pagination, and memoization techniques to improve load times and enhance offline funcitonality."
+        ],
         "nextSteps": [
             "Pet customizations",
             "Message reactions",
@@ -30,7 +32,9 @@
         "title": "Astronomy Gallery",
         "year": 2025,
         "description": "Web application showcasing astronomical images including nebulas, galaxies, and more",
-        "detailedDescription": "This Astronomy Gallery was built to showcase the images of a specific astrophotographer. The application includes a homepage, about section, and a gallery. I built a hidden admin panel to allow the photographer to upload, edit, or delete images displayed in the gallery. The images are stored in an AWS S3 bucket with their paths and meta-data stored in a Neon DB.",
+        "detailedDescription": [
+            "This Astronomy Gallery was built to showcase the images of a specific astrophotographer. The application includes a homepage, about section, and a gallery. I built a hidden admin panel to allow the photographer to upload, edit, or delete images displayed in the gallery. The images are stored in an AWS S3 bucket with their paths and meta-data stored in a Neon DB."
+        ],
         "nextSteps": ["Admin panel drag-and-drop image order re-arrange"],
         "image": "/assets/images/astroApp/orionNebula.png",
         "technologies": [
@@ -51,7 +55,10 @@
         "title": "The Last Descent",
         "year": 2025,
         "description": "A short action/adventure game submitted to the 17th Pirate Software game jam",
-        "detailedDescription": "The Last Descent is an action-adventure game created for the 17th Pirate Software game jam. Created in Unity with C# scripting and custom sprites designed in Aseprite. I followed Object-Oriented Programming principles to create a modular, event-driven codebase that I can continue to build on.",
+        "detailedDescription": [
+            "The Last Descent is an action-adventure game created for the 17th Pirate Software game jam. Created in Unity with C# scripting and custom sprites designed in Aseprite. I followed Object-Oriented Programming principles to create a modular, event-driven codebase that I can continue to build on.",
+            "**If you enjoy this adventure, consider trying [Cursed Caves](https://malcolmfonseca.itch.io/cursed-caves) next!**"
+        ],
         "image": "/assets/images/theLastDescent/theLastDescent.png",
         "technologies": [
             "/assets/images/technologies/Unity-icon.png",
@@ -70,7 +77,9 @@
         "title": "AI Image Translation",
         "year": 2024,
         "description": "A system designed to transform artificial surgery practice into a realistic image",
-        "detailedDescription": "This innovative AI-powered system translates surgical training simulations into photorealistic images, bridging the gap between virtual practice and real-world scenarios. The system employs generative adversarial networks (GANs, specifically CycleGAN) to convert synthetic medical images into realistic representations.",
+        "detailedDescription": [
+            "This innovative AI-powered system translates surgical training simulations into photorealistic images, bridging the gap between virtual practice and real-world scenarios. The system employs generative adversarial networks (GANs, specifically CycleGAN) to convert synthetic medical images into realistic representations."
+        ],
         "image": "/assets/images/aiImageTranslation/modelImage.jpg",
         "technologies": [
             "/assets/images/technologies/Python_logo_01.png",
@@ -85,7 +94,9 @@
         "title": "Haunting Grounds",
         "year": 2024,
         "description": "A mini stealth/action game created for the 16th Pirate Software game jam",
-        "detailedDescription": "Haunting Grounds is a stealth-action mini game where players enter as the ghost entity and try to rid the castle of it's residents by scaring them to death. The game challenges players to use stealth mechanics and environmental awareness to complete the objective. Featuring original soundtrack composed in FL Studio, hand-crafted pixel art animations, and interesting gameplay mechanics. Developed in Unity with C#, while making use of the A* algorithm for NPC pathfinding.",
+        "detailedDescription": [
+            "Haunting Grounds is a stealth-action mini game where players enter as the ghost entity and try to rid the castle of it's residents by scaring them to death. The game challenges players to use stealth mechanics and environmental awareness to complete the objective. Featuring original soundtrack composed in FL Studio, hand-crafted pixel art animations, and interesting gameplay mechanics. Developed in Unity with C#, while making use of the A* algorithm for NPC pathfinding."
+        ],
         "image": "/assets/images/hauntingGrounds/titleScreen.png",
         "technologies": [
             "/assets/images/technologies/Unity-icon.png",
@@ -105,7 +116,9 @@
         "title": "Pokédex Application",
         "year": 2023,
         "description": "Interactive Pokédex with search functionality and detailed Pokémon information",
-        "detailedDescription": "An interactive web-based Pokédex application that provides information about 20 Pokémon. Features include searching by name or number (with input validation) to display simple details about the Pokémon. Built with vanilla JavaScript, HTML5, and CSS3 as an introductory project to web development.",
+        "detailedDescription": [
+            "An interactive web-based Pokédex application that provides information about 20 Pokémon. Features include searching by name or number (with input validation) to display simple details about the Pokémon. Built with vanilla JavaScript, HTML5, and CSS3 as an introductory project to web development."
+        ],
         "image": "/assets/images/pokedex/Pokedex.jpg",
         "technologies": [
             "/assets/images/technologies/javascriptIcon.png",
