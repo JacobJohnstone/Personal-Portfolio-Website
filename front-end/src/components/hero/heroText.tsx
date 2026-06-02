@@ -16,7 +16,7 @@ const HeroText = () => {
                 new Promise((resolve) => setTimeout(resolve, ms));
 
             for (let i = 0; i < stringArr.length; i++) {
-                const delayMs = i == 0 ? 1000 : Math.random() * 20 + 80; // longer delay before the string "starts typing"
+                const delayMs = i === 0 ? 1000 : Math.random() * 20 + 80; // longer delay before the string "starts typing"
 
                 await delay(delayMs);
                 currentString += stringArr[i];
