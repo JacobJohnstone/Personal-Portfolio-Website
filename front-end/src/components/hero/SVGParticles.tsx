@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./hero.module.css";
 
 interface SVGParticle {
@@ -86,7 +86,7 @@ const SVGParticles: React.FC = () => {
                     isVisibleRef.current = entry.isIntersecting;
                 });
             },
-            { threshold: 0.1 }
+            { threshold: 0.1 },
         );
 
         observer.observe(container);
@@ -105,16 +105,14 @@ const SVGParticles: React.FC = () => {
             <svg
                 width="100%"
                 height="100%"
-                style={{ position: "absolute", top: 0, left: 0 }}
-            >
+                style={{ position: "absolute", top: 0, left: 0 }}>
                 {particlesRef.current.map((particle) => (
                     <g
                         key={particle.id}
                         transform={`translate(${particle.x}, ${particle.y}) rotate(${
                             (particle.rotation * 180) / Math.PI
                         })`}
-                        opacity={particle.opacity}
-                    >
+                        opacity={particle.opacity}>
                         <path
                             d={petalPath}
                             fill="#FF8FA3"
