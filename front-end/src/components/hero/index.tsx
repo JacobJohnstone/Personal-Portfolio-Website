@@ -6,22 +6,18 @@ import SVGParticles from "./SVGParticles";
 import PerformanceControls from "./PerformanceControls";
 
 const Hero = () => {
-    const [particleCount, setParticleCount] = useState(60);
     const [useSVG, setUseSVG] = useState(false);
-    const [lowPowerMode, setLowPowerMode] = useState(false);
 
     // Auto-detect low power devices
     useEffect(() => {
         const isLowPower =
             navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2;
         const prefersReducedMotion = window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
+            "(prefers-reduced-motion: reduce)",
         ).matches;
 
         if (isLowPower || prefersReducedMotion) {
-            setLowPowerMode(true);
             setUseSVG(true);
-            setParticleCount(30);
         }
     }, []);
 
@@ -30,11 +26,7 @@ const Hero = () => {
             {useSVG ? <SVGParticles /> : <FloatingParticles />}
             <HeroText />
             <div className={styles.particleFade}></div>
-            <PerformanceControls
-                onParticleCountChange={setParticleCount}
-                onUseSVGChange={setUseSVG}
-                onLowPowerModeChange={setLowPowerMode}
-            />
+            <PerformanceControls onUseSVGChange={setUseSVG} />
         </div>
     );
 };
